@@ -1,0 +1,10 @@
+Sprawozdanie z dnia 21.04.2022
+
+Dnia 21.04.2022 w godzinach 20:00-21:00 odbyło się pierwsze spotkanie członków zespołu w celu ustalenia ogólnego planu realizacji projektu.
+Podczas spotkania zostały przydzielone zadania poszczególnym członkom zespołu:
+Konrad Grucel, Łukasz Filo – wprowadzenie możliwości wyboru poziomu trudności.
+Konrad Grucel, Klaudiusz grobelski – wprowadzenie możliwości wyboru koloru tła.
+Krzysztof Furtak, Łukasz Filo – wprowadzenie możliwości nadania nazwy dla węża.
+Filip Dymczyk, Klaudiusz Grobleski – wprowadzenie opcji „nowa gra” oraz „wyjdź z gry”.
+Zostało też ustalone główne zadanie to jest ustalenie konceptu menu głównego którego zostali przypisani wszyscy członkowie zespołu.
+Termin wykonania powyższych zadań został ustalony na 06.06.2022.
