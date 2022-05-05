@@ -1,7 +1,8 @@
 #include <iostream>
-#include "food.hpp"
 #include "snake.hpp"
-int main() {
+#include "food.hpp"
 
+int main() {
+    menu();
     return 0;
 }
