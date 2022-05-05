@@ -1,6 +1,7 @@
 #include <iostream>
-
+#include "food.hpp"
+#include "snake.hpp"
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
     return 0;
 }

@@ -8,6 +8,7 @@ add_compile_options(-Wall -Wextra -Werror -Wpedantic -pedantic-errors)
 include_directories(include)
 
 set(SOURCE_FILES
-        src/snake.cpp)
+        src/snake.cpp
+        src/food.cpp)
 
 add_executable(snake ${SOURCE_FILES} main.cpp)
