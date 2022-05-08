@@ -1,3 +1,4 @@
 *Zdobywanie punktówn będzie polegało na zbieraniu owoców pojawiających się losowo na całej planszy.*
 
 Priorytet powyższego elementu został ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022.
+Priorytet powyższego elementu został ustalony na NISKI przez Klaudiusza Grobelskiego dnia 07.05.2022.
