@@ -1,0 +1,14 @@
+Sprawozdanie z dnia 07.05.2022
+
+W dniu 07.05.2022 od godziny 20:00 do godziny 21:00 odbyło sie drugie spotkanie 
+członków zespołu w celu podjęcia kolejnych kroków w projeknie gry "Snake".
+Prowadzącym spotaknie bylem ja (Klaudiusz Grobelski) w spotkaniu uczestniczyli 
+rónież pozostali członkowie Konrad Grucel zarządzajacy możłiwościa wyboru 
+poziomu trudności oraz koloru tła, Łukasz Filo zajmujący się możliwością nadania
+nazwy węża i poziomem trudnośći, Filip Dymczyk pracujący nad opcja w menu "nowa gra"
+oraz "wyjdź z gry" i kolorem węża oraz Krzysztof Furtak tworzący nadanie nazwy węża
+i koloru węża. Na spotkaniu ustalone zostały priorytety w zadaniach, z powodu trudności
+zarządzone zostały nowe priorytety "Punktacja graczy" otrzymał niski priorytet, 
+"Gra w formie 2D" otrzymał niski prioytet. Celem głownym zespołu jest stworzenie menu.
+Członkowie zespołu prowadzą dalsze pracę nad zadaniami wyznaczonymi na ostatnim spotkaniu,
+jednakże termin z powodów trudności został przesunięty na 21.05.2022.
