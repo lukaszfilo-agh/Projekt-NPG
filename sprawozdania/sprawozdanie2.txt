@@ -11,4 +11,5 @@ i koloru węża. Na spotkaniu ustalone zostały priorytety w zadaniach, z powodu
 zarządzone zostały nowe priorytety "Punktacja graczy" otrzymał niski priorytet, 
 "Gra w formie 2D" otrzymał niski prioytet. Celem głownym zespołu jest stworzenie menu.
 Członkowie zespołu prowadzą dalsze pracę nad zadaniami wyznaczonymi na ostatnim spotkaniu,
-jednakże termin z powodów trudności został przesunięty na 21.05.2022.
+jednakże termin z powodów trudności został przesunięty na 21.05.2022. Następne spotkanie 
+odbędzie się 27.05.2022 roku, gdzie zespół podejmie kolejne kroki związane z projektem.
