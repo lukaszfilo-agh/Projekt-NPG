@@ -1,0 +1,13 @@
+Scrum Master od 20.04.2022 - 29.04.2022.
+
+Podczas tego okresu zostały podjęte następujące działania:
+- odbyto pierwsze spotkanie deweloperów dnia 21.04.2022 o godz. 20:00 na platfromie MS Teams, na którym podjęto pierwsze wiążące ustalenia (więcej informacji w pliku "sprawozdanie1" w katalogu "sprawozdania"),
+- członkowie zespołu zostali podzielenie na cztery dwuosobowe grupy mieszane;
+- rozdzielono zadania (dotyczące realizacji pierwszego kamienia milowego - stworzenia funkcjonalności menu głównego) pomiędzy wydzielone wcześniej grupy:
+   1) możliwość wyboru koloru węża - Filip Dymczyk i Krzysztof Furtak,
+   2) możliwość wyboru koloru tła - Klaudiusz Grobelski i Konrad Grucel,
+   3) stworzenie opcji nowa gra oraz wyjdź z gry - Filip Dymczyk i Klaudiusz Grobelski,
+   4) możliwość nadania nazwy dla węża - Krzysztof Furtak i Łukasz Filo,
+   5) możliwość wyboru poziomu trudności - Konrad Grucel i Łukasz Filo;
+- stworzono początkowy Backlog gry "Snake" oraz ustalono priorytety konkretnych zadań (niezbędne informacje znajdują się w folderze Backlog),
+- umówiono następne spotkanie na dzień 07.05.2022, godz. 20:00 na platformie MS Teams.
