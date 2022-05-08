@@ -1,0 +1,8 @@
+Menu główne powinno zawierać następujące funkcjonalności:
+- opcje wejścia do raz wyjścia z gry,
+- możliwość nadania nazwy węża,
+- możliwość wyboru poziomu trudności,
+- możliwość wyboru koloru tła,
+- możliwość wyboru koloru węża.
+ 
+Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Filipa Dymczyka - 21.04.2022.
