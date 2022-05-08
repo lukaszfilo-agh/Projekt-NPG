@@ -1,0 +1,5 @@
+*Gra umożliwiałaby rozgrywkę multiplayer pomiędzy graczami na jednej wygenerowanej planszy. 
+Mogliby wówczas konkurować np. o najdłuższe przetrwanie, bądź zdobycie największej ilości punktów 
+(zasady zdobywanie punktów znajduja się w pliku Punktacja).*
+
+Priorytet powyższego elementu został ustalony na BARDZO NISKI przez Filipa Dymczyka dnia 21.04.2022.
