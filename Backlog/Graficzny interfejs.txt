@@ -1,0 +1,3 @@
+*Pozwoli użytkownikom na wybór elementów menu za pomocą myszy.*
+
+Priorytet powyższego elementu zosyał ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022. 

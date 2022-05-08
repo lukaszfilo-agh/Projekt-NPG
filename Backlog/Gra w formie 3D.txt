@@ -1,0 +1,4 @@
+*Gra pozwalałaby na widok oraz kontrolę węża zza jego ogona ("z trzeciej osoby"), co uniemożliwiałoby zauważenie wszystkich elementów planszy 
+(widzielibyśmy tylko to co znajduje się przed wężem oraz w małym stożku obejmującym jego prawą i lewą stronę).*
+
+Priorytet powyzszego elementu został ustalony na NISKI przez Filipa Dymczyka dnia 21.04.2022.

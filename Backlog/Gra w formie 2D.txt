@@ -1,0 +1,3 @@
+*Gra standardowo będzie opierała sie na widoku z góry węża (2D) obejmując przy tym całą planszę oraz dając widok na wszystkie jej elementy.*
+
+Priorytet powyższego elementu został ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022.
