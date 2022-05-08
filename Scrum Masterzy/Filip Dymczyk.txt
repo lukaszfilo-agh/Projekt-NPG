@@ -10,4 +10,4 @@ Podczas tego okresu zostały podjęte następujące działania:
    4) możliwość nadania nazwy dla węża - Krzysztof Furtak i Łukasz Filo,
    5) możliwość wyboru poziomu trudności - Konrad Grucel i Łukasz Filo;
 - stworzono początkowy Backlog gry "Snake" oraz ustalono priorytety konkretnych zadań (niezbędne informacje znajdują się w folderze Backlog),
-- umówiono następne spotkanie na dzień 07.05.2022, godz. 20:00 na platformie MS Teams.
+- umówiono następne spotkanie na dzień 07.05.2022, godz. 20:00 na platformie MS Teams. 
