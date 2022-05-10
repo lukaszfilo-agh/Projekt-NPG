@@ -6,4 +6,4 @@ std::string w_nazwa_weza();
 
 int w_poziom_trudnosci();
 
-#endif //SNAKE_SNAKE_HPP
+#endif

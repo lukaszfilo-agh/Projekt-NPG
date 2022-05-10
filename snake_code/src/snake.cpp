@@ -2,13 +2,6 @@
 #include "snake.hpp"
 
 
-
-void menu() {
-
-
-
-}
-
 int w_poziom_trudnosci() {
     std::cout << "Wybierz poziom trudnosci:" << std::endl;
     std::cout << "1. Latwy" << std::endl;
@@ -18,7 +11,7 @@ int w_poziom_trudnosci() {
     int poziom_trudnosci;
     std::cin >> poziom_trudnosci;
     if (poziom_trudnosci == 1)
-       std::cout << "Wybrales poziom latwy" << std::endl;
+        std::cout << "Wybrales poziom latwy" << std::endl;
     else if (poziom_trudnosci == 2)
         std::cout << "Wybrales poziom sredni" << std::endl;
     else if (poziom_trudnosci == 3)
