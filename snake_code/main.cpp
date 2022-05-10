@@ -18,14 +18,18 @@ int main() {
         std::cout << "Wybierz opcje z menu: ";
 
         std::cin >> wybor;
-        if (wybor == 1) {   // rozpoczecie gry
-            std::cout << "Rozpoczynasz nowa gre, nazwa twojego weza to: " << nazwa_weza << std::endl;
-            std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci;
-        } else if (wybor == 2)
+
+        if (wybor == 2)
             poziom_trudnosci = w_poziom_trudnosci();
         else if (wybor == 3)
             nazwa_weza = w_nazwa_weza();
     }
+
+    if (wybor == 1) {   // rozpoczecie gry
+        std::cout << "Rozpoczynasz nowa gre, nazwa twojego weza to: " << nazwa_weza << std::endl;
+        std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci;
+        }
+
 
     return 0;
 }
