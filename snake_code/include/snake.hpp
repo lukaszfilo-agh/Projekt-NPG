@@ -8,10 +8,15 @@
 
 
 std::string znaki();
+
 std::string w_nazwa_weza();
+
 std::string w_kolor_weza();
 
 void sleep();
+
 int w_poziom_trudnosci();
+
+void menu_display();
 
 #endif
