@@ -101,3 +101,30 @@ std::string select_snake_color() {
     wait();
     return kolor;
 }
+std::string select_background_color()
+{
+    clear_console();
+    std::string kolor;
+    std::cout<<signs();
+    std::cout << "Dostepne kolory to:" << std::endl;
+    std::cout << "- bialy," << std::endl;
+    std::cout << "- czarny," << std::endl;
+    std::cout << "- rozowy," << std::endl;
+    std::cout << "- brazowy." << std::endl;
+    std::cout << signs();
+    std::cout << "Wybierz swoj kolor: ";
+    std::cin >> kolor;
+    if (kolor == "bialy") {
+        std::cout << "Wybrales kolor " << kolor << "!";
+    } else if (kolor == "czarny") {
+        std::cout << "Wybrales kolor " << kolor << "!";
+    } else if (kolor == "rozowy") {
+        std::cout << "Wybrales kolor " << kolor << "!";
+    } else if (kolor == "brazowy") {
+        std::cout << "Wybrales kolor " << kolor << "!";
+    }
+    wait();
+    return kolor;
+
+
+}

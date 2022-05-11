@@ -5,6 +5,7 @@ int main() {
     int poziom_trudnosci = 1;
     std::string nazwa_weza = "snake";
     std::string kolor_weza = "zielony";
+    std::string kolor_tla = "bialy";
     std::cout << signs() << "===Witaj w grze snake===" << std::endl << signs();
     wait();
     int wybor = 0;
@@ -17,7 +18,11 @@ int main() {
             nazwa_weza = select_snake_name();
         } else if (wybor == 4) {
             kolor_weza = select_snake_color();
-        } else if (wybor == 6) {
+
+        } else if(wybor == 5) {
+            kolor_tla = select_background_color();
+        }
+        else if (wybor == 6) {
             exit_game();
             return 0;
         }
@@ -29,6 +34,7 @@ int main() {
         std::cout << "===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << nazwa_weza << std::endl;
         std::cout << "Kolor twojego weza to : " << kolor_weza << std::endl;
+        std::cout << "Kolor twojego tla to : " << kolor_tla << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci << std::endl;
         std::cout << signs();
         wait();

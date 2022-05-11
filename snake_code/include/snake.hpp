@@ -15,6 +15,7 @@ std::string signs();
 std::string select_snake_name();
 
 std::string select_snake_color();
+std::string select_background_color();
 
 void wait();
 
