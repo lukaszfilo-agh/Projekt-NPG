@@ -12,6 +12,15 @@ void sleep() {
     std::cin.get();
 }
 
+//void  err_check(std::function<std::string ()> func){
+//    if(std::cin.fail()){
+//        std::cin.clear();
+//        std::cin.ignore();
+//        std::cout << "Podana zła wartosc" << std::endl;
+//       func();
+//    }
+//}
+
 void menu_display(){
     std::system("clear");
     std::cout << znaki() << "===MENU GLOWNE===" << std::endl;
@@ -23,15 +32,16 @@ void menu_display(){
     std::cout << "6. Wyjdz z gry" << std::endl;
     std::cout << znaki();
     std::cout << "Wybierz opcje z menu: ";
-};
+}
 
 int w_poziom_trudnosci() {
-    std::cout << znaki() << std::endl;
+    std::system("clear");
+    std::cout << znaki();
     std::cout << "Dostepne poziomy:" << std::endl;
     std::cout << "1. Latwy" << std::endl;
     std::cout << "2. Sredni" << std::endl;
     std::cout << "3. Trudny" << std::endl;
-    std::cout << znaki() << std::endl;
+    std::cout << znaki();
     std::cout << "Wybierz poziom trundosci: ";
 
     int poziom_trudnosci;
@@ -46,18 +56,20 @@ int w_poziom_trudnosci() {
     return poziom_trudnosci;
 }
 
-
 std::string w_nazwa_weza() {
+    std::system("clear");
     std::cout << "Podaj nazwe swojego weza: ";
     std::string nazwa_weza;
     std::cin >> nazwa_weza;
+    //err_check(w_nazwa_weza);
     std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
     return nazwa_weza;
 }
 
 std::string w_kolor_weza() {
+    std::system("clear");
     std::string kolor;
-    std::cout << znaki() << std::endl;
+    std::cout << znaki();
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "- zielony," << std::endl;
     std::cout << "- czerwony," << std::endl;
@@ -75,5 +87,6 @@ std::string w_kolor_weza() {
     } else if (kolor == "pomaranczowy") {
         std::cout << "Wybrales kolor " << kolor << "!";
     }
+    sleep();
     return kolor;
 }

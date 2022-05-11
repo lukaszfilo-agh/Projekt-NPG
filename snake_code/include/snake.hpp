@@ -19,4 +19,6 @@ int w_poziom_trudnosci();
 
 void menu_display();
 
+//void err_check(std::function<std::string ()> func);
+
 #endif

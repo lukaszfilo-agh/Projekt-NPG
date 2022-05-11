@@ -9,6 +9,7 @@ int main() {
     sleep();
     int wybor = 0;
     while (wybor != 1) {
+        wybor = 0;
         menu_display();
         std::cin >> wybor;
         if (wybor == 2) {
@@ -25,11 +26,12 @@ int main() {
     }
 
     if (wybor == 1) { // rozpoczecie gry
+        std::system("clear");
         std::cout << znaki();
         std::cout << "===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << nazwa_weza << std::endl;
         std::cout << "Kolor twojego weza to : " << kolor_weza << std::endl;
-        std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci;
+        std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci << std::endl;
         std::cout << znaki();
     }
 
