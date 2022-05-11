@@ -1,5 +1,5 @@
 #include "snake.hpp"
-#include <sstream>
+#include "food.hpp"
 
 std::string znaki() {
     std::ostringstream oss;
@@ -7,9 +7,12 @@ std::string znaki() {
     return oss.str();
 }
 
-void sleep() {
-    std::cout << "Naciśnij ENTER aby kontynuowac..." << std::endl;
-    std::cin.get();
+void clear_console(){
+    std::system("cls");
+};
+
+void wait() {
+    sleep(1);
 }
 
 //void  err_check(std::function<std::string ()> func){
@@ -22,7 +25,7 @@ void sleep() {
 //}
 
 void menu_display(){
-    std::system("clear");
+    clear_console();
     std::cout << znaki() << "===MENU GLOWNE===" << std::endl;
     std::cout << "1. Nowa Gra" << std::endl;
     std::cout << "2. Poziom Trudnosci" << std::endl;
@@ -34,8 +37,14 @@ void menu_display(){
     std::cout << "Wybierz opcje z menu: ";
 }
 
+void exit_game() {
+    std::cout << "Do zobaczenia!" << std::endl;
+    std::cout << "Zamykanie...";
+    wait();
+}
+
 int w_poziom_trudnosci() {
-    std::system("clear");
+    clear_console();
     std::cout << znaki();
     std::cout << "Dostepne poziomy:" << std::endl;
     std::cout << "1. Latwy" << std::endl;
@@ -53,21 +62,23 @@ int w_poziom_trudnosci() {
     } else if (poziom_trudnosci == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
+    wait();
     return poziom_trudnosci;
 }
 
 std::string w_nazwa_weza() {
-    std::system("clear");
+    clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     std::string nazwa_weza;
     std::cin >> nazwa_weza;
     //err_check(w_nazwa_weza);
     std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
+    wait();
     return nazwa_weza;
 }
 
 std::string w_kolor_weza() {
-    std::system("clear");
+    clear_console();
     std::string kolor;
     std::cout << znaki();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -87,6 +98,6 @@ std::string w_kolor_weza() {
     } else if (kolor == "pomaranczowy") {
         std::cout << "Wybrales kolor " << kolor << "!";
     }
-    sleep();
+    wait();
     return kolor;
 }
