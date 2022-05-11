@@ -10,15 +10,15 @@
 #include "food.hpp"
 
 
-std::string znaki();
+std::string signs();
 
-std::string w_nazwa_weza();
+std::string select_snake_name();
 
-std::string w_kolor_weza();
+std::string select_snake_color();
 
 void wait();
 
-int w_poziom_trudnosci();
+int select_difficulty_level();
 
 void menu_display();
 

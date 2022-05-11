@@ -1,7 +1,7 @@
 #include "snake.hpp"
 #include "food.hpp"
 
-std::string znaki() {
+std::string signs() {
     std::ostringstream oss;
     oss << "------------------------------------------------------" << std::endl;
     return oss.str();
@@ -26,14 +26,14 @@ void wait() {
 
 void menu_display(){
     clear_console();
-    std::cout << znaki() << "===MENU GLOWNE===" << std::endl;
+    std::cout << signs() << "===MENU GLOWNE===" << std::endl;
     std::cout << "1. Nowa Gra" << std::endl;
     std::cout << "2. Poziom Trudnosci" << std::endl;
     std::cout << "3. Nazwa weza" << std::endl;
     std::cout << "4. Kolor weza" << std::endl;
     std::cout << "5. Kolor tla" << std::endl;
     std::cout << "6. Wyjdz z gry" << std::endl;
-    std::cout << znaki();
+    std::cout << signs();
     std::cout << "Wybierz opcje z menu: ";
 }
 
@@ -43,14 +43,14 @@ void exit_game() {
     wait();
 }
 
-int w_poziom_trudnosci() {
+int select_difficulty_level() {
     clear_console();
-    std::cout << znaki();
+    std::cout << signs();
     std::cout << "Dostepne poziomy:" << std::endl;
     std::cout << "1. Latwy" << std::endl;
     std::cout << "2. Sredni" << std::endl;
     std::cout << "3. Trudny" << std::endl;
-    std::cout << znaki();
+    std::cout << signs();
     std::cout << "Wybierz poziom trundosci: ";
 
     int poziom_trudnosci;
@@ -66,27 +66,27 @@ int w_poziom_trudnosci() {
     return poziom_trudnosci;
 }
 
-std::string w_nazwa_weza() {
+std::string select_snake_name() {
     clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     std::string nazwa_weza;
     std::cin >> nazwa_weza;
-    //err_check(w_nazwa_weza);
+    //err_check(select_snake_name);
     std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
     wait();
     return nazwa_weza;
 }
 
-std::string w_kolor_weza() {
+std::string select_snake_color() {
     clear_console();
     std::string kolor;
-    std::cout << znaki();
+    std::cout << signs();
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "- zielony," << std::endl;
     std::cout << "- czerwony," << std::endl;
     std::cout << "- niebieski," << std::endl;
     std::cout << "- pomaranczowy." << std::endl;
-    std::cout << znaki();
+    std::cout << signs();
     std::cout << "Wybierz swoj kolor: ";
     std::cin >> kolor;
     if (kolor == "zielony") {
