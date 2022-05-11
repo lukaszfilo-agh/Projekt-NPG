@@ -1,9 +1,18 @@
 
 #include "snake.hpp"
+#include <sstream>
 
 std::string znaki(){
-    return "------------------------------------------------------";
+    std::ostringstream oss;
+    oss << "------------------------------------------------------" << std::endl;
+    return oss.str();
 }
+
+void sleep(){
+    std::cout << "Naciśnij ENTER aby kontynuowac..." << std::endl;
+    std::cin.get();
+}
+
 int w_poziom_trudnosci() {
     std::cout << znaki() << std::endl;
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -31,10 +40,8 @@ int w_poziom_trudnosci() {
 std::string w_nazwa_weza() {
     std::cout << "Podaj nazwe swojego weza: ";
     std::string nazwa_weza;
-    getch();
     std::cin >> nazwa_weza;
     std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
-
     return nazwa_weza;
 }
 
