@@ -3,7 +3,7 @@
 
 
 int main() {
-    std::string poziom_trudnosci = "1";
+    Menu_Data difficulty;
     std::string nazwa_weza = "snake";
     std::string kolor_weza = "zielony";
     std::string kolor_tla = "bialy";
@@ -15,7 +15,7 @@ int main() {
         menu_display();
         std::cin >> wybor;
         if (wybor == 2) {
-            poziom_trudnosci = select_difficulty_level();
+            select_difficulty_level();
         } else if (wybor == 3) {
             nazwa_weza = select_snake_name();
         }
@@ -40,7 +40,7 @@ int main() {
         std::cout << "Nazwa twojego weza to: " << nazwa_weza << std::endl;
         std::cout << "Kolor twojego weza to: " << kolor_weza << std::endl;
         std::cout << "Kolor twojego tla to: " << kolor_tla << std::endl;
-        std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci << std::endl;
+        std::cout << "Grasz na poziomie trudnosci nr: " << difficulty.get_int() << std::endl;
         signs();
         sleep(5); //tymczasowo
     }

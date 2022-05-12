@@ -1,5 +1,17 @@
 #include "menu.hpp"
 
+void Menu_Data::set_str(){
+    std::string temp;
+    std::cin >> temp;
+    temp = str_;
+}
+void Menu_Data::set_int() {
+    int temp;
+    std::cin >> temp;
+    temp = int_;
+}
+
+
 void signs() {
     std::cout << "------------------------------------------------------" << std::endl;
 }
@@ -45,7 +57,8 @@ void exit_game() {
     menu_wait();
 }
 
-std::string select_difficulty_level() {
+void select_difficulty_level() {
+    Menu_Data difficulty;
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -54,17 +67,16 @@ std::string select_difficulty_level() {
     std::cout << "3. Trudny" << std::endl;
     signs();
     std::cout << "Wybierz poziom trundosci: ";
-    std::string poziom_trudnosci;
-    std::cin >> poziom_trudnosci;
-    if (poziom_trudnosci == "1") {
+    difficulty.set_int();
+
+    if (difficulty.get_int() == 1) {
         std::cout << "Wybrales poziom latwy." << std::endl;
-    } else if (poziom_trudnosci == "2") {
+    } else if (difficulty.get_int() == 2) {
         std::cout << "Wybrales poziom sredni." << std::endl;
-    } else if (poziom_trudnosci == "3") {
+    } else if (difficulty.get_int() == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
     menu_wait();
-    return poziom_trudnosci;
 }
 
 std::string select_snake_name() {
