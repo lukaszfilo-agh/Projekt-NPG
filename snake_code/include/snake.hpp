@@ -6,8 +6,10 @@
 #include <windows.h>
 #include <sstream>
 #include <conio.h>
+#include <functional>
 #include "snake.hpp"
 #include "food.hpp"
+
 
 
 std::string signs();
@@ -15,11 +17,12 @@ std::string signs();
 std::string select_snake_name();
 
 std::string select_snake_color();
+
 std::string select_background_color();
 
-void wait();
+std::string select_difficulty_level();
 
-int select_difficulty_level();
+void wait(const int i);
 
 void menu_display();
 
@@ -27,6 +30,6 @@ void clear_console();
 
 void exit_game();
 
-//void err_check(std::function<std::string ()> func);
+void err_check(std::function<void (std::string)> func);
 
 #endif

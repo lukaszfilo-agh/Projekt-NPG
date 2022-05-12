@@ -8,25 +8,24 @@ std::string signs() {
 }
 
 void clear_console(){
-    std::system("cls");
+    system("cls");
 };
 
-void wait() {
-    sleep(1);
+void wait(const int i) {
+    sleep(i);
 }
 
-//void  err_check(std::function<std::string ()> func){
-//    if(std::cin.fail()){
-//        std::cin.clear();
-//        std::cin.ignore();
-//        std::cout << "Podana zła wartosc" << std::endl;
-//       func();
-//    }
+//void  err_check(std::string (func())) {
+  //  if (std::cin.fail()) {
+    //    std::cin.clear();
+     //   std::cin.ignore();
+      //  std::cout << "Podana zła wartosc" << std::endl;
+       // func();
+   // }
 //}
 
 void menu_display(){
-    clear_console();
-    std::cout << signs() << "===MENU GLOWNE===" << std::endl;
+    std::cout << signs() << "                 ===MENU GLOWNE===" << std::endl;
     std::cout << "1. Nowa Gra" << std::endl;
     std::cout << "2. Poziom Trudnosci" << std::endl;
     std::cout << "3. Nazwa weza" << std::endl;
@@ -34,17 +33,17 @@ void menu_display(){
     std::cout << "5. Kolor tla" << std::endl;
     std::cout << "6. Wyjdz z gry" << std::endl;
     std::cout << signs();
-    std::cout << "Wybierz opcje z menu: ";
+    std::cout << "Wybierz opcje z menu: " << std::endl;
 }
 
 void exit_game() {
     std::cout << "Do zobaczenia!" << std::endl;
+    wait(1);
     std::cout << "Zamykanie...";
-    wait();
+    wait(2);
 }
 
-int select_difficulty_level() {
-    clear_console();
+std::string select_difficulty_level() {
     std::cout << signs();
     std::cout << "Dostepne poziomy:" << std::endl;
     std::cout << "1. Latwy" << std::endl;
@@ -53,32 +52,34 @@ int select_difficulty_level() {
     std::cout << signs();
     std::cout << "Wybierz poziom trundosci: ";
 
-    int poziom_trudnosci;
+    std::string poziom_trudnosci;
     std::cin >> poziom_trudnosci;
-    if (poziom_trudnosci == 1) {
+    getchar();
+    if (poziom_trudnosci == "1") {
         std::cout << "Wybrales poziom latwy." << std::endl;
-    } else if (poziom_trudnosci == 2) {
+    } else if (poziom_trudnosci == "2") {
         std::cout << "Wybrales poziom sredni." << std::endl;
-    } else if (poziom_trudnosci == 3) {
+    } else if (poziom_trudnosci == "3") {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
-    wait();
+    wait(2);
+    std::cout << "Powrot do okna menu..." << std::endl << std::endl;
+    wait(1);
     return poziom_trudnosci;
 }
 
 std::string select_snake_name() {
-    clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     std::string nazwa_weza;
     std::cin >> nazwa_weza;
-    //err_check(select_snake_name);
     std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
-    wait();
+    wait(2);
+    std::cout << "Powrot do okna menu..." << std::endl << std::endl;
+    wait(1);
     return nazwa_weza;
 }
 
 std::string select_snake_color() {
-    clear_console();
     std::string kolor;
     std::cout << signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -90,20 +91,21 @@ std::string select_snake_color() {
     std::cout << "Wybierz swoj kolor: ";
     std::cin >> kolor;
     if (kolor == "zielony") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "czerwony") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "niebieski") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "pomaranczowy") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!"<< std::endl;
     }
-    wait();
+    wait(2);
+    std::cout << "Powrot do okna menu..." << std::endl << std::endl;
+    wait(1);
     return kolor;
 }
 std::string select_background_color()
 {
-    clear_console();
     std::string kolor;
     std::cout<<signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -115,16 +117,16 @@ std::string select_background_color()
     std::cout << "Wybierz swoj kolor: ";
     std::cin >> kolor;
     if (kolor == "bialy") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "czarny") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "rozowy") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     } else if (kolor == "brazowy") {
-        std::cout << "Wybrales kolor " << kolor << "!";
+        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
     }
-    wait();
+    wait(2);
+    std::cout << "Powrot do okna menu..." << std::endl << std::endl;
+    wait(1);
     return kolor;
-
-
 }
