@@ -4,13 +4,12 @@
 #include <iostream>
 #include <unistd.h>
 #include <windows.h>
-#include <sstream>
 #include <conio.h>
 #include <functional>
 
 
 
-std::string signs();
+void signs();
 
 std::string select_snake_name();
 

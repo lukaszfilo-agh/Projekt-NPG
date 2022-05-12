@@ -7,7 +7,9 @@ int main() {
     std::string nazwa_weza = "snake";
     std::string kolor_weza = "zielony";
     std::string kolor_tla = "bialy";
-    std::cout << signs() << "              ===Witaj w grze snake===" << std::endl << signs();
+    signs();
+    std::cout << "              ===Witaj w grze snake===" << std::endl;
+    signs();
     wait(2);
     int wybor = 0;
     while (wybor != 1) {
@@ -36,13 +38,13 @@ int main() {
         }
     }
     if (wybor == 1) { // rozpoczecie gry
-        std::cout << signs();
+        signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << nazwa_weza << std::endl;
         std::cout << "Kolor twojego weza to: " << kolor_weza << std::endl;
         std::cout << "Kolor twojego tla to: " << kolor_tla << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci << std::endl;
-        std::cout << signs();
+        signs();
         wait(2);
     }
 
