@@ -10,6 +10,7 @@ include_directories(include)
 
 set(SOURCE_FILES
         src/snake.cpp
-        src/food.cpp)
+        src/food.cpp
+        src/menu.cpp)
 
 add_executable(snake ${SOURCE_FILES} main.cpp)
