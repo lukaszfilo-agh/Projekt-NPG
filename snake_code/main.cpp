@@ -10,7 +10,6 @@ int main() {
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
-    wait(2);
     int wybor = 0;
     while (wybor != 1) {
         menu_display();
@@ -32,9 +31,7 @@ int main() {
         }
         else if (wybor < 1 || wybor > 6){
             std::cout << "Podano nieznana opcje!" << std::endl;
-            wait(1);
-            std::cout << "Powrot do okna menu..." << std::endl << std::endl;
-            wait(2);
+            menu_wait();
         }
     }
     if (wybor == 1) { // rozpoczecie gry
@@ -45,7 +42,7 @@ int main() {
         std::cout << "Kolor twojego tla to: " << kolor_tla << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << poziom_trudnosci << std::endl;
         signs();
-        wait(2);
+        sleep(5); //tymczasowo
     }
 
     return 0;

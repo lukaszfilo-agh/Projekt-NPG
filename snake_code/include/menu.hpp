@@ -19,7 +19,7 @@ std::string select_background_color();
 
 std::string select_difficulty_level();
 
-void wait(const int i);
+void menu_wait();
 
 void menu_display();
 
@@ -27,5 +27,6 @@ void clear_console();
 
 void exit_game();
 
-void err_check(std::function<void (std::string)> func);
+//void err_check(std::function<void (std::string)> func);
+
 #endif //SNAKE_MENU_HPP
