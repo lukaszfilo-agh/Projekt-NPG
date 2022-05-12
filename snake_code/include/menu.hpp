@@ -28,7 +28,7 @@ std::string select_snake_color();
 
 std::string select_background_color();
 
-void select_difficulty_level();
+void select_difficulty_level(Menu_Data menu_data);
 
 void menu_wait();
 

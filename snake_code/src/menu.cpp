@@ -3,12 +3,12 @@
 void Menu_Data::set_str(){
     std::string temp;
     std::cin >> temp;
-    temp = str_;
+    str_ = temp;
 }
 void Menu_Data::set_int() {
     int temp;
     std::cin >> temp;
-    temp = int_;
+    int_ = temp;
 }
 
 
@@ -57,8 +57,7 @@ void exit_game() {
     menu_wait();
 }
 
-void select_difficulty_level() {
-    Menu_Data difficulty;
+void select_difficulty_level(Menu_Data menu_data) {
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -67,13 +66,13 @@ void select_difficulty_level() {
     std::cout << "3. Trudny" << std::endl;
     signs();
     std::cout << "Wybierz poziom trundosci: ";
-    difficulty.set_int();
+    menu_data.set_int();
 
-    if (difficulty.get_int() == 1) {
+    if (menu_data.get_int() == 1) {
         std::cout << "Wybrales poziom latwy." << std::endl;
-    } else if (difficulty.get_int() == 2) {
+    } else if (menu_data.get_int() == 2) {
         std::cout << "Wybrales poziom sredni." << std::endl;
-    } else if (difficulty.get_int() == 3) {
+    } else if (menu_data.get_int() == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
     menu_wait();

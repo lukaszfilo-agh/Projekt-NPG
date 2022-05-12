@@ -3,7 +3,7 @@
 
 
 int main() {
-    Menu_Data difficulty;
+    Menu_Data difficulty("",1);
     std::string nazwa_weza = "snake";
     std::string kolor_weza = "zielony";
     std::string kolor_tla = "bialy";
@@ -15,7 +15,7 @@ int main() {
         menu_display();
         std::cin >> wybor;
         if (wybor == 2) {
-            select_difficulty_level();
+            select_difficulty_level(difficulty);
         } else if (wybor == 3) {
             nazwa_weza = select_snake_name();
         }
