@@ -154,15 +154,8 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     menuData.set_background_color();
     clear_console();
     signs();
-    if (menuData.get_background_color() == 1) {
-        std::cout << "Wybrales kolor czarny!" << std::endl;
-    } else if (menuData.get_background_color() == 2) {
-        std::cout << "Wybrales kolor bialy!" << std::endl;
-    } else if (menuData.get_background_color() == 3) {
-        std::cout << "Wybrales kolor rozowy!" << std::endl;
-    } else if (menuData.get_background_color() == 4) {
-        std::cout << "Wybrales kolor brazowy!" << std::endl;
-    }
+    std::cout << "Wybrales kolor ";
+    std::cout << menuData.get_background_color_map(menuData.get_background_color()) << "!" << std::endl;
     signs();
     menu_wait();
 }
