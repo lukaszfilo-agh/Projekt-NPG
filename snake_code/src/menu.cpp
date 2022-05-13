@@ -123,8 +123,8 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "1. czarny,," << std::endl;
-    std::cout << "1. bialy," << std::endl;
+    std::cout << "1. czarny," << std::endl;
+    std::cout << "2. bialy," << std::endl;
     std::cout << "2. rozowy," << std::endl;
     std::cout << "3. brazowy." << std::endl;
     signs();
