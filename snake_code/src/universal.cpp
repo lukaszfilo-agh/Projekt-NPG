@@ -11,16 +11,20 @@ void clear_console() {
     system("cls");
 }
 
-void menu_wait() {               // domyslne oczekiwanie z informacja
+void menu_wait() {// domyslne oczekiwanie z informacja
+    signs();
     std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
+    signs();
     std::cin.ignore();
     std::cin.get();
+    signs();
     std::cout << "Powrot do okna menu..." << std::endl;
+    signs();
     sleep(1);
 }
 
-void normal_wait() {       // samo oczekiwanie z wyborem czasu trwania
-    sleep(1);
+void normal_wait(const int i) {       // samo oczekiwanie z wyborem czasu trwania
+    sleep(i);
     signs();
     std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
     signs();
