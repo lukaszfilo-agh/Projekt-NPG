@@ -1,8 +1,9 @@
 #include "menu.hpp"
-//--------------------------------------------------------------------------------------------------------
+#include "universal.hpp"
+#include <unistd.h>
 // PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void whole_menu(){
+void whole_menu() {
     MenuData menuData;  // wszystkie domyslne dane znajduja sie w tym obiekcie
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
@@ -10,19 +11,20 @@ void whole_menu(){
 
     // choice obsluguje wyboru w menu
 
-     if(choice(menuData) == 1) {   // warunek rozpoczecia gry
-         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
-         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
-         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
-         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
-         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
-         signs();
-         sleep(2); //tymczasowo. Edit : zmieniono
-     }
+    if (choice(menuData) == 1) {   // warunek rozpoczecia gry
+        std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
+        std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
+        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
+        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
+        std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
+        signs();
+        sleep(2); //tymczasowo. Edit : zmieniono
+    }
 
 
 }
-void menu_display(){                       // wyswiwetlanie opcji w menu
+
+void menu_display() {                       // wyswiwetlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -36,7 +38,7 @@ void menu_display(){                       // wyswiwetlanie opcji w menu
     std::cout << "Wybierz opcje z menu: " << std::endl;
 }
 
-int choice(MenuData& menuData){                    // wybory w menu
+int choice(MenuData &menuData) {                    // wybory w menu
     int wybor = 0;
     while (wybor != 1) {
         menu_display();                            // wyswietlanie menu
@@ -45,17 +47,14 @@ int choice(MenuData& menuData){                    // wybory w menu
             select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (wybor == 3) {
             select_snake_name(menuData);           // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        }
-        else if (wybor == 4) {
+        } else if (wybor == 4) {
             select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        }
-        else if(wybor == 5) {
+        } else if (wybor == 5) {
             select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        }
-        else if (wybor == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (COS NIE DZIALA TAK JAK POWINNO) !!!!!!!!!!!!!!
+        } else if (wybor ==
+                   6) {                     // !!!!!!!!!!!!! wyjscie z menu (COS NIE DZIALA TAK JAK POWINNO) !!!!!!!!!!!!!!
             exit_game();
-        }
-        else if (wybor < 1 || wybor > 6){                         // podanie złej opcji konczy sie zakonczeniem gry
+        } else if (wybor < 1 || wybor > 6) {                         // podanie złej opcji konczy sie zakonczeniem gry
             std::cout << "Podano nieznana opcje!" << std::endl;
             menu_wait();
         }
@@ -63,7 +62,8 @@ int choice(MenuData& menuData){                    // wybory w menu
     return wybor;
 
 }
-void select_difficulty_level(MenuData& menuData) {             // obsluguje wybor poziomu trudnosci
+
+void select_difficulty_level(MenuData &menuData) {             // obsluguje wybor poziomu trudnosci
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -76,17 +76,15 @@ void select_difficulty_level(MenuData& menuData) {             // obsluguje wybo
 
     if (menuData.get_diff_level() == 1) {
         std::cout << "Wybrales poziom latwy." << std::endl;
-    }
-    else if (menuData.get_diff_level()  == 2) {
+    } else if (menuData.get_diff_level() == 2) {
         std::cout << "Wybrales poziom sredni." << std::endl;
-    }
-    else if (menuData.get_diff_level()  == 3) {
+    } else if (menuData.get_diff_level() == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
     menu_wait();
 }
 
-void select_snake_name(MenuData& menuData) {               // obsluguje wybor nazwy weza
+void select_snake_name(MenuData &menuData) {               // obsluguje wybor nazwy weza
     clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     menuData.set_snake_name();
@@ -94,7 +92,7 @@ void select_snake_name(MenuData& menuData) {               // obsluguje wybor na
     menu_wait();
 }
 
-void select_snake_color(MenuData& menuData) {             // obsluguje wybor koloru weza
+void select_snake_color(MenuData &menuData) {             // obsluguje wybor koloru weza
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -107,20 +105,17 @@ void select_snake_color(MenuData& menuData) {             // obsluguje wybor kol
     menuData.set_snake_color();
     if (menuData.get_snake_color() == "zielony") {
         std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    }
-    else if (menuData.get_snake_color() == "czerwony"){
+    } else if (menuData.get_snake_color() == "czerwony") {
         std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    }
-    else if (menuData.get_snake_color() == "niebieski"){
+    } else if (menuData.get_snake_color() == "niebieski") {
         std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    }
-    else if (menuData.get_snake_color() == "pomaranczowy"){
-        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!"<< std::endl;
+    } else if (menuData.get_snake_color() == "pomaranczowy") {
+        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
     }
     menu_wait();
 }
 
-void select_background_color(MenuData& menuData){             // obsluguje wybor koloru tla
+void select_background_color(MenuData &menuData) {             // obsluguje wybor koloru tla
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;

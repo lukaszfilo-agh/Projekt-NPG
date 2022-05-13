@@ -1,5 +1,8 @@
+#include "universal.hpp"
+#include <iostream>
+#include <unistd.h>
+#include <functional>
 
-#include "menu.hpp"
 //-----------------------------------------------------------------
 // Ponizej funckje uniwersanlne
 
@@ -16,7 +19,7 @@ void signs() {
     std::cout << "------------------------------------------------------" << std::endl;
 }
 
-void clear_console(){
+void clear_console() {
     system("cls");
 }
 
@@ -26,6 +29,6 @@ void menu_wait() {               // domyslne oczekiwanie z informacja
     sleep(1);
 }
 
-void normal_wait(int i){       // samo oczekiwanie z wyborem czasu trwania
+void normal_wait(int i) {       // samo oczekiwanie z wyborem czasu trwania
     sleep(i);
 }
