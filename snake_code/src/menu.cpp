@@ -36,7 +36,7 @@ void menu(MenuData menuData) {
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
-        std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
+        std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y() << std::endl;
         std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
         signs();
         std::cin.ignore();
@@ -158,25 +158,13 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
 void select_size(MenuData &menuData) {               // rozmiar planszy
     clear_console();
     signs();
-    std::cout << "Dostepne rozmiary planszy: "<< std::endl;
-    std::cout << "1. 10 X 10," << std::endl;
-    std::cout << "2. 20 X 20," << std::endl;
-    std::cout << "3. 30 X 30," << std::endl;
-    std::cout << "4. 40 X 40." << std::endl;
-    signs();
-    std::cout << "Wybierz rozmiar planszy: ";
-    menuData.set_size();
+    std::cout << "Wybierz szerokosc planszy: ";
+    menuData.set_size_x();
+    std::cout << "Wybierz wysokosc planszy: ";
+    menuData.set_size_y();
     clear_console();
     signs();
-    if (menuData.get_size() == 1) {
-        std::cout << "Wybrales rozmiar 10 X 10." << std::endl;
-    }else if (menuData.get_size() == 2) {
-        std::cout << "Wybrales rozmiar 20 X 20." << std::endl;
-    } else if (menuData.get_size() == 3) {
-        std::cout << "Wybrales rozmiar 30 X 30." << std::endl;
-    } else if (menuData.get_size() == 4) {
-        std::cout << "Wybrales rozmiar 40 X 40." << std::endl;
-    }
+    std::cout << "Wybrales rozmiar: " << menuData.get_size_x() << " X " << menuData.get_size_y() << std::endl;
     signs();
     menu_wait();
 }

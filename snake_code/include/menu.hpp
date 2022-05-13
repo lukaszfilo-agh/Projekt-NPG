@@ -7,9 +7,9 @@
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
     MenuData(const int diff_level = 1, const std::string &snake_name = "snake",
-             const int &snake_color = 1, const int &background_color = 1, const int &size = 1, const int &board = 1)
+             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 10, const int &size_y = 10, const int &board = 1)
             : diff_level_(diff_level), snake_name_(snake_name), snake_color_(snake_color),
-              background_color_(background_color), size_(size) , board_(board) {}; // konstruktor domyslny
+              background_color_(background_color), size_x_(size_x), size_y_(size_y), board_(board) {}; // konstruktor domyslny
 
     int get_diff_level() const { return diff_level_; }
 
@@ -19,7 +19,9 @@ public:
 
     int get_background_color() const { return background_color_; }
 
-    int get_size () const { return size_;}
+    int get_size_x () const { return size_x_;}
+
+    int get_size_y () const { return size_y_;}
 
     int get_board() const { return board_;}
 
@@ -33,14 +35,17 @@ public:
 
     void set_board() { board_ = read<int>(); }
 
-    void set_size() { size_ = read<int>(); }
+    void set_size_x() { size_x_ = read<int>(); }
+
+    void set_size_y() { size_y_ = read<int>();}
 
 private:
     int diff_level_;
     std::string snake_name_;
     int snake_color_;
     int background_color_;
-    int size_;
+    int size_x_;
+    int size_y_;
     int board_;
 
 };
