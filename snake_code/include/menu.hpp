@@ -2,6 +2,7 @@
 #define SNAKE_MENU_HPP
 
 #include <iostream>
+#include "universal.hpp"
 
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
@@ -18,13 +19,13 @@ public:
 
     std::string get_background_color() const { return background_color_; }
 
-    void set_diff_level() { std::cin >> diff_level_; }
+    void set_diff_level() { diff_level_ = read<int>(); }
 
-    void set_snake_name() { std::cin >> snake_name_; }               // settery
+    void set_snake_name() { snake_name_ = read<std::string>(); }               // settery
 
-    void set_snake_color() { std::cin >> snake_color_; }
+    void set_snake_color() { snake_color_ = read<std::string>(); }
 
-    void set_background_color() { std::cin >> background_color_; }
+    void set_background_color() { background_color_ = read<std::string>(); }
 
 private:
     int diff_level_;
