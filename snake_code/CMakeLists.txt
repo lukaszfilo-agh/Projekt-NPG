@@ -12,6 +12,7 @@ set(SOURCE_FILES
         src/snake.cpp
         src/food.cpp
         src/menu.cpp
-        src/universal.cpp)
+        src/universal.cpp
+        src/game.cpp)
 
 add_executable(snake ${SOURCE_FILES} main.cpp)

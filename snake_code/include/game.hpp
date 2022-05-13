@@ -1,0 +1,4 @@
+#ifndef SNAKE_GAME_HPP
+#define SNAKE_GAME_HPP
+
+#endif //SNAKE_GAME_HPP
