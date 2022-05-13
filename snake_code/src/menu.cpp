@@ -4,10 +4,6 @@
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
-    signs();
-    std::cout << "              ===Witaj w grze snake===" << std::endl;
-    signs();
-
     int choice = 0;
     while (choice != 1 && choice != 6) {
         menu_display();                            // wyswietlanie menu
@@ -41,6 +37,13 @@ void menu(MenuData menuData) {
     } else if (choice == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
         exit_game();
     }
+}
+
+void welcome_message() {
+    signs();
+    std::cout << "              ===Witaj w grze snake===" << std::endl;
+    signs();
+    normal_wait(1);
 }
 
 void menu_display() {                       // wyswiwetlanie opcji w menu
