@@ -41,7 +41,7 @@ void menu(MenuData menuData) {
         signs();
         std::cin.ignore();
         normal_wait(1);
-    } else if (choice == 7) {                     // wyjscie z menu
+    } else if (choice == 8) {                     // wyjscie z menu
         exit_game();
     }
 }
