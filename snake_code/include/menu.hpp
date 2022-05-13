@@ -43,6 +43,10 @@ public:
 
     void set_size_y() { size_y_ = read<int>(); }
 
+    std::string get_diff_level_map(int index) const { return diff_level_map_.at(index); };
+
+    void print_background_diff_level_map();
+
     std::string get_snake_color_map(int index) const { return snake_colors_.at(index); };
 
     void print_snake_color_map();
@@ -63,6 +67,7 @@ private:
     int size_x_;
     int size_y_;
     int board_;
+    const static std::map<int, std::string> diff_level_map_;
     const static std::map<int, std::string> snake_colors_;
     const static std::map<int, std::string> background_colors_;
     const static std::map<int, std::string> board_chars_;
