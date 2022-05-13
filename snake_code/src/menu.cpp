@@ -8,7 +8,7 @@ void menu(MenuData menuData) {
     while (choice != 1 && choice != 7) {
 
         menu_display();                            // wyswietlanie menu
-        std::cin >> choice;
+        choice = read<int>();
         if (choice == 2) {
             select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 3) {
