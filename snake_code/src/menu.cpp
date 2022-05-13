@@ -35,7 +35,7 @@ void menu(MenuData menuData) {
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
         signs();
         sleep(2); //tymczasowo. Edit : zmieniono
-    } else if (choice == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
+    } else if (choice == 6) {                     // wyjscie z gry
         exit_game();
     }
 }
@@ -44,7 +44,7 @@ void welcome_message() {
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
-    normal_wait(1);
+    normal_wait();
 }
 
 void menu_display() {                       // wyswiwetlanie opcji w menu
@@ -142,5 +142,5 @@ void exit_game() {                                  // opuszczanie menu
     std::cout << "Do zobaczenia!" << std::endl;
     std::cout << "Zamykanie..." << std::endl;
     signs();
-    normal_wait(1);
+    normal_wait();
 }
