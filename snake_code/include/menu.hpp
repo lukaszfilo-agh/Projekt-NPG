@@ -39,8 +39,6 @@ void whole_menu();                                                       // calo
 
 void menu_display();                                                     // wyswietlanie opcji w menu
 
-int choice(MenuData &menuData);                                          // obsluga wyborów opcji
-
 void select_difficulty_level(MenuData &menuData);                        // wybor poziomu trudnosci
 
 void select_snake_name(MenuData &menuData);                              // wybor nazwy weza

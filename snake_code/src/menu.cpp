@@ -9,9 +9,24 @@ void whole_menu() {
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
 
-    // choice obsluguje wyboru w menu
-
-    if (choice(menuData) == 1) {   // warunek rozpoczecia gry
+    int choice = 0;
+    while (choice != 1 && choice != 6) {
+        menu_display();                            // wyswietlanie menu
+        std::cin >> choice;
+        if (choice == 2) {
+            select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        } else if (choice == 3) {
+            select_snake_name(menuData);           // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        } else if (choice == 4) {
+            select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        } else if (choice == 5) {
+            select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        } else if (choice < 1 || choice > 6) {                         // podanie złej opcji konczy sie zakonczeniem gry
+            std::cout << "Podano nieznana opcje!" << std::endl;
+            menu_wait();
+        }
+    }
+    if (choice == 1) {   // warunek rozpoczecia gry
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
@@ -19,9 +34,9 @@ void whole_menu() {
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
         signs();
         sleep(2); //tymczasowo. Edit : zmieniono
+    } else if (choice == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
+        exit_game();
     }
-
-
 }
 
 void menu_display() {                       // wyswiwetlanie opcji w menu
@@ -35,32 +50,7 @@ void menu_display() {                       // wyswiwetlanie opcji w menu
     std::cout << "5. Kolor tla" << std::endl;
     std::cout << "6. Wyjdz z gry" << std::endl;
     signs();
-    std::cout << "Wybierz opcje z menu: " << std::endl;
-}
-
-int choice(MenuData &menuData) {                    // wybory w menu
-    int wybor = 0;
-    while (wybor != 1) {
-        menu_display();                            // wyswietlanie menu
-        std::cin >> wybor;
-        if (wybor == 2) {
-            select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if (wybor == 3) {
-            select_snake_name(menuData);           // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if (wybor == 4) {
-            select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if (wybor == 5) {
-            select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if (wybor ==
-                   6) {                     // !!!!!!!!!!!!! wyjscie z menu (COS NIE DZIALA TAK JAK POWINNO) !!!!!!!!!!!!!!
-            exit_game();
-        } else if (wybor < 1 || wybor > 6) {                         // podanie złej opcji konczy sie zakonczeniem gry
-            std::cout << "Podano nieznana opcje!" << std::endl;
-            menu_wait();
-        }
-    }
-    return wybor;
-
+    std::cout << "Wybierz opcje z menu: ";
 }
 
 void select_difficulty_level(MenuData &menuData) {             // obsluguje wybor poziomu trudnosci
