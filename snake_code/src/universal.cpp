@@ -1,9 +1,6 @@
 #include "universal.hpp"
 #include <iostream>
 #include <unistd.h>
-#include <functional>
-
-//-----------------------------------------------------------------
 // Ponizej funckje uniwersanlne
 
 void signs() {
