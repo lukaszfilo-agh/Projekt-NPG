@@ -27,6 +27,6 @@ void clear_console();       // czyszczenie konsoli
 
 void menu_wait();                // sleep domyslny z informacja
 
-void normal_wait(int i);         // sleep do wyboru czasu oczekiwania
+void normal_wait();         // oczekiwanie na enter poza menu
 
 #endif
