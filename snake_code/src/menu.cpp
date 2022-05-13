@@ -75,9 +75,9 @@ void select_difficulty_level(MenuData &menuData) {             // obsluguje wybo
     std::cout << "3. Trudny" << std::endl;
     signs();
     std::cout << "Wybierz poziom trudnosci: ";
-
     menuData.set_diff_level();
-
+    clear_console();
+    signs();
     if (menuData.get_diff_level() == 1) {
         std::cout << "Wybrales poziom latwy." << std::endl;
     } else if (menuData.get_diff_level() == 2) {
@@ -85,6 +85,7 @@ void select_difficulty_level(MenuData &menuData) {             // obsluguje wybo
     } else if (menuData.get_diff_level() == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
+    signs();
     menu_wait();
 }
 
@@ -92,7 +93,10 @@ void select_snake_name(MenuData &menuData) {               // obsluguje wybor na
     clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     menuData.set_snake_name();
+    clear_console();
+    signs();
     std::cout << "Twoj waz to: " << menuData.get_snake_name() << std::endl;
+    signs();
     menu_wait();
 }
 
@@ -107,6 +111,8 @@ void select_snake_color(MenuData &menuData) {             // obsluguje wybor kol
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_snake_color();
+    clear_console();
+    signs();
     if (menuData.get_snake_color() == 1) {
         std::cout << "Wybrales kolor zielony!" << std::endl;
     } else if (menuData.get_snake_color() == 2) {
@@ -116,6 +122,7 @@ void select_snake_color(MenuData &menuData) {             // obsluguje wybor kol
     } else if (menuData.get_snake_color() == 4) {
         std::cout << "Wybrales kolor pomaranczowy!" << std::endl;
     }
+    signs();
     menu_wait();
 }
 
@@ -125,11 +132,13 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "1. czarny," << std::endl;
     std::cout << "2. bialy," << std::endl;
-    std::cout << "2. rozowy," << std::endl;
-    std::cout << "3. brazowy." << std::endl;
+    std::cout << "3. rozowy," << std::endl;
+    std::cout << "4. brazowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_background_color();
+    clear_console();
+    signs();
     if (menuData.get_background_color() == 1) {
         std::cout << "Wybrales kolor czarny!" << std::endl;
     } else if (menuData.get_background_color() == 2) {
@@ -139,6 +148,7 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     } else if (menuData.get_background_color() == 4) {
         std::cout << "Wybrales kolor brazowy!" << std::endl;
     }
+    signs();
     menu_wait();
 }
 void select_size(MenuData &menuData) {               // rozmiar planszy
@@ -152,6 +162,8 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     signs();
     std::cout << "Wybierz rozmiar planszy: ";
     menuData.set_size();
+    clear_console();
+    signs();
     if (menuData.get_size() == 1) {
         std::cout << "Wybrales rozmiar 10 X 10." << std::endl;
     }else if (menuData.get_size() == 2) {
@@ -161,6 +173,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     } else if (menuData.get_size() == 4) {
         std::cout << "Wybrales rozmiar 40 X 40." << std::endl;
     }
+    signs();
     menu_wait();
 }
 
