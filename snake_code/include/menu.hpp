@@ -1,7 +1,7 @@
 #ifndef SNAKE_MENU_HPP
 #define SNAKE_MENU_HPP
+
 #include <iostream>
-//void err_check(std::function<void (std::string)> func);  // DO ZROBIENIA
 
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
@@ -37,7 +37,7 @@ private:
 
 void welcome_message();
 
-void menu(MenuData menuData);                                                       // calosciowa obsluga menu
+void menu(MenuData menuData);                                            // calosciowa obsluga menu
 
 void menu_display();                                                     // wyswietlanie opcji w menu
 

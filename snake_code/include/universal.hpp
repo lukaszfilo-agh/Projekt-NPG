@@ -8,4 +8,7 @@ void clear_console();       // czyszczenie konsoli
 void menu_wait();                // sleep domyslny z informacja
 
 void normal_wait(int i);         // sleep do wyboru czasu oczekiwania
+
+//void err_check();  // DO ZROBIENIA
+
 #endif

@@ -6,13 +6,9 @@
 //-----------------------------------------------------------------
 // Ponizej funckje uniwersanlne
 
-//void  err_check(std::string (func())) {             // DO ZROBIENIA
-//  if (std::cin.fail()) {
-//    std::cin.clear();
-//   std::cin.ignore();
-//  std::cout << "Podana zła wartosc" << std::endl;
-// func();
-// }
+//void err_check() {             // DO ZROBIENIA
+//
+//    }
 //}
 
 void signs() {

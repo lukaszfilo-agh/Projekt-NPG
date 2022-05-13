@@ -6,6 +6,7 @@
 void menu(MenuData menuData) {
     int choice = 0;
     while (choice != 1 && choice != 6) {
+
         menu_display();                            // wyswietlanie menu
         std::cin >> choice;
         if (choice == 2) {
@@ -69,6 +70,7 @@ void select_difficulty_level(MenuData &menuData) {             // obsluguje wybo
     std::cout << "3. Trudny" << std::endl;
     signs();
     std::cout << "Wybierz poziom trudnosci: ";
+
     menuData.set_diff_level();
 
     if (menuData.get_diff_level() == 1) {
@@ -141,4 +143,3 @@ void exit_game() {                                  // opuszczanie menu
     std::cout << "Zamykanie...";
     normal_wait(1);
 }
-
