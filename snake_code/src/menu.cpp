@@ -37,6 +37,7 @@ void menu(MenuData menuData) {
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
+        std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
         signs();
         std::cin.ignore();
         normal_wait(1);
