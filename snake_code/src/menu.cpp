@@ -39,11 +39,7 @@ void menu(MenuData menuData) {
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
         signs();
         sleep(2); //tymczasowo. Edit : zmieniono
-<<<<<<< HEAD
     } else if (choice == 7) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
-=======
-    } else if (choice == 6) {                     // wyjscie z gry
->>>>>>> 9d5ed784128c3bc3987b1bfde763bb5cf3ea200d
         exit_game();
     }
 }
@@ -154,7 +150,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     std::cout << "3. 30 X 30," << std::endl;
     std::cout << "4. 40 X 40," << std::endl;
     signs();
-    std::cout << "Wybierz rozmiar planszy: "<< std::endl;
+    std::cout << "Wybierz rozmiar planszy: ";
     menuData.set_size();
     if (menuData.get_size() == 1) {
         std::cout << "Wybrales rozmiar 10 X 10." << std::endl;

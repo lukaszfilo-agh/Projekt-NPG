@@ -7,11 +7,7 @@
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
     MenuData(const int diff_level = 1, const std::string &snake_name = "snake",
-<<<<<<< HEAD
-             const std::string &snake_color = "zielony", const std::string &background_color = "bialy", const int size = 1)
-=======
-             const int &snake_color = 1, const int &background_color = 1)
->>>>>>> 9d5ed784128c3bc3987b1bfde763bb5cf3ea200d
+             const int &snake_color = 1, const int &background_color = 1, const int size = 1)
             : diff_level_(diff_level), snake_name_(snake_name), snake_color_(snake_color),
               background_color_(background_color), size_(size) {}; // konstruktor domyslny
 
@@ -38,14 +34,10 @@ public:
 private:
     int diff_level_;
     std::string snake_name_;
-<<<<<<< HEAD
-    std::string snake_color_;
-    std::string background_color_;
-    int size_;
-=======
     int snake_color_;
     int background_color_;
->>>>>>> 9d5ed784128c3bc3987b1bfde763bb5cf3ea200d
+    int size_;
+
 };
 
 // PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
