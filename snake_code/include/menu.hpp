@@ -7,9 +7,9 @@
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
     MenuData(const int diff_level = 1, const std::string &snake_name = "snake",
-             const int &snake_color = 1, const int &background_color = 1, const int size = 1)
+             const int &snake_color = 1, const int &background_color = 1, const int size = 1, const int &board = 1)
             : diff_level_(diff_level), snake_name_(snake_name), snake_color_(snake_color),
-              background_color_(background_color), size_(size) {}; // konstruktor domyslny
+              background_color_(background_color), size_(size) , board_(board) {}; // konstruktor domyslny
 
     int get_diff_level() const { return diff_level_; }
 
