@@ -1,41 +1,28 @@
 #include "menu.hpp"
+//--------------------------------------------------------------------------------------------------------
+// PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void Menu_Data::set_str(){
-    std::string temp;
-    std::cin >> temp;
-    str_ = temp;
+void whole_menu(){
+    MenuData menuData;  // wszystkie domyslne dane znajduja sie w tym obiekcie
+    signs();
+    std::cout << "              ===Witaj w grze snake===" << std::endl;
+    signs();
+
+    // choice obsluguje wyboru w menu
+
+     if(choice(menuData) == 1) {   // warunek rozpoczecia gry
+         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
+         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
+         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
+         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
+         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
+         signs();
+         sleep(2); //tymczasowo. Edit : zmieniono
+     }
+
+
 }
-void Menu_Data::set_int() {
-    int temp;
-    std::cin >> temp;
-    int_ = temp;
-}
-
-
-void signs() {
-    std::cout << "------------------------------------------------------" << std::endl;
-}
-
-void clear_console(){
-    system("cls");
-}
-
-void menu_wait() {
-    sleep(2);
-    std::cout << "Powrot do okna menu..." << std::endl << std::endl;
-    sleep(1);
-}
-
-//void  err_check(std::string (func())) {
-//  if (std::cin.fail()) {
-//    std::cin.clear();
-//   std::cin.ignore();
-//  std::cout << "Podana zła wartosc" << std::endl;
-// func();
-// }
-//}
-
-void menu_display(){
+void menu_display(){                       // wyswiwetlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -49,15 +36,34 @@ void menu_display(){
     std::cout << "Wybierz opcje z menu: " << std::endl;
 }
 
-void exit_game() {
-    clear_console();
-    std::cout << "Do zobaczenia!" << std::endl;
-    menu_wait();
-    std::cout << "Zamykanie...";
-    menu_wait();
-}
+int choice(MenuData& menuData){                    // wybory w menu
+    int wybor = 0;
+    while (wybor != 1) {
+        menu_display();                            // wyswietlanie menu
+        std::cin >> wybor;
+        if (wybor == 2) {
+            select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        } else if (wybor == 3) {
+            select_snake_name(menuData);           // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        }
+        else if (wybor == 4) {
+            select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        }
+        else if(wybor == 5) {
+            select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+        }
+        else if (wybor == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (COS NIE DZIALA TAK JAK POWINNO) !!!!!!!!!!!!!!
+            exit_game();
+        }
+        else if (wybor < 1 || wybor > 6){                         // podanie złej opcji konczy sie zakonczeniem gry
+            std::cout << "Podano nieznana opcje!" << std::endl;
+            menu_wait();
+        }
+    }
+    return wybor;
 
-void select_difficulty_level(Menu_Data menu_data) {
+}
+void select_difficulty_level(MenuData& menuData) {             // obsluguje wybor poziomu trudnosci
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -65,32 +71,31 @@ void select_difficulty_level(Menu_Data menu_data) {
     std::cout << "2. Sredni" << std::endl;
     std::cout << "3. Trudny" << std::endl;
     signs();
-    std::cout << "Wybierz poziom trundosci: ";
-    menu_data.set_int();
+    std::cout << "Wybierz poziom trudnosci: ";
+    menuData.set_diff_level();
 
-    if (menu_data.get_int() == 1) {
+    if (menuData.get_diff_level() == 1) {
         std::cout << "Wybrales poziom latwy." << std::endl;
-    } else if (menu_data.get_int() == 2) {
+    }
+    else if (menuData.get_diff_level()  == 2) {
         std::cout << "Wybrales poziom sredni." << std::endl;
-    } else if (menu_data.get_int() == 3) {
+    }
+    else if (menuData.get_diff_level()  == 3) {
         std::cout << "Wybrales poziom trudny." << std::endl;
     }
     menu_wait();
 }
 
-std::string select_snake_name() {
+void select_snake_name(MenuData& menuData) {               // obsluguje wybor nazwy weza
     clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
-    std::string nazwa_weza;
-    std::cin >> nazwa_weza;
-    std::cout << "Twoj waz to: " << nazwa_weza << std::endl;
+    menuData.set_snake_name();
+    std::cout << "Twoj waz to: " << menuData.get_snake_name() << std::endl;
     menu_wait();
-    return nazwa_weza;
 }
 
-std::string select_snake_color() {
+void select_snake_color(MenuData& menuData) {             // obsluguje wybor koloru weza
     clear_console();
-    std::string kolor;
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "- zielony," << std::endl;
@@ -99,23 +104,24 @@ std::string select_snake_color() {
     std::cout << "- pomaranczowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
-    std::cin >> kolor;
-    if (kolor == "zielony") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "czerwony") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "niebieski") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "pomaranczowy") {
-        std::cout << "Wybrales kolor " << kolor << "!"<< std::endl;
+    menuData.set_snake_color();
+    if (menuData.get_snake_color() == "zielony") {
+        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
+    }
+    else if (menuData.get_snake_color() == "czerwony"){
+        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
+    }
+    else if (menuData.get_snake_color() == "niebieski"){
+        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
+    }
+    else if (menuData.get_snake_color() == "pomaranczowy"){
+        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!"<< std::endl;
     }
     menu_wait();
-    return kolor;
 }
-std::string select_background_color()
-{
+
+void select_background_color(MenuData& menuData){             // obsluguje wybor koloru tla
     clear_console();
-    std::string kolor;
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "- bialy," << std::endl;
@@ -124,17 +130,23 @@ std::string select_background_color()
     std::cout << "- brazowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
-    std::cin >> kolor;
-    if (kolor == "bialy") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "czarny") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "rozowy") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
-    } else if (kolor == "brazowy") {
-        std::cout << "Wybrales kolor " << kolor << "!" << std::endl;
+    menuData.set_background_color();
+    if (menuData.get_background_color() == "bialy") {
+        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
+    } else if (menuData.get_background_color() == "czarny") {
+        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
+    } else if (menuData.get_background_color() == "rozowy") {
+        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
+    } else if (menuData.get_background_color() == "brazowy") {
+        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
     }
     menu_wait();
-    return kolor;
+}
+
+void exit_game() {                                  // opuszczanie menu
+    std::cout << "Do zobaczenia!" << std::endl;
+    normal_wait(1);
+    std::cout << "Zamykanie...";
+    normal_wait(1);
 }
 
