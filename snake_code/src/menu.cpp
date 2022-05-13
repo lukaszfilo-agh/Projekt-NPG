@@ -2,6 +2,7 @@
 #include "universal.hpp"
 
 // wypelnienie map
+
 const std::map<int, std::string> MenuData::snake_colors_ = {{1, "zielony"},
                                                             {2, "czerwony"},
                                                             {3, "niebieski"},
@@ -16,11 +17,18 @@ const std::map<int, std::string> MenuData::board_chars_ = {{1, "#"},
                                                            {3, "*"},
                                                            {4, "&"}};
 
-const std::map<int, std::string> MenuData::diff_level_map_ = {{1,"Latwy"},
-                                                              {2,"Sredni"},
-                                                              {3,"Trudny"}};
+const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},
+                                                        {2, "Sredni"},
+                                                        {3, "Trudny"}};
 
 //wypisywanie map
+
+void MenuData::print_background_diff_map() {
+    for (auto const &pair: diff_map_) {
+        std::cout << pair.first << ". " << pair.second << std::endl;
+    }
+}
+
 void MenuData::print_background_color_map() {
     for (auto const &pair: background_colors_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
@@ -33,17 +41,12 @@ void MenuData::print_snake_color_map() {
     }
 }
 
-void MenuData::print_board_chars_map(){
+void MenuData::print_board_chars_map() {
     for (auto const &pair: board_chars_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
 
-void MenuData::print_background_diff_level_map(){
-    for (auto const &pair: diff_level_map_) {
-        std::cout << pair.first << ". " << pair.second << std::endl;
-    }
-};
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
@@ -76,7 +79,8 @@ void menu(MenuData menuData) {
         clear_console();
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
-        std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level_map(menuData.get_diff_level()) << std::endl;
+        std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_map(menuData.get_diff())
+                  << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color_map(menuData.get_snake_color()) << std::endl;
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color_map(menuData.get_background_color())
@@ -119,13 +123,13 @@ void select_difficulty_level(MenuData &menuData) {             // obsluguje wybo
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
-    menuData.print_background_diff_level_map();
+    menuData.print_background_diff_map();
     signs();
     std::cout << "Wybierz poziom trudnosci: ";
-    menuData.set_diff_level();
+    menuData.set_diff();
     clear_console();
     signs();
-    std::cout << "Wybrales poziom " << menuData.get_diff_level_map(menuData.get_diff_level()) << std::endl;
+    std::cout << "Wybrales poziom " << menuData.get_diff_map(menuData.get_diff()) << std::endl;
     signs();
     menu_wait();
 }
