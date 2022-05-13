@@ -38,7 +38,8 @@ void menu(MenuData menuData) {
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
         signs();
-        sleep(3); //tymczasowo. Edit : zmieniono
+        std::cin.ignore();
+        normal_wait(1);
     } else if (choice == 7) {                     // wyjscie z menu
         exit_game();
     }
