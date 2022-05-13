@@ -138,8 +138,9 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
 }
 
 void exit_game() {                                  // opuszczanie menu
+    signs();
     std::cout << "Do zobaczenia!" << std::endl;
-    normal_wait(1);
-    std::cout << "Zamykanie...";
+    std::cout << "Zamykanie..." << std::endl;
+    signs();
     normal_wait(1);
 }
