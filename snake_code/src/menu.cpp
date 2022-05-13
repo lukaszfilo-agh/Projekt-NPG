@@ -5,7 +5,6 @@
 void menu(MenuData menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
-
         menu_display();                            // wyswietlanie menu
         choice = read<int>();
         if (choice == 2) {
@@ -16,11 +15,11 @@ void menu(MenuData menuData) {
             select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 5) {
             select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if(choice == 6) {
+        } else if (choice == 6) {
             select_size(menuData);
-        } else if(choice == 7) {
+        } else if (choice == 7) {
             select_board(menuData);
-        } else if (choice < 1 || choice > 8) {                         // podanie złej opcji konczy sie zakonczeniem gry
+        } else {                         // podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -36,12 +35,13 @@ void menu(MenuData menuData) {
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
-        std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y() << std::endl;
+        std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y()
+                  << std::endl;
         std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
         signs();
         std::cin.ignore();
         normal_wait(1);
-    } else if (choice == 8) {                     // wyjscie z menu
+    } else {                     // wyjscie z menu
         exit_game();
     }
 }
@@ -168,10 +168,11 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     signs();
     menu_wait();
 }
-void select_board(MenuData &menuData){                     //wybor mapy
+
+void select_board(MenuData &menuData) {                     //wybor mapy
     clear_console();
     signs();
-    std::cout << "Dostepne plansze: "<< std::endl;
+    std::cout << "Dostepne plansze: " << std::endl;
     std::cout << "1. #," << std::endl;
     std::cout << "2. $," << std::endl;
     std::cout << "3. *," << std::endl;
