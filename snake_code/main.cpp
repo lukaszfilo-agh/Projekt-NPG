@@ -1,6 +1,7 @@
 #include "menu.hpp"
 
 int main() {
-    whole_menu();
+    MenuData menuData; // obiekt przechowujacy dane menu
+    menu(menuData);
     return 0;
 }

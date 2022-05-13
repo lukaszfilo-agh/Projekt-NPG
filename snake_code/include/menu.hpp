@@ -35,7 +35,7 @@ private:
 
 // PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void whole_menu();                                                       // calosciowa obsluga menu
+void menu(MenuData menuData);                                                       // calosciowa obsluga menu
 
 void menu_display();                                                     // wyswietlanie opcji w menu
 

@@ -1,10 +1,9 @@
 #include "menu.hpp"
 #include "universal.hpp"
 #include <unistd.h>
-// PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
+// PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void whole_menu() {
-    MenuData menuData;  // wszystkie domyslne dane znajduja sie w tym obiekcie
+void menu(MenuData menuData) {
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
@@ -22,11 +21,16 @@ void whole_menu() {
         } else if (choice == 5) {
             select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice < 1 || choice > 6) {                         // podanie złej opcji konczy sie zakonczeniem gry
+            clear_console();
+            signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
+            signs();
             menu_wait();
         }
     }
     if (choice == 1) {   // warunek rozpoczecia gry
+        clear_console();
+        signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
