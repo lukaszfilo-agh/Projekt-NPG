@@ -130,7 +130,7 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "1. czarny,," << std::endl;
+    std::cout << "1. czarny," << std::endl;
     std::cout << "2. bialy," << std::endl;
     std::cout << "3. rozowy," << std::endl;
     std::cout << "4. brazowy." << std::endl;
@@ -159,7 +159,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     std::cout << "1. 10 X 10," << std::endl;
     std::cout << "2. 20 X 20," << std::endl;
     std::cout << "3. 30 X 30," << std::endl;
-    std::cout << "4. 40 X 40," << std::endl;
+    std::cout << "4. 40 X 40." << std::endl;
     signs();
     std::cout << "Wybierz rozmiar planszy: ";
     menuData.set_size();
