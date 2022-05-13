@@ -1,6 +1,5 @@
 #include "menu.hpp"
 #include "universal.hpp"
-#include <unistd.h>
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
