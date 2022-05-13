@@ -32,14 +32,14 @@ void menu(MenuData menuData) {
         clear_console();
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
-        std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
-//        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
-//        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
+        std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
+        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
+        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
         signs();
-        sleep(2); //tymczasowo. Edit : zmieniono
-    } else if (choice == 7) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
+        sleep(3); //tymczasowo. Edit : zmieniono
+    } else if (choice == 7) {                     // wyjscie z menu
         exit_game();
     }
 }
@@ -48,10 +48,10 @@ void welcome_message() {
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
-    normal_wait();
+    normal_wait(1);
 }
 
-void menu_display() {                       // wyswiwetlanie opcji w menu
+void menu_display() {                       // wyswietlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -124,9 +124,9 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
     std::cout << "1. czarny,," << std::endl;
-    std::cout << "1. bialy," << std::endl;
-    std::cout << "2. rozowy," << std::endl;
-    std::cout << "3. brazowy." << std::endl;
+    std::cout << "2. bialy," << std::endl;
+    std::cout << "3. rozowy," << std::endl;
+    std::cout << "4. brazowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_background_color();
@@ -141,6 +141,7 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     }
     menu_wait();
 }
+
 void select_size(MenuData &menuData) {               // rozmiar planszy
     clear_console();
     signs();
@@ -164,12 +165,10 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     menu_wait();
 }
 
-
-
 void exit_game() {                                  // opuszczanie menu
     signs();
     std::cout << "Do zobaczenia!" << std::endl;
     std::cout << "Zamykanie..." << std::endl;
     signs();
-    normal_wait();
+    normal_wait(2);
 }
