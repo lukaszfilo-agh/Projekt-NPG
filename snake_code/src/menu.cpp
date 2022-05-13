@@ -5,7 +5,7 @@
 
 void menu(MenuData menuData) {
     int choice = 0;
-    while (choice != 1 && choice != 7) {
+    while (choice != 1 && choice != 8) {
 
         menu_display();                            // wyswietlanie menu
         std::cin >> choice;
@@ -19,8 +19,9 @@ void menu(MenuData menuData) {
             select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if(choice == 6) {
             select_size(menuData);
-        }
-        else if (choice < 1 || choice > 7) {                         // podanie złej opcji konczy sie zakonczeniem gry
+        } else if(choice == 7) {
+            select_board(menuData);
+        } else if (choice < 1 || choice > 8) {                         // podanie złej opcji konczy sie zakonczeniem gry
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -61,7 +62,8 @@ void menu_display() {                       // wyswiwetlanie opcji w menu
     std::cout << "4. Kolor weza" << std::endl;
     std::cout << "5. Kolor tla" << std::endl;
     std::cout << "6  Rozmiar planszy" << std::endl;
-    std::cout << "7. Wyjdz z gry" << std::endl;
+    std::cout << "7  Rodzaj  planszy" << std::endl;
+    std::cout << "8. Wyjdz z gry" << std::endl;
     signs();
     std::cout << "Wybierz opcje z menu: ";
 }
@@ -160,6 +162,28 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
         std::cout << "Wybrales rozmiar 30 X 30." << std::endl;
     } else if (menuData.get_size() == 4) {
         std::cout << "Wybrales rozmiar 40 X 40." << std::endl;
+    }
+    menu_wait();
+}
+void select_board(MenuData &menuData){                     //wybor mapy
+    clear_console();
+    signs();
+    std::cout << "Dostepne plansze: "<< std::endl;
+    std::cout << "1. #," << std::endl;
+    std::cout << "2. $," << std::endl;
+    std::cout << "3. *," << std::endl;
+    std::cout << "4. &," << std::endl;
+    signs();
+    std::cout << "Wybierz rodzaj planszy: ";
+    menuData.set_board();
+    if (menuData.get_board() == 1) {
+        std::cout << "Wybrales plansze #." << std::endl;
+    } else if (menuData.get_board() == 2) {
+        std::cout << "Wybrales plansze $." << std::endl;
+    } else if (menuData.get_board() == 3) {
+        std::cout << "Wybrales plansze *" << std::endl;
+    } else if (menuData.get_board() == 4) {
+        std::cout << "Wybrales plansze &" << std::endl;
     }
     menu_wait();
 }

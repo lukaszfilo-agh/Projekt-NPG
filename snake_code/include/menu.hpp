@@ -21,6 +21,8 @@ public:
 
     int get_size () const { return size_;}
 
+    int get_board() const { return board_;}
+
     void set_diff_level() { diff_level_ = read<int>(); }
 
     void set_snake_name() { snake_name_ = read<std::string>(); }               // settery
@@ -29,6 +31,8 @@ public:
 
     void set_background_color() { background_color_ = read<int>(); }
 
+    void set_board() { board_ = read<int>(); }
+
     void set_size() { size_ = read<int>(); }
 
 private:
@@ -36,6 +40,7 @@ private:
     std::string snake_name_;
     int snake_color_;
     int background_color_;
+    int board_;
     int size_;
 
 };
@@ -57,6 +62,8 @@ void select_snake_color(MenuData &menuData);                             // wybo
 void select_background_color(MenuData &menuData);                        // wybor koloru tla
 
 void select_size(MenuData & menuData);                                   // rozmiar planszy
+
+void select_board(MenuData &menuData);                                   // wybor planszy
 
 void exit_game();                                                        // wyjscie z menu
 
