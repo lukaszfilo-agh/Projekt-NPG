@@ -43,9 +43,13 @@ public:
 
     void set_size_y() { size_y_ = read<int>(); }
 
-    std::string get_snake_color_map(int index) const { return snake_colors_.at(index);};
+    std::string get_snake_color_map(int index) const { return snake_colors_.at(index); };
 
-    std::string get_background_color_map(int index) const { return background_colors_.at(index);};
+    void print_snake_color_map();
+
+    std::string get_background_color_map(int index) const { return background_colors_.at(index); };
+
+    void print_background_color_map();
 
 private:
     std::string snake_name_;

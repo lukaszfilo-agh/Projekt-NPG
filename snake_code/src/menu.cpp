@@ -8,8 +8,21 @@ const std::map<int, std::string> MenuData::snake_colors_ = {{1, "zielony"},
                                                             {4, "pomaranczowy"}};
 const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},
                                                                  {2, "bialy"},
-                                                                {3, "rozowy"},
-                                                                {4, "brazowy"}};
+                                                                 {3, "rozowy"},
+                                                                 {4, "brazowy"}};
+
+//wypisywanie map
+void MenuData::print_background_color_map() {
+    for (auto const &pair: background_colors_) {
+        std::cout << pair.first << ". " << pair.second << std::endl;
+    }
+}
+
+void MenuData::print_snake_color_map() {
+    for (auto const &pair: snake_colors_) {
+        std::cout << pair.first << ". " << pair.second << std::endl;
+    }
+};
 
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
@@ -46,7 +59,8 @@ void menu(MenuData menuData) {
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color_map(menuData.get_snake_color()) << std::endl;
-        std::cout << "Kolor twojego tla to: " << menuData.get_background_color_map(menuData.get_background_color()) << std::endl;
+        std::cout << "Kolor twojego tla to: " << menuData.get_background_color_map(menuData.get_background_color())
+                  << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y()
                   << std::endl;
         std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
@@ -119,24 +133,14 @@ void select_snake_color(MenuData &menuData) {             // obsluguje wybor kol
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "1. zielony," << std::endl;
-    std::cout << "2. czerwony," << std::endl;
-    std::cout << "3. niebieski," << std::endl;
-    std::cout << "4. pomaranczowy." << std::endl;
+    menuData.print_snake_color_map();
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_snake_color();
     clear_console();
     signs();
-    if (menuData.get_snake_color() == 1) {
-        std::cout << "Wybrales kolor zielony!" << std::endl;
-    } else if (menuData.get_snake_color() == 2) {
-        std::cout << "Wybrales kolor czerwony!" << std::endl;
-    } else if (menuData.get_snake_color() == 3) {
-        std::cout << "Wybrales kolor niebieski!" << std::endl;
-    } else if (menuData.get_snake_color() == 4) {
-        std::cout << "Wybrales kolor pomaranczowy!" << std::endl;
-    }
+    std::cout << "Wybrales kolor ";
+    std::cout << menuData.get_snake_color_map(menuData.get_snake_color()) << "!" << std::endl;
     signs();
     menu_wait();
 }
@@ -145,10 +149,7 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "1. czarny," << std::endl;
-    std::cout << "2. bialy," << std::endl;
-    std::cout << "3. rozowy," << std::endl;
-    std::cout << "4. brazowy." << std::endl;
+    menuData.print_background_color_map();
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_background_color();
