@@ -12,10 +12,14 @@ void clear_console() {
 }
 
 void menu_wait() {// domyslne oczekiwanie z informacja
-    std::cout << std::endl << "Nacisnij ENTER aby kontynuowac." << std::endl;
+    signs();
+    std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
+    signs();
     std::cin.ignore();
     std::cin.get();
+    signs();
     std::cout << "Powrot do okna menu..." << std::endl;
+    signs();
     sleep(1);
 }
 
