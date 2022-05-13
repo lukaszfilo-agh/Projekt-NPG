@@ -5,7 +5,7 @@
 
 void menu(MenuData menuData) {
     int choice = 0;
-    while (choice != 1 && choice != 6) {
+    while (choice != 1 && choice != 7) {
 
         menu_display();                            // wyswietlanie menu
         std::cin >> choice;
@@ -17,7 +17,10 @@ void menu(MenuData menuData) {
             select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 5) {
             select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
-        } else if (choice < 1 || choice > 6) {                         // podanie złej opcji konczy sie zakonczeniem gry
+        } else if(choice == 6) {
+            select_size(menuData);
+        }
+        else if (choice < 1 || choice > 7) {                         // podanie złej opcji konczy sie zakonczeniem gry
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -33,9 +36,10 @@ void menu(MenuData menuData) {
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
         std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
+        std::cout << "Rozmiar twojej planszy to: " << menuData.get_size() * 10 << " X " << menuData.get_size() * 10 << std::endl;
         signs();
         sleep(2); //tymczasowo. Edit : zmieniono
-    } else if (choice == 6) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
+    } else if (choice == 7) {                     // !!!!!!!!!!!!! wyjscie z menu (poprawiono dzialanie)
         exit_game();
     }
 }
@@ -56,7 +60,8 @@ void menu_display() {                       // wyswiwetlanie opcji w menu
     std::cout << "3. Nazwa weza" << std::endl;
     std::cout << "4. Kolor weza" << std::endl;
     std::cout << "5. Kolor tla" << std::endl;
-    std::cout << "6. Wyjdz z gry" << std::endl;
+    std::cout << "6  Rozmiar planszy" << std::endl;
+    std::cout << "7. Wyjdz z gry" << std::endl;
     signs();
     std::cout << "Wybierz opcje z menu: ";
 }
@@ -136,6 +141,30 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     }
     menu_wait();
 }
+void select_size(MenuData &menuData) {               // rozmiar planszy
+    clear_console();
+    signs();
+    std::cout << "Dostepne rozmiary planszy: "<< std::endl;
+    std::cout << "1. 10 X 10," << std::endl;
+    std::cout << "2. 20 X 20," << std::endl;
+    std::cout << "3. 30 X 30," << std::endl;
+    std::cout << "4. 40 X 40," << std::endl;
+    signs();
+    std::cout << "Wybierz rozmiar planszy: "<< std::endl;
+    menuData.set_size();
+    if (menuData.get_size() == 1) {
+        std::cout << "Wybrales rozmiar 10 X 10." << std::endl;
+    }else if (menuData.get_size() == 2) {
+        std::cout << "Wybrales rozmiar 20 X 20." << std::endl;
+    } else if (menuData.get_size() == 3) {
+        std::cout << "Wybrales rozmiar 30 X 30." << std::endl;
+    } else if (menuData.get_size() == 4) {
+        std::cout << "Wybrales rozmiar 40 X 40." << std::endl;
+    }
+    menu_wait();
+}
+
+
 
 void exit_game() {                                  // opuszczanie menu
     signs();
