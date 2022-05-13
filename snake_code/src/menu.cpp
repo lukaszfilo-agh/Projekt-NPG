@@ -11,6 +11,11 @@ const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},
                                                                  {3, "rozowy"},
                                                                  {4, "brazowy"}};
 
+const std::map<int, std::string> MenuData::board_chars_ = = {{1, "#"},
+                                                             {2, "$"},
+                                                             {3, "*"},
+                                                             {4, "&"}};
+
 //wypisywanie map
 void MenuData::print_background_color_map() {
     for (auto const &pair: background_colors_) {
@@ -22,8 +27,13 @@ void MenuData::print_snake_color_map() {
     for (auto const &pair: snake_colors_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
-};
+}
 
+void MenuData::print_board_chars_map(){
+    for (auto const &pair: board_chars_) {
+        std::cout << pair.first << ". " << pair.second << std::endl;
+    }
+}
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
@@ -63,7 +73,7 @@ void menu(MenuData menuData) {
                   << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y()
                   << std::endl;
-        std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
+        std::cout << "Wybrales plansze: " << menuData.get_board_chars(menuData.get_board()) << std::endl;
         signs();
         std::cin.ignore();
         normal_wait(1);
@@ -190,22 +200,11 @@ void select_board(MenuData &menuData) {                     //wybor mapy
     clear_console();
     signs();
     std::cout << "Dostepne plansze: " << std::endl;
-    std::cout << "1. #," << std::endl;
-    std::cout << "2. $," << std::endl;
-    std::cout << "3. *," << std::endl;
-    std::cout << "4. &," << std::endl;
+    menuData.print_board_chars_map();
     signs();
     std::cout << "Wybierz rodzaj planszy: ";
     menuData.set_board();
-    if (menuData.get_board() == 1) {
-        std::cout << "Wybrales plansze #." << std::endl;
-    } else if (menuData.get_board() == 2) {
-        std::cout << "Wybrales plansze $." << std::endl;
-    } else if (menuData.get_board() == 3) {
-        std::cout << "Wybrales plansze *" << std::endl;
-    } else if (menuData.get_board() == 4) {
-        std::cout << "Wybrales plansze &" << std::endl;
-    }
+    std::cout << "Wybrales plansze " << menuData.get_board_chars(menuData.get_board()) << "!";
     menu_wait();
 }
 

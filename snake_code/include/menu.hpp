@@ -51,6 +51,10 @@ public:
 
     void print_background_color_map();
 
+    std::string get_board_chars(int index) const { return board_chars_.at(index); };
+
+    void print_board_chars_map();
+
 private:
     std::string snake_name_;
     int diff_level_;
@@ -61,6 +65,7 @@ private:
     int board_;
     const static std::map<int, std::string> snake_colors_;
     const static std::map<int, std::string> background_colors_;
+    const static std::map<int, std::string> board_chars_;
 
 };
 
