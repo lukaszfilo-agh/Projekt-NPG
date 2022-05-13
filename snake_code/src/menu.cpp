@@ -30,8 +30,8 @@ void menu(MenuData menuData) {
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
-        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
-        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
+//        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
+//        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
         signs();
         sleep(2); //tymczasowo. Edit : zmieniono
@@ -95,21 +95,21 @@ void select_snake_color(MenuData &menuData) {             // obsluguje wybor kol
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "- zielony," << std::endl;
-    std::cout << "- czerwony," << std::endl;
-    std::cout << "- niebieski," << std::endl;
-    std::cout << "- pomaranczowy." << std::endl;
+    std::cout << "1. zielony," << std::endl;
+    std::cout << "2. czerwony," << std::endl;
+    std::cout << "3. niebieski," << std::endl;
+    std::cout << "4. pomaranczowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_snake_color();
-    if (menuData.get_snake_color() == "zielony") {
-        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    } else if (menuData.get_snake_color() == "czerwony") {
-        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    } else if (menuData.get_snake_color() == "niebieski") {
-        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
-    } else if (menuData.get_snake_color() == "pomaranczowy") {
-        std::cout << "Wybrales kolor " << menuData.get_snake_color() << "!" << std::endl;
+    if (menuData.get_snake_color() == 1) {
+        std::cout << "Wybrales kolor zielony!" << std::endl;
+    } else if (menuData.get_snake_color() == 2) {
+        std::cout << "Wybrales kolor czerwony!" << std::endl;
+    } else if (menuData.get_snake_color() == 3) {
+        std::cout << "Wybrales kolor niebieski!" << std::endl;
+    } else if (menuData.get_snake_color() == 4) {
+        std::cout << "Wybrales kolor pomaranczowy!" << std::endl;
     }
     menu_wait();
 }
@@ -118,21 +118,21 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
-    std::cout << "- bialy," << std::endl;
-    std::cout << "- czarny," << std::endl;
-    std::cout << "- rozowy," << std::endl;
-    std::cout << "- brazowy." << std::endl;
+    std::cout << "1. czarny,," << std::endl;
+    std::cout << "1. bialy," << std::endl;
+    std::cout << "2. rozowy," << std::endl;
+    std::cout << "3. brazowy." << std::endl;
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_background_color();
-    if (menuData.get_background_color() == "bialy") {
-        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
-    } else if (menuData.get_background_color() == "czarny") {
-        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
-    } else if (menuData.get_background_color() == "rozowy") {
-        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
-    } else if (menuData.get_background_color() == "brazowy") {
-        std::cout << "Wybrales kolor " << menuData.get_background_color() << "!" << std::endl;
+    if (menuData.get_background_color() == 1) {
+        std::cout << "Wybrales kolor czarny!" << std::endl;
+    } else if (menuData.get_background_color() == 2) {
+        std::cout << "Wybrales kolor bialy!" << std::endl;
+    } else if (menuData.get_background_color() == 3) {
+        std::cout << "Wybrales kolor rozowy!" << std::endl;
+    } else if (menuData.get_background_color() == 4) {
+        std::cout << "Wybrales kolor brazowy!" << std::endl;
     }
     menu_wait();
 }
