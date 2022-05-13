@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "universal.hpp"
+#include <map>
+
 
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
@@ -41,6 +43,10 @@ public:
 
     void set_size_y() { size_y_ = read<int>(); }
 
+    std::string get_snake_color_map(int index) const { return snake_colors_.at(index);};
+
+    std::string get_background_color_map(int index) const { return background_colors_.at(index);};
+
 private:
     std::string snake_name_;
     int diff_level_;
@@ -49,6 +55,8 @@ private:
     int size_x_;
     int size_y_;
     int board_;
+    const static std::map<int, std::string> snake_colors_;
+    const static std::map<int, std::string> background_colors_;
 
 };
 

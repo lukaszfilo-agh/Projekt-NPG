@@ -1,5 +1,16 @@
 #include "menu.hpp"
 #include "universal.hpp"
+
+// wypelnienie map
+const std::map<int, std::string> MenuData::snake_colors_ = {{1, "zielony"},
+                                                            {2, "czerwony"},
+                                                            {3, "niebieski"},
+                                                            {4, "pomaranczowy"}};
+const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},
+                                                                 {2, "bialy"},
+                                                                {3, "rozowy"},
+                                                                {4, "brazowy"}};
+
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
@@ -19,7 +30,8 @@ void menu(MenuData menuData) {
             select_size(menuData);
         } else if (choice == 7) {
             select_board(menuData);
-        } else if (choice < 1 || choice > 8){                         // podanie złej opcji konczy sie przeladowaniem menu
+        } else if (choice < 1 ||
+                   choice > 8) {                         // podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -33,8 +45,8 @@ void menu(MenuData menuData) {
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_level() << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
-        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color() << std::endl;
-        std::cout << "Kolor twojego tla to: " << menuData.get_background_color() << std::endl;
+        std::cout << "Kolor twojego weza to: " << menuData.get_snake_color_map(menuData.get_snake_color()) << std::endl;
+        std::cout << "Kolor twojego tla to: " << menuData.get_background_color_map(menuData.get_background_color()) << std::endl;
         std::cout << "Rozmiar twojej planszy to: " << menuData.get_size_x() << " X " << menuData.get_size_y()
                   << std::endl;
         std::cout << "Wybrales plansze: " << menuData.get_board() << std::endl;
@@ -160,8 +172,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     signs();
     std::cout << "Wybierz szerokosc planszy(max 50): ";
     menuData.set_size_x();
-    while (menuData.get_size_x() > 50)
-    {
+    while (menuData.get_size_x() > 50) {
         signs();
         std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 50): ";
         menuData.set_size_x();
@@ -169,8 +180,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     signs();
     std::cout << "Wybierz wysokosc planszy(max 50): ";
     menuData.set_size_y();
-    while (menuData.get_size_y() > 50)
-    {
+    while (menuData.get_size_y() > 50) {
         signs();
         std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 50): ";
         menuData.set_size_y();
