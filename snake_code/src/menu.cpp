@@ -19,7 +19,7 @@ void menu(MenuData menuData) {
             select_size(menuData);
         } else if (choice == 7) {
             select_board(menuData);
-        } else {                         // podanie złej opcji konczy sie przeladowaniem menu
+        } else if (choice < 1 || choice > 8){                         // podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -158,10 +158,23 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
 void select_size(MenuData &menuData) {               // rozmiar planszy
     clear_console();
     signs();
-    std::cout << "Wybierz szerokosc planszy: ";
+    std::cout << "Wybierz szerokosc planszy(max 50): ";
     menuData.set_size_x();
-    std::cout << "Wybierz wysokosc planszy: ";
+    while (menuData.get_size_x() > 50)
+    {
+        signs();
+        std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 50): ";
+        menuData.set_size_x();
+    }
+    signs();
+    std::cout << "Wybierz wysokosc planszy(max 50): ";
     menuData.set_size_y();
+    while (menuData.get_size_y() > 50)
+    {
+        signs();
+        std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 50): ";
+        menuData.set_size_y();
+    }
     clear_console();
     signs();
     std::cout << "Wybrales rozmiar: " << menuData.get_size_x() << " X " << menuData.get_size_y() << std::endl;
