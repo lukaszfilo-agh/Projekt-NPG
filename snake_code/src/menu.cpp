@@ -177,6 +177,11 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     signs();
     std::cout << "Wybierz swoj kolor: ";
     menuData.set_background_color();
+//    while (menuData.get_background_color() > 4) { //error checker
+//        signs();
+//        std::cout << "Wybrano niepoprawny kolor planszy: ";
+//        menuData.set_background_color();
+//    }
     clear_console();
     signs();
     std::cout << "Wybrales kolor ";
