@@ -53,6 +53,7 @@ void menu(MenuData menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
         menu_display();                            // wyswietlanie menu
+        std::cout << "Wybierz opcje z menu: ";
         choice = read<int>();
         if (choice == 2) {
             select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
@@ -79,7 +80,7 @@ void menu(MenuData menuData) {
         clear_console();
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
-        std::cout << "Grasz na poziomie trudnosci nr: " << menuData.get_diff_map(menuData.get_diff())
+        std::cout << "Grasz na poziomie trudnosci: " << menuData.get_diff_map(menuData.get_diff())
                   << std::endl;
         std::cout << "Nazwa twojego weza to: " << menuData.get_snake_name() << std::endl;
         std::cout << "Kolor twojego weza to: " << menuData.get_snake_color_map(menuData.get_snake_color()) << std::endl;
@@ -116,7 +117,6 @@ void menu_display() {                       // wyswietlanie opcji w menu
     std::cout << "7  Rodzaj  planszy" << std::endl;
     std::cout << "8. Wyjdz z gry" << std::endl;
     signs();
-    std::cout << "Wybierz opcje z menu: ";
 }
 
 void select_difficulty_level(MenuData &menuData) {             // obsluguje wybor poziomu trudnosci
@@ -210,7 +210,7 @@ void select_board(MenuData &menuData) {                     //wybor mapy
     signs();
     std::cout << "Wybierz rodzaj planszy: ";
     menuData.set_board();
-    std::cout << "Wybrales plansze " << menuData.get_board_chars(menuData.get_board()) << "!";
+    std::cout << "Wybrales plansze " << menuData.get_board_chars(menuData.get_board()) << std::endl;
     menu_wait();
 }
 
