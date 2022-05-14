@@ -1,8 +1,20 @@
 #include "universal.hpp"
 #include <iostream>
 #include <unistd.h>
+#include <windows.h>
 
 // Ponizej funckje uniwersanlne
+
+void ShowConsoleCursor(bool showFlag)
+{
+    HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    CONSOLE_CURSOR_INFO     cursorInfo;
+
+    GetConsoleCursorInfo(out, &cursorInfo);
+    cursorInfo.bVisible = showFlag;
+    SetConsoleCursorInfo(out, &cursorInfo);
+}
 
 void signs() {
     std::cout << "------------------------------------------------------" << std::endl;

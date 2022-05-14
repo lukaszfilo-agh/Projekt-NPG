@@ -21,6 +21,8 @@ inline T read() {
     }
 }
 
+void ShowConsoleCursor(bool showFlag);      //pokazanie lub ukrycie kursora
+
 void signs();        // znaki ozdobne
 
 void clear_console();       // czyszczenie konsoli
