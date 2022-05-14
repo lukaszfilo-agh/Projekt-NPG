@@ -15,13 +15,20 @@ public:
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
               board_(board) {}; // konstruktor domyslny
 
-    std::string get_snake_name() const { return snake_name_; }              // gettery
+    // gettery
+    std::string get_snake_name() const { return snake_name_; }
 
     int get_diff() const { return diff_; }
 
+    std::string get_diff_map(int index) const { return diff_map_.at(index); };
+
     int get_snake_color() const { return snake_color_; }
 
+    std::string get_snake_color_map(int index) const { return snake_colors_.at(index); };
+
     int get_background_color() const { return background_color_; }
+
+    std::string get_background_color_map(int index) const { return background_colors_.at(index); };
 
     int get_size_x() const { return size_x_; }
 
@@ -29,9 +36,13 @@ public:
 
     int get_board() const { return board_; }
 
+    std::string get_board_chars(int index) const { return board_chars_.at(index); };
+
+    // settery
+
     void set_diff() { diff_ = read<int>(); }
 
-    void set_snake_name() { snake_name_ = read<std::string>(); }               // settery
+    void set_snake_name() { snake_name_ = read<std::string>(); }
 
     void set_snake_color() { snake_color_ = read<int>(); }
 
@@ -43,21 +54,17 @@ public:
 
     void set_size_y() { size_y_ = read<int>(); }
 
-    std::string get_diff_map(int index) const { return diff_map_.at(index); };
+    //wypisywanie map
 
     void print_background_diff_map();
 
-    std::string get_snake_color_map(int index) const { return snake_colors_.at(index); };
-
     void print_snake_color_map();
-
-    std::string get_background_color_map(int index) const { return background_colors_.at(index); };
 
     void print_background_color_map();
 
-    std::string get_board_chars(int index) const { return board_chars_.at(index); };
-
     void print_board_chars_map();
+
+    void print_menu_text();
 
 private:
     std::string snake_name_;
@@ -71,6 +78,7 @@ private:
     const static std::map<int, std::string> snake_colors_;
     const static std::map<int, std::string> background_colors_;
     const static std::map<int, std::string> board_chars_;
+    const static std::map<int, std::string> menu_text_;
 
 };
 
@@ -80,7 +88,7 @@ void welcome_message();
 
 void menu(MenuData menuData);                                            // calosciowa obsluga menu
 
-void menu_display();                                                     // wyswietlanie opcji w menu
+void menu_display(MenuData &menuData);                                   // wyswietlanie opcji w menu
 
 void select_difficulty_level(MenuData &menuData);                        // wybor poziomu trudnosci
 

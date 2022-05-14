@@ -21,6 +21,15 @@ const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},
                                                         {2, "Sredni"},
                                                         {3, "Trudny"}};
 
+const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},
+                                                         {2, "Poziom Trudnosci"},
+                                                         {3, "Nazwa weza"},
+                                                         {4, "Kolor weza"},
+                                                         {5, "Kolor tla"},
+                                                         {6, "Rozmiar planszy"},
+                                                         {7, "Rodzaj planszy"},
+                                                         {8, "Wyjdz z gry"}};
+
 //wypisywanie map
 
 void MenuData::print_background_diff_map() {
@@ -47,12 +56,18 @@ void MenuData::print_board_chars_map() {
     }
 }
 
+void MenuData::print_menu_text() {
+    for (auto const &pair: menu_text_) {
+        std::cout << pair.first << ". " << pair.second << std::endl;
+    }
+}
+
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
 void menu(MenuData menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
-        menu_display();                            // wyswietlanie menu
+        menu_display(menuData);                            // wyswietlanie menu
         std::cout << "Wybierz opcje z menu: ";
         choice = read<int>();
         if (choice == 2) {
@@ -104,18 +119,11 @@ void welcome_message() {
     normal_wait(1);
 }
 
-void menu_display() {                       // wyswietlanie opcji w menu
+void menu_display(MenuData &menuData) {                       // wyswietlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
-    std::cout << "1. Nowa Gra" << std::endl;
-    std::cout << "2. Poziom Trudnosci" << std::endl;
-    std::cout << "3. Nazwa weza" << std::endl;
-    std::cout << "4. Kolor weza" << std::endl;
-    std::cout << "5. Kolor tla" << std::endl;
-    std::cout << "6  Rozmiar planszy" << std::endl;
-    std::cout << "7  Rodzaj  planszy" << std::endl;
-    std::cout << "8. Wyjdz z gry" << std::endl;
+    menuData.print_menu_text();
     signs();
 }
 
