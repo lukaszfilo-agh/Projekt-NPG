@@ -1,0 +1,14 @@
+Sprawozdanie z dnia 14.05.2022
+
+W dniu 14.05.2022 od godziny 20:00 do godziny 21:00 odbyło sie trzecie spotkanie 
+członków zespołu z powodu szybszego (niż przewidywane) skończenia zaplanowanych prac nad
+menu - w związku z czym udało się osiągnąć pierwszy kamień milowy. Prowadzącym spotkanie byl 
+Klaudiusz Grobelski (obecny Scrum master). W spotkaniu uczestniczyli rówież pozostali członkowie 
+zespołu. Majpierw każdy zdał krótką relację z wykonanych przez siebie zadań. Zostaly omówione również problemy
+napotkane podczas wykonywnaia pracy. Następnie ustaliliśmy kolejność wykonania następnych zadań - od teraz zespół 
+będzie pracował nad wykonaniem właściwej gry (na razie w 2D); rozpoczynając od generowania planszy, 
+opracowania odpowiedniego wyświetlania węża oraz sterowania. Następnie zespół zajmie się zagadnienień 
+zdobywania punktów, przechowywania i porównywania wyników. Czas na wykonanie gry w formie 2D
+został ustalony na 27.05.2022. Wtedy odbędzie się również następne spotkanie, na ktorym zostaną omówione dalsze 
+działania. Wszystkie zagadnienia dotyczące gry 2D otrzymują priorytet wysoki (priorytet pozostalych pozostał
+bez zmian).
