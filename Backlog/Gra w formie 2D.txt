@@ -2,3 +2,17 @@
 
 Priorytet powyższego elementu został ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022.
 Priorytet powyższego elementu został ustalony na NISKI przez Klaudiusza Grobelskiego dnia 07.05.2022.
+
+gra powinna zawierać:
+
+-funkcję umożliwiającą ruch w górę,dół,prawo,lewo.
+-funkcję wydłużającą węża.
+-funkcję powudującą pojawianie się przeszkód.
+-funkcję powodującą pojawianie się owoców(lub innego przedmiotu powodującego wydłużanie się węża).
+-funkcję powodującą wyświetlanie się planszy.
+-funckję powodującą wyswietlanie się weża.
+-funckję koncząca gre w przypadku kolizji(tzn uderzenia w ściankę,przeszkode lub w siebie).
+
+Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Konrada Grucel dnia 16.05.2022
+
+
