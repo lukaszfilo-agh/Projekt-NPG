@@ -13,7 +13,7 @@ private:
     char direction_;
 
 public:
-    Snake(COORD position_, int velocity_) {};
+    Snake(COORD position_, int velocity_);
 
     void snake_move() {};
 
