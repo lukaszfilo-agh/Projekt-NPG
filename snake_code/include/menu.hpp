@@ -9,8 +9,8 @@
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
     MenuData(const std::string &snake_name = "snake", const int diff = 1,
-             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 25,
-             const int &size_y = 25, const int &board = 1)
+             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 10,
+             const int &size_y = 10, const int &board = 1)
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
               board_(board) {}; // konstruktor domyslny
