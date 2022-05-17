@@ -1,7 +1,6 @@
 #include "snake.hpp"
 
-Snake::Snake(COORD position, int velocity)
-{
+Snake::Snake(COORD position, int velocity) {
     this->position_ = position;
     this->velocity_ = velocity;
 
@@ -12,7 +11,7 @@ Snake::Snake(COORD position, int velocity)
 }
 
 bool Snake::snake_eaten(COORD food) {
-    if(position_.X == food.X && position_.Y == food.Y)
+    if (position_.X == food.X && position_.Y == food.Y)
         return true;
     else
         return false;

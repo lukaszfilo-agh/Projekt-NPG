@@ -33,31 +33,31 @@ const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},
 //wypisywanie map
 
 void MenuData::print_background_diff_map() {
-    for (auto const &pair: diff_map_) {
+    for (auto const& pair: diff_map_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
 
 void MenuData::print_background_color_map() {
-    for (auto const &pair: background_colors_) {
+    for (auto const& pair: background_colors_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
 
 void MenuData::print_snake_color_map() {
-    for (auto const &pair: snake_colors_) {
+    for (auto const& pair: snake_colors_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
 
 void MenuData::print_board_chars_map() {
-    for (auto const &pair: board_chars_) {
+    for (auto const& pair: board_chars_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
 
 void MenuData::print_menu_text() {
-    for (auto const &pair: menu_text_) {
+    for (auto const& pair: menu_text_) {
         std::cout << pair.first << ". " << pair.second << std::endl;
     }
 }
@@ -119,7 +119,7 @@ void welcome_message() {
     normal_wait(1);
 }
 
-void menu_display(MenuData &menuData) {                       // wyswietlanie opcji w menu
+void menu_display(MenuData& menuData) {                       // wyswietlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -127,7 +127,7 @@ void menu_display(MenuData &menuData) {                       // wyswietlanie op
     signs();
 }
 
-void select_difficulty_level(MenuData &menuData) {             // obsluguje wybor poziomu trudnosci
+void select_difficulty_level(MenuData& menuData) {             // obsluguje wybor poziomu trudnosci
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -142,7 +142,7 @@ void select_difficulty_level(MenuData &menuData) {             // obsluguje wybo
     menu_wait();
 }
 
-void select_snake_name(MenuData &menuData) {               // obsluguje wybor nazwy weza
+void select_snake_name(MenuData& menuData) {               // obsluguje wybor nazwy weza
     clear_console();
     std::cout << "Podaj nazwe swojego weza: ";
     menuData.set_snake_name();
@@ -153,7 +153,7 @@ void select_snake_name(MenuData &menuData) {               // obsluguje wybor na
     menu_wait();
 }
 
-void select_snake_color(MenuData &menuData) {             // obsluguje wybor koloru weza
+void select_snake_color(MenuData& menuData) {             // obsluguje wybor koloru weza
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -169,7 +169,7 @@ void select_snake_color(MenuData &menuData) {             // obsluguje wybor kol
     menu_wait();
 }
 
-void select_background_color(MenuData &menuData) {             // obsluguje wybor koloru tla
+void select_background_color(MenuData& menuData) {             // obsluguje wybor koloru tla
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -190,7 +190,7 @@ void select_background_color(MenuData &menuData) {             // obsluguje wybo
     menu_wait();
 }
 
-void select_size(MenuData &menuData) {               // rozmiar planszy
+void select_size(MenuData& menuData) {               // rozmiar planszy
     clear_console();
     signs();
     std::cout << "Wybierz szerokosc planszy(max 50): ";
@@ -215,7 +215,7 @@ void select_size(MenuData &menuData) {               // rozmiar planszy
     menu_wait();
 }
 
-void select_board(MenuData &menuData) {                     //wybor mapy
+void select_board(MenuData& menuData) {                     //wybor mapy
     clear_console();
     signs();
     std::cout << "Dostepne plansze: " << std::endl;
