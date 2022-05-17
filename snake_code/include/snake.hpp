@@ -1,6 +1,8 @@
 #ifndef SNAKE_SNAKE_HPP
 #define SNAKE_SNAKE_HPP
 
+#include <vector>
+#include <windows.h>
 
 class Snake {
 private:
