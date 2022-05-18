@@ -7,9 +7,9 @@
 
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
-    MenuData(const std::string& snake_name = "snake", const int diff = 1,
-             const int& snake_color = 1, const int& background_color = 1, const int& size_x = 25,
-             const int& size_y = 25, const int& board = 1)
+    MenuData(const std::string &snake_name = "snake", const int diff = 1,
+             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 25,
+             const int &size_y = 25, const int &board = 1)
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
               board_(board) {}; // konstruktor domyslny
@@ -85,21 +85,21 @@ private:
 
 void welcome_message();
 
-void menu(MenuData& menuData);                                            // calosciowa obsluga menu
+void menu(MenuData &menuData);                                            // calosciowa obsluga menu
 
-void menu_display(MenuData& menuData);                                   // wyswietlanie opcji w menu
+void menu_display(MenuData &menuData);                                   // wyswietlanie opcji w menu
 
-void select_difficulty_level(MenuData& menuData);                        // wybor poziomu trudnosci
+void select_difficulty_level(MenuData &menuData);                        // wybor poziomu trudnosci
 
-void select_snake_name(MenuData& menuData);                              // wybor nazwy weza
+void select_snake_name(MenuData &menuData);                              // wybor nazwy weza
 
-void select_snake_color(MenuData& menuData);                             // wybor koloru weza
+void select_snake_color(MenuData &menuData);                             // wybor koloru weza
 
-void select_background_color(MenuData& menuData);                        // wybor koloru tla
+void select_background_color(MenuData &menuData);                        // wybor koloru tla
 
-void select_size(MenuData& menuData);                                   // rozmiar planszy
+void select_size(MenuData &menuData);                                   // rozmiar planszy
 
-void select_board(MenuData& menuData);                                   // wybor planszy
+void select_board(MenuData &menuData);                                   // wybor planszy
 
 void exit_game();                                                        // wyjscie z menu
 
