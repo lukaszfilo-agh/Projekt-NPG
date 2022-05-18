@@ -1,4 +1,0 @@
-#ifndef SNAKE_FOOD_HPP
-#define SNAKE_FOOD_HPP
-
-#endif //SNAKE_FOOD_HPP

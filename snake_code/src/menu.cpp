@@ -64,7 +64,7 @@ void MenuData::print_menu_text() {
 
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void menu(MenuData menuData) {
+void menu(MenuData& menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
         menu_display(menuData);                            // wyswietlanie menu

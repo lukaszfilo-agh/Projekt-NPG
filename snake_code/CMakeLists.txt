@@ -10,7 +10,7 @@ include_directories(include)
 
 set(SOURCE_FILES
         src/snake.cpp
-        src/food.cpp
+        src/fruit.cpp
         src/menu.cpp
         src/universal.cpp
         src/game.cpp)
