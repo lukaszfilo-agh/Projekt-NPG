@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <windows.h>
+#include "menu.hpp"
 
 class Snake {
 private:
@@ -13,7 +14,7 @@ private:
     char direction_;
 
 public:
-    Snake(COORD position, int velocity);   //konstruktor snakea
+    Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
 
     void snake_move() {}; //poruszanie snakem
 
@@ -27,7 +28,7 @@ public:
 
     bool snake_eaten(COORD food);
 
-    //bool snake_collided();    //czy snake zderzyl sie
+    bool snake_collided(const MenuData& menuData);    //czy snake zderzyl sie
 };
 
 #endif
