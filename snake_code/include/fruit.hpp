@@ -9,7 +9,7 @@ private:
     COORD position_;
 
 public:
-    COORD fruit_get_position() { return position_; } //uzyskanie pozycji owoca
+    COORD fruit_get_position() const { return position_; } //uzyskanie pozycji owoca
 
     void fruit_generate(const MenuData& menuData);
 };

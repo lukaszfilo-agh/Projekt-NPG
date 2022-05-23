@@ -9,20 +9,22 @@ class Snake {
 private:
     COORD position_;
     std::vector<COORD> body_;
-    int lenght_;            //dlugosc weza
+    int length_;            //dlugosc weza
     int velocity_;          //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
     char direction_;
 
 public:
     Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
 
-    void snake_move() {}; //poruszanie snakem
+    //void snake_move(); //poruszanie snakem
 
-    void snake_grow() { lenght_++; };   //wydluzanie weza
+    int get_length() const {return length_;}
 
-    COORD snake_get_position() { return position_; };   //uzyskanie pozycji
+    void snake_grow() { length_++; };   //wydluzanie weza
 
-    void snake_direction(char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
+    COORD snake_get_position() const { return position_; };   //uzyskanie pozycji
+
+    void snake_direction(const char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
 
     std::vector<COORD> get_body() { return body_; };
 
