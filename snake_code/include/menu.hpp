@@ -9,10 +9,10 @@ class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (
 public:
     MenuData(const std::string &snake_name = "snake", const int diff = 1,
              const int &snake_color = 1, const int &background_color = 1, const int &size_x = 25,
-             const int &size_y = 25, const int &board = 1)
+             const int &size_y = 25, const int &board = 1, const int &score = 0)
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
-              board_(board) {}; // konstruktor domyslny
+              board_(board), score_(score){}; // konstruktor domyslny
 
     // gettery
     std::string get_snake_name() const { return snake_name_; }
@@ -27,7 +27,7 @@ public:
 
     int get_background_color() const { return background_color_; }
 
-    std::string get_background_color_map(int index) const { return background_colors_.at(index); };
+    std::string get_background_color_map(int index) const { return background_colors_.at(index); }
 
     int get_size_x() const { return size_x_; }
 
@@ -35,7 +35,9 @@ public:
 
     int get_board() const { return board_; }
 
-    std::string get_board_chars(int index) const { return board_chars_.at(index); };
+    std::string get_board_chars(int index) const { return board_chars_.at(index); }
+
+    int get_score() const { return score_; }
 
     // settery
 
@@ -52,6 +54,8 @@ public:
     void set_size_x() { size_x_ = read<int>(); }
 
     void set_size_y() { size_y_ = read<int>(); }
+
+    void score_add() { score_ += 10;}
 
     //wypisywanie map
 
@@ -73,6 +77,7 @@ private:
     int size_x_;
     int size_y_;
     int board_;
+    int score_;
     const static std::map<int, std::string> diff_map_;
     const static std::map<int, std::string> snake_colors_;
     const static std::map<int, std::string> background_colors_;

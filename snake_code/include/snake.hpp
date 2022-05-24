@@ -9,14 +9,14 @@ class Snake {
 private:
     COORD position_;
     std::vector<COORD> body_;
-    int length_;            //dlugosc weza
+    std::vector<COORD>::size_type length_;            //dlugosc weza
     int velocity_;          //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
     char direction_;
 
 public:
     Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
 
-    //void snake_move(); //poruszanie snakem
+    void snake_move(); //poruszanie snakem
 
     int get_length() const {return length_;}
 

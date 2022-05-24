@@ -21,23 +21,26 @@ bool Snake::snake_collided(const MenuData& menuData) {
     if (position_.X < 1 || position_.X > menuData.get_size_x() - 2 || position_.Y < 1 ||
         position_.Y > menuData.get_size_y() - 2)
         return true;
-    for (int i = 0; i < length_ - 1; i++) {
+    for (std::vector<COORD>::size_type i = 0; i < length_ - 1; i++) {
         if (position_.X == body_[i].X && position_.Y == body_[i].Y)
             return true;
     }
     return false;
 }
 
-//void Snake::snake_move()            //porusdzanie wezem
-//{
-  //  switch(dir)
-   // {
-     //   case 'u': pos.Y -= vel; break;
-       // case 'd': pos.Y += vel; break;
-       // case 'l': pos.X -= vel; break;
-        //case 'r': pos.X += vel; break;
-    //}
+void Snake::snake_move()            //porusdzanie wezem
+{
+    switch(direction_)
+    {
+        case 'u': position_.Y -= velocity_; break;
+        case 'd': position_.Y += velocity_; break;
+        case 'l': position_.X -= velocity_; break;
+        case 'r': position_.X += velocity_; break;
+    }
 
-    //body.push_back(pos);
-    //if(body.size() > len) body.erase(body.begin());
-//}
+    body_.push_back(position_);
+
+    if(body_.size() > length_) {
+        body_.erase(body_.begin());
+    }
+}

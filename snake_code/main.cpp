@@ -8,11 +8,11 @@ int main() {
     MenuData menuData; // obiekt przechowujacy dane menu
     welcome_message();
     menu(menuData);
-    std::cout << "nowa gra" << std::endl;
     Snake snake({static_cast<SHORT>(menuData.get_size_x()/2), static_cast<SHORT>(menuData.get_size_y()/2)}, menuData);
     bool game_over = false;   // warunek konca gry
     Fruit fruit;
     fruit.fruit_generate(menuData);
+    clear_console();
     while(!game_over){
         board(snake, menuData, fruit);
         if(kbhit())
@@ -32,14 +32,12 @@ int main() {
         {
             fruit.fruit_generate(menuData);
             snake.snake_grow();
-            //score = score + 10;
+            menuData.score_add();
         }
 
-        //snake.move_snake();
+        snake.snake_move();
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
     }
-
-    system("pause");
     return 0;
 }
