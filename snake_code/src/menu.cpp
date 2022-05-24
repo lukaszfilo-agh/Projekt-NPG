@@ -230,7 +230,8 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     menu_wait();
 }
 
-void exit_game() {                                  // opuszczanie menu
+void exit_game() {         // opuszczanie menu
+    clear_console();
     signs();
     std::cout << "Do zobaczenia!" << std::endl;
     std::cout << "Zamykanie..." << std::endl;

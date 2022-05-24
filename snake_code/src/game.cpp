@@ -1,4 +1,16 @@
 #include "game.hpp"
+#include <unistd.h>
+
+void end_game(MenuData& menuData){
+    clear_console();
+    signs();
+    std::cout << "                     KONIEC GRY!" << std::endl;
+    signs();
+    sleep(1);
+    clear_console();
+    menu_wait();
+    menu(menuData);
+}
 
 void board(const Snake& snake, const MenuData& menuData, const Fruit& fruit){
         COORD snake_pos = snake.snake_get_position();
@@ -39,9 +51,8 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
     srand(time(nullptr));
 
     bool game_over = false;   // warunek konca gry
-    fruit.fruit_generate(menuData);
-
     clear_console();
+    fruit.fruit_generate(menuData);
     console_cursor(false);
 
     while(!game_over){
@@ -50,6 +61,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
         {
             switch(getch())
             {
+
                 case 'w': snake.snake_direction('u'); break;
                 case 'a': snake.snake_direction('l'); break;
                 case 's': snake.snake_direction('d'); break;
@@ -70,4 +82,5 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
     }
+    end_game(menuData);
 }
