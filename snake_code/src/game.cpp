@@ -9,6 +9,12 @@ void end_game(MenuData& menuData) {
     signs();
     sleep(1);
     clear_console();
+    signs();
+    std::cout << "Twoj wynik to: " << menuData.get_score() << "!" << std::endl;
+    sleep(1);
+    std::cout << "Gratulacje!!!" << std::endl;
+    signs();
+    clear_console();
     menu_wait();
     menu(menuData);
 }
@@ -46,14 +52,13 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
 void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
     srand(time(NULL));
 
-    bool game_over = false;   // warunek konca gry
     clear_console();
     fruit.fruit_generate(menuData);
     console_cursor(false);
 
-    while (!game_over) {
-        board(snake, menuData, fruit);
-        if (kbhit()) {
+    while (menuData.get_end()) {           // warunek konca gry
+        board(snake, menuData, fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem
+        if (kbhit()) {                            // jak damy znowu nowa gre po przegranej to sie wyłącza
             switch (getch()) {
                 case 'w':
                     snake.snake_direction('u');
@@ -70,7 +75,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
             }
         }
 
-        if (snake.snake_collided(menuData)) game_over = true;
+        if (snake.snake_collided(menuData)) menuData.set_end(false);
 
         if (snake.snake_eaten(fruit)) {
             fruit.fruit_generate(menuData);
