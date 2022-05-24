@@ -30,17 +30,24 @@ bool Snake::snake_collided(const MenuData& menuData) {
 
 void Snake::snake_move()            //porusdzanie wezem
 {
-    switch(direction_)
-    {
-        case 'u': position_.Y -= velocity_; break;
-        case 'd': position_.Y += velocity_; break;
-        case 'l': position_.X -= velocity_; break;
-        case 'r': position_.X += velocity_; break;
+    switch (direction_) {
+        case 'u':
+            position_.Y -= velocity_;
+            break;
+        case 'd':
+            position_.Y += velocity_;
+            break;
+        case 'l':
+            position_.X -= velocity_;
+            break;
+        case 'r':
+            position_.X += velocity_;
+            break;
     }
 
     body_.push_back(position_);
 
-    if(body_.size() > length_) {
+    if (body_.size() > length_) {
         body_.erase(body_.begin());
     }
 }

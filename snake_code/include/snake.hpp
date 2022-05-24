@@ -19,7 +19,7 @@ public:
 
     void snake_move(); //poruszanie snakem
 
-    int get_length() const {return length_;}
+    int get_length() const { return length_; }
 
     void snake_grow() { length_++; };   //wydluzanie weza
 

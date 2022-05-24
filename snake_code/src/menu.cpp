@@ -149,7 +149,7 @@ void select_snake_name(MenuData& menuData) {               // obsluguje wybor na
     menuData.set_snake_name();
     clear_console();
     signs();
-    std::cout << "Twoj waz to: " << menuData.get_snake_name() << "!" <<std::endl;
+    std::cout << "Twoj waz to: " << menuData.get_snake_name() << "!" << std::endl;
     signs();
     menu_wait();
 }

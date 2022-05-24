@@ -2,7 +2,7 @@
 #include "game.hpp"
 #include <unistd.h>
 
-void end_game(MenuData& menuData){
+void end_game(MenuData& menuData) {
     clear_console();
     signs();
     std::cout << "                     KONIEC GRY!" << std::endl;
