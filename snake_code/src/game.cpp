@@ -21,7 +21,7 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit){
                     bool isBodyPart = false;
                     for(int k = 0; k < snake.get_body_size() - 1; k++)
                     {
-                        if(i == snake.get_body_elem(k).X && j + 1 == snake.get_body_elem(k).Y)
+                        if(i == snake.get_body_elem(k).Y && j + 1 == snake.get_body_elem(k).X)
                         {
                             std::cout << 'o';
                             isBodyPart = true;
