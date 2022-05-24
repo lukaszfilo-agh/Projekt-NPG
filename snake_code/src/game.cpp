@@ -60,7 +60,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
 
         if(snake.snake_collided(menuData)) game_over = true;
 
-        if(snake.snake_eaten(fruit.fruit_get_position()))
+        if(snake.snake_eaten(fruit))
         {
             fruit.fruit_generate(menuData);
             snake.snake_grow();

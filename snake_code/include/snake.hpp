@@ -4,6 +4,7 @@
 #include <vector>
 #include <windows.h>
 #include "menu.hpp"
+#include "fruit.hpp"
 
 class Snake {
 private:
@@ -32,7 +33,7 @@ public:
 
     int get_body_size() const { return body_.size(); }
 
-    bool snake_eaten(COORD food);
+    bool snake_eaten(const Fruit& fruit);
 
     bool snake_collided(const MenuData& menuData);    //czy snake zderzyl sie
 };
