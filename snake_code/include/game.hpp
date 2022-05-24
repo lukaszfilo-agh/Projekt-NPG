@@ -7,6 +7,7 @@
 void board(const Snake& snake, const MenuData& menuData, const Fruit& fruit);
 
 void game(MenuData& menuData, Snake& snake, Fruit& fruit);
+void end_game(MenuData& menuData);
 
 
 #endif //SNAKE_GAME_HPP
