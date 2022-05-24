@@ -137,18 +137,19 @@ void select_difficulty_level(MenuData& menuData) {             // obsluguje wybo
     menuData.set_diff();
     clear_console();
     signs();
-    std::cout << "Wybrales poziom " << menuData.get_diff_map(menuData.get_diff()) << std::endl;
+    std::cout << "Wybrales poziom " << menuData.get_diff_map(menuData.get_diff()) << "!" << std::endl;
     signs();
     menu_wait();
 }
 
 void select_snake_name(MenuData& menuData) {               // obsluguje wybor nazwy weza
     clear_console();
+    signs();
     std::cout << "Podaj nazwe swojego weza: ";
     menuData.set_snake_name();
     clear_console();
     signs();
-    std::cout << "Twoj waz to: " << menuData.get_snake_name() << std::endl;
+    std::cout << "Twoj waz to: " << menuData.get_snake_name() << "!" <<std::endl;
     signs();
     menu_wait();
 }
@@ -223,7 +224,9 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     signs();
     std::cout << "Wybierz rodzaj planszy: ";
     menuData.set_board();
+    clear_console();
     std::cout << "Wybrales plansze " << menuData.get_board_chars(menuData.get_board()) << std::endl;
+    signs();
     menu_wait();
 }
 
