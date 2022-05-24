@@ -201,9 +201,9 @@ void select_size(MenuData& menuData) {               // rozmiar planszy
         menuData.set_size_x();
     }
     signs();
-    std::cout << "Wybierz wysokosc planszy(max 50): ";
+    std::cout << "Wybierz wysokosc planszy(max 25): ";
     menuData.set_size_y();
-    while (menuData.get_size_y() > 50) {
+    while (menuData.get_size_y() > 25) {
         signs();
         std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 50): ";
         menuData.set_size_y();

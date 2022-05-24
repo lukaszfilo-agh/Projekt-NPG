@@ -13,6 +13,7 @@ int main() {
     Fruit fruit;
     fruit.fruit_generate(menuData);
     clear_console();
+    console_cursor(false);
     while(!game_over){
         board(snake, menuData, fruit);
         if(kbhit())

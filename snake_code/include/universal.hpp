@@ -21,7 +21,7 @@ inline T read() {
     }
 }
 
-void ShowConsoleCursor(bool showFlag);      //pokazanie lub ukrycie kursora
+void console_cursor(bool showFlag);      //pokazanie lub ukrycie kursora
 
 void signs();        // znaki ozdobne
 

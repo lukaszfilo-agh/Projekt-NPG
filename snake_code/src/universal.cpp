@@ -5,7 +5,7 @@
 
 // Ponizej funckje uniwersanlne
 
-void ShowConsoleCursor(bool showFlag) {
+void console_cursor(bool showFlag) {
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 
     CONSOLE_CURSOR_INFO cursorInfo;
@@ -24,7 +24,7 @@ void clear_console() {
 }
 
 void menu_wait() {// domyslne oczekiwanie z informacja
-    ShowConsoleCursor(false);
+    console_cursor(false);
     signs();
     std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
     signs();
@@ -34,15 +34,15 @@ void menu_wait() {// domyslne oczekiwanie z informacja
     std::cout << "Powrot do okna menu..." << std::endl;
     signs();
     sleep(1);
-    ShowConsoleCursor(true);
+    console_cursor(true);
 }
 
 void normal_wait(const int i) {       // samo oczekiwanie z wyborem czasu trwania
-    ShowConsoleCursor(false);
+    console_cursor(false);
     sleep(i);
     signs();
     std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
     signs();
     std::cin.get();
-    ShowConsoleCursor(true);
+    console_cursor(true);
 }
