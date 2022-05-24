@@ -4,6 +4,7 @@
 #include <vector>
 #include <windows.h>
 #include "menu.hpp"
+#include "fruit.hpp"
 
 class Snake {
 private:
@@ -26,9 +27,13 @@ public:
 
     void snake_direction(const char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
 
-    std::vector<COORD> get_body() { return body_; };
+    std::vector<COORD> get_body() const { return body_; }
 
-    bool snake_eaten(COORD food);
+    COORD get_body_elem(int i) const { return body_[i]; }
+
+    int get_body_size() const { return body_.size(); }
+
+    bool snake_eaten(const Fruit& fruit);
 
     bool snake_collided(const MenuData& menuData);    //czy snake zderzyl sie
 };

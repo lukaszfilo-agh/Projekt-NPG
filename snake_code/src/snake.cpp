@@ -10,8 +10,8 @@ Snake::Snake(COORD position, const MenuData& menuData) {
     body_.push_back(position);
 }
 
-bool Snake::snake_eaten(COORD food) {
-    if (position_.X == food.X && position_.Y == food.Y)
+bool Snake::snake_eaten(const Fruit& fruit) {
+    if (position_.X == fruit.fruit_get_position().X && position_.Y == fruit.fruit_get_position().Y)
         return true;
     else
         return false;

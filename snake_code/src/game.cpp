@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "game.hpp"
 #include <unistd.h>
 
@@ -12,7 +13,7 @@ void end_game(MenuData& menuData){
     menu(menuData);
 }
 
-void board(const Snake& snake, const MenuData& menuData, const Fruit& fruit){
+void board(const Snake& snake, const MenuData& menuData, Fruit& fruit){
         COORD snake_pos = snake.snake_get_position();
 
         menuData.print_score();
@@ -30,9 +31,9 @@ void board(const Snake& snake, const MenuData& menuData, const Fruit& fruit){
                 else
                 {
                     bool isBodyPart = false;
-                    for(int k = 0; k < snake.get_length() - 1; k++)
+                    for(int k = 0; k < snake.get_body_size() - 1; k++)
                     {
-                        if(i == snake.snake_get_position().X && j + 1 == snake.snake_get_position().Y)
+                        if(i == snake.get_body_elem(k).Y && j + 1 == snake.get_body_elem(k).X)
                         {
                             std::cout << 'o';
                             isBodyPart = true;
@@ -48,7 +49,7 @@ void board(const Snake& snake, const MenuData& menuData, const Fruit& fruit){
 }
 
 void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
-    srand(time(nullptr));
+    srand(time(NULL));
 
     bool game_over = false;   // warunek konca gry
     clear_console();
@@ -71,7 +72,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
 
         if(snake.snake_collided(menuData)) game_over = true;
 
-        if(snake.snake_eaten(fruit.fruit_get_position()))
+        if(snake.snake_eaten(fruit))
         {
             fruit.fruit_generate(menuData);
             snake.snake_grow();
@@ -81,6 +82,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
         snake.snake_move();
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
+        usleep(500);
     }
     end_game(menuData);
 }
