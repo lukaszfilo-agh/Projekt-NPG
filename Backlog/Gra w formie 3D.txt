@@ -2,3 +2,6 @@
 (widzielibyśmy tylko to co znajduje się przed wężem oraz w małym stożku obejmującym jego prawą i lewą stronę).*
 
 Priorytet powyzszego elementu został ustalony na NISKI przez Filipa Dymczyka dnia 21.04.2022.
+
+Założenia zadania:
+- gra będzie posiadać taką samą specyfikację jak standardowa gra 2D.

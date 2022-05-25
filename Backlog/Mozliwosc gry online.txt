@@ -3,3 +3,6 @@ Mogliby wówczas konkurować np. o najdłuższe przetrwanie, bądź zdobycie naj
 (zasady zdobywanie punktów znajduja się w pliku Punktacja).*
 
 Priorytet powyższego elementu został ustalony na BARDZO NISKI przez Filipa Dymczyka dnia 21.04.2022.
+
+Założenia zadania:
+- dodatkową możliwością skończenie gry, oprócz wejścia w ścianę, będzie wejście w ogon drugiego gracza.
