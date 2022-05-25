@@ -1,0 +1,10 @@
+Scrum Master od 31.04.2022 - 13.04.2022.
+
+Podczas tego okresu zostały podjęte następujące działania, 
+które miały usprawnić w przyszłości pracę nad projektem, tj.:
+- wybór narzędzia do organizacji pracy za pomocą, którego odbywać się będzie nasza komunikacja,
+- stworzenie przestrzeni roboczej w Trello,
+- dodanie członków grupy do projektu,
+- wybór tematu projektu oraz jego ogólny zamysł,
+- wybór języka programowania,
+- stworzenie repozytorium Github oraz projektu.
