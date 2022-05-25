@@ -4,6 +4,7 @@
 #include "fruit.hpp"
 
 int main() {
+    ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
     MenuData menuData; // obiekt przechowujacy dane menu
     welcome_message();
 
