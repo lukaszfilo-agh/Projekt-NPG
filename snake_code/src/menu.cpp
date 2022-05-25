@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "menu.hpp"
 #include "universal.hpp"
 
@@ -109,7 +110,7 @@ void menu(MenuData& menuData) {
         std::cin.ignore();
         normal_wait(1);
     } else {                     // wyjscie z menu
-        menu_exit();
+        menu_exit(menuData);
     }
 }
 
@@ -231,11 +232,16 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     menu_wait();
 }
 
-void menu_exit() {         // opuszczanie menu
+void menu_exit(MenuData& menuData) {       // opuszczanie menu
+    clear_console();
+    signs();
+    std::cout << "              Twoj koncowy wynik to: " << menuData.get_score() << std::endl;
+    signs();
+    sleep(2);
     clear_console();
     signs();
     std::cout << "Do zobaczenia!" << std::endl;
     std::cout << "Zamykanie..." << std::endl;
     signs();
-    normal_wait(2);
+    sleep(2);
 }

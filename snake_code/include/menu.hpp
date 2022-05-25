@@ -113,6 +113,6 @@ void select_size(MenuData &menuData);                                   // rozmi
 
 void select_board(MenuData &menuData);                                   // wybor planszy
 
-void menu_exit();                                                        // wyjscie z menu
+void menu_exit(MenuData& menuData);                                                        // wyjscie z menu
 
 #endif //SNAKE_MENU_HPP
