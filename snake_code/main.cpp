@@ -21,9 +21,5 @@ int main() {
             snake.~Snake();
             fruit.~Fruit();
         }
-//        system("pause");
     }
-    std::cout << "wyjebalo petle"<< std::endl;
-    system("pause");
-    return 0;
 }
