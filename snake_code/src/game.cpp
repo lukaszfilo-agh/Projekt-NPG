@@ -13,7 +13,7 @@ void end_game(MenuData& menuData) {
     std::cout << "Twoj wynik to: " << menuData.get_score() << "!" << std::endl;
     std::cout << "Gratulacje!!!" << std::endl;
     signs();
-    normal_wait(1);
+    menu_wait();
     clear_console();
     menuData.set_game_end(true);
 }
@@ -54,7 +54,6 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
     clear_console();
     fruit.fruit_generate(menuData);
     console_cursor(false);
-    menuData.set_game_end(false);
 
     while (!menuData.get_game_end()) {           // warunek konca gry
         board(snake, menuData, fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem
