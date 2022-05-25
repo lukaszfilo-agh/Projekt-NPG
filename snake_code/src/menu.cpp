@@ -93,6 +93,7 @@ void menu(MenuData& menuData) {
     }
     if (choice == 1) {   // warunek rozpoczecia gry
         clear_console();
+        menuData.set_game_end(false);
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
         std::cout << "Grasz na poziomie trudnosci: " << menuData.get_diff_map(menuData.get_diff())

@@ -15,7 +15,6 @@ void end_game(MenuData& menuData) {
     signs();
     normal_wait(1);
     clear_console();
-    menu(menuData);
 }
 
 void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
@@ -85,7 +84,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
         snake.snake_move();
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
-        usleep(500);
+        usleep(800);
     }
     end_game(menuData);
 }

@@ -14,6 +14,6 @@ int main() {
                     menuData);
         Fruit fruit;
         game(menuData, snake, fruit);
-        return 0;
+//        menu(menuData);
     }
 }
