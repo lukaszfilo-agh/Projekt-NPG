@@ -92,7 +92,6 @@ void menu(MenuData& menuData) {
         }
     }
     if (choice == 1) {   // warunek rozpoczecia gry
-        menuData.set_game_end(false);
         clear_console();
         signs();
         std::cout << "              ===ROZPOCZYNASZ NOWA GRE===" << std::endl;
