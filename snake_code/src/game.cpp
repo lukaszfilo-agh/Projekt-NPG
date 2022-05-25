@@ -22,9 +22,10 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
     COORD snake_pos = snake.snake_get_position();
 
     menuData.print_score();
+    std::cout << fruit.fruit_get_position().X << "." << fruit.fruit_get_position().Y;
 
     for (int i = 0; i < menuData.get_size_y(); i++) {
-        std::cout << "\t\t" + menuData.get_board_chars(menuData.get_board());
+        std::cout << "\t" + menuData.get_board_chars(menuData.get_board());
         for (int j = 0; j < menuData.get_size_x() - 2; j++) {
             if (i == 0 || i == menuData.get_size_y() - 1) std::cout << menuData.get_board_chars(menuData.get_board());
 

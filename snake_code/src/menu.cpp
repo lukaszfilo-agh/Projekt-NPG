@@ -195,11 +195,11 @@ void select_background_color(MenuData& menuData) {             // obsluguje wybo
 void select_size(MenuData& menuData) {               // rozmiar planszy
     clear_console();
     signs();
-    std::cout << "Wybierz szerokosc planszy(max 50): ";
+    std::cout << "Wybierz szerokosc planszy(max 55): ";
     menuData.set_size_x();
-    while (menuData.get_size_x() > 50) {
+    while (menuData.get_size_x() > 55) {
         signs();
-        std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 50): ";
+        std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 55): ";
         menuData.set_size_x();
     }
     signs();
@@ -207,7 +207,7 @@ void select_size(MenuData& menuData) {               // rozmiar planszy
     menuData.set_size_y();
     while (menuData.get_size_y() > 25) {
         signs();
-        std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 50): ";
+        std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 25): ";
         menuData.set_size_y();
     }
     clear_console();
