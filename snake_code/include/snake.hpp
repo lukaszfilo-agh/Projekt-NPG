@@ -17,6 +17,8 @@ private:
 public:
     Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
 
+    ~Snake() = default;
+
     void snake_move(); //poruszanie snakem
 
     int get_length() const { return length_; }

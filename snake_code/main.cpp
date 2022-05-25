@@ -6,14 +6,24 @@
 int main() {
     MenuData menuData; // obiekt przechowujacy dane menu
     welcome_message();
-    menu(menuData);
-    if (menuData.get_game_end()) {
-        return 0;
-    } else {
-        Snake snake({static_cast<SHORT>(menuData.get_size_x() / 2), static_cast<SHORT>(menuData.get_size_y() / 2)},
-                    menuData);
-        Fruit fruit;
-        game(menuData, snake, fruit);
-//        menu(menuData);
+
+    while(menuData.get_game_end()) {
+        menu(menuData);
+        if (menuData.get_game_end()) {
+            menuData.~MenuData();
+            return 0;
+        }
+        else {
+            Snake snake({static_cast<SHORT>(menuData.get_size_x() / 2), static_cast<SHORT>(menuData.get_size_y() / 2)},
+                        menuData);
+            Fruit fruit;
+            game(menuData, snake, fruit);
+            snake.~Snake();
+            fruit.~Fruit();
+        }
+//        system("pause");
     }
+    std::cout << "wyjebalo petle"<< std::endl;
+    system("pause");
+    return 0;
 }

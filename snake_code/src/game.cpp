@@ -15,6 +15,7 @@ void end_game(MenuData& menuData) {
     signs();
     normal_wait(1);
     clear_console();
+    menuData.set_game_end(true);
 }
 
 void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {

@@ -13,7 +13,7 @@ public:
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
               board_(board), score_(score), game_ended_(game_ended){}; // konstruktor domyslny
-
+    ~MenuData() = default;
     // gettery
     std::string get_snake_name() const { return snake_name_; }
 
@@ -113,6 +113,6 @@ void select_size(MenuData &menuData);                                   // rozmi
 
 void select_board(MenuData &menuData);                                   // wybor planszy
 
-void exit_game();                                                        // wyjscie z menu
+void menu_exit();                                                        // wyjscie z menu
 
 #endif //SNAKE_MENU_HPP

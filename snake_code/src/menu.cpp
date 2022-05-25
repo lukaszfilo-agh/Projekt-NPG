@@ -109,7 +109,7 @@ void menu(MenuData& menuData) {
         std::cin.ignore();
         normal_wait(1);
     } else {                     // wyjscie z menu
-        exit_game();
+        menu_exit();
     }
 }
 
@@ -231,7 +231,7 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     menu_wait();
 }
 
-void exit_game() {         // opuszczanie menu
+void menu_exit() {         // opuszczanie menu
     clear_console();
     signs();
     std::cout << "Do zobaczenia!" << std::endl;
