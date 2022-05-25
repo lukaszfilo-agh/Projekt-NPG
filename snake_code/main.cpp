@@ -7,10 +7,9 @@ int main() {
     MenuData menuData; // obiekt przechowujacy dane menu
     welcome_message();
     menu(menuData);
-    if (menuData.get_end()) {
+    if (menuData.get_game_end()) {
         return 0;
-    }
-    else {
+    } else {
         Snake snake({static_cast<SHORT>(menuData.get_size_x() / 2), static_cast<SHORT>(menuData.get_size_y() / 2)},
                     menuData);
         Fruit fruit;

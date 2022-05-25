@@ -51,12 +51,11 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
 
 void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
     srand(time(NULL));
-
     clear_console();
     fruit.fruit_generate(menuData);
     console_cursor(false);
 
-    while (menuData.get_end()) {           // warunek konca gry
+    while (!menuData.get_game_end()) {           // warunek konca gry
         board(snake, menuData, fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem
         if (kbhit()) {                            // jak damy znowu nowa gre po przegranej to sie wyłącza
             switch (getch()) {
@@ -75,7 +74,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
             }
         }
 
-        if (snake.snake_collided(menuData)) menuData.set_end(false);
+        if (snake.snake_collided(menuData)) menuData.set_game_end(true);
 
         if (snake.snake_eaten(fruit)) {
             fruit.fruit_generate(menuData);
