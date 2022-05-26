@@ -51,5 +51,5 @@ void Snake::snake_move()            //porusdzanie wezem
     if (body_.size() > length_) {
         body_.erase(body_.begin());
     }
-    usleep(2500);
+    usleep(20000);
 }
