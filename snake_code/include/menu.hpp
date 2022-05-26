@@ -8,8 +8,8 @@
 class MenuData {          // klasa obslugujaca wszystkie dane pobierane w menu (calkowicie przerobiona)
 public:
     MenuData(const std::string &snake_name = "snake", const int diff = 1,
-             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 55,
-             const int &size_y = 25, const int &board = 1, const int &score = 0, const bool game_ended = true)
+             const int &snake_color = 1, const int &background_color = 1, const int &size_x = 60,
+             const int &size_y = 30, const int &board = 1, const int &score = 0, const bool game_ended = true)
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
               board_(board), score_(score), game_ended_(game_ended){}; // konstruktor domyslny
@@ -113,6 +113,6 @@ void select_size(MenuData &menuData);                                   // rozmi
 
 void select_board(MenuData &menuData);                                   // wybor planszy
 
-void menu_exit();                                                        // wyjscie z menu
+void menu_exit(MenuData& menuData);                                                        // wyjscie z menu
 
 #endif //SNAKE_MENU_HPP
