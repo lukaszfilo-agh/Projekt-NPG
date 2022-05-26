@@ -3,11 +3,13 @@
 
 Użytkownik produktu będzie mógł w menu klikając odpowiedni przycisk w menu 
 wyjść w każdej chwili z aplikacji,
+
 - możliwość nadania nazwy węża:
 
 opcja służąca do nazwania przez gracza swojego węża, opcja ma na celu 
 uprzyjemnienie rozgrywki przez uczestnika, aby gracz nadał nazwę węża
 należy w menu wybrać odpowiednią opcje,
+
 - możliwość wyboru poziomu trudności:
 w aplikacji znajdują się trzy poziomy trudności "łatwy", "średni", "trudny",
 każdy gracz może wybrać poziom trudności w menu, wybierając odpowiednia 
