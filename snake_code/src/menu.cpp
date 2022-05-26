@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "menu.hpp"
 #include "universal.hpp"
 
@@ -109,7 +110,7 @@ void menu(MenuData& menuData) {
         std::cin.ignore();
         normal_wait(1);
     } else {                     // wyjscie z menu
-        menu_exit();
+        menu_exit(menuData);
     }
 }
 
@@ -195,19 +196,19 @@ void select_background_color(MenuData& menuData) {             // obsluguje wybo
 void select_size(MenuData& menuData) {               // rozmiar planszy
     clear_console();
     signs();
-    std::cout << "Wybierz szerokosc planszy(max 55): ";
+    std::cout << "Wybierz szerokosc planszy(max 60): ";
     menuData.set_size_x();
-    while (menuData.get_size_x() > 55) {
+    while (menuData.get_size_x() > 60) {
         signs();
-        std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 55): ";
+        std::cout << "Wybrano za duza szerokosc planszy, podaj poprawna(max 60): ";
         menuData.set_size_x();
     }
     signs();
-    std::cout << "Wybierz wysokosc planszy(max 25): ";
+    std::cout << "Wybierz wysokosc planszy(max 30): ";
     menuData.set_size_y();
-    while (menuData.get_size_y() > 25) {
+    while (menuData.get_size_y() > 30) {
         signs();
-        std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 25): ";
+        std::cout << "Wybrano za duza wysokosc planszy, podaj poprawna(max 30): ";
         menuData.set_size_y();
     }
     clear_console();
@@ -231,11 +232,16 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     menu_wait();
 }
 
-void menu_exit() {         // opuszczanie menu
+void menu_exit(MenuData& menuData) {       // opuszczanie menu
+    clear_console();
+    signs();
+    std::cout << "              Twoj koncowy wynik to: " << menuData.get_score() << std::endl;
+    signs();
+    sleep(2);
     clear_console();
     signs();
     std::cout << "Do zobaczenia!" << std::endl;
     std::cout << "Zamykanie..." << std::endl;
     signs();
-    normal_wait(2);
+    sleep(2);
 }
