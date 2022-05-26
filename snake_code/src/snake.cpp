@@ -11,14 +11,14 @@ Snake::Snake(COORD position, const MenuData& menuData) {
     body_.push_back(position);
 }
 
-bool Snake::snake_eaten(const Fruit& fruit) {
+bool Snake::eaten(const Fruit& fruit) {
     if (position_.X == fruit.fruit_get_position().X && position_.Y == fruit.fruit_get_position().Y)
         return true;
     else
         return false;
 }
 
-bool Snake::snake_collided(const MenuData& menuData) {
+bool Snake::collided(const MenuData& menuData) {
     if (position_.X < 1 || position_.X > menuData.get_size_x() - 2 || position_.Y < 1 ||
         position_.Y > menuData.get_size_y() - 2)
         return true;
@@ -29,7 +29,7 @@ bool Snake::snake_collided(const MenuData& menuData) {
     return false;
 }
 
-void Snake::snake_move()            //porusdzanie wezem
+void Snake::move()            //porusdzanie wezem
 {
     switch (direction_) {
         case 'u':
