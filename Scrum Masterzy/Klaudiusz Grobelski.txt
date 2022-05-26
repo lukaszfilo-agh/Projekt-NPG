@@ -1,0 +1,40 @@
+Czynności i zadania wykonane w od dnia 4 maja do 13 maja:
+
+	Zadania wykonane przez zespół:
+
+	-utworzenie w menu głównym nadania nazwy węża
+
+	-utworzenia w menu głównym wyboru trudności poziomu
+	
+	-utworzenia w menu głównym wyboru tła
+
+	-utworzenia w menu głównym wyboru koloru węża
+
+	-utworzenia w menu głównym utworzenie opcji nowa gra oraz wyjdź z gry
+
+	-utworzenia w menu głównym rozmiaru planszy
+	przechowywanie danych w klasie
+
+	-utworzenia w menu głównym stylu obramowania planszy
+
+	-utworzenie systemu kontroli błędów
+
+	-utworzenia w menu głównym kontroli wyboru opcji z sekcji menu
+
+	-ukończenie kamienia milowego o nazwie "MENU GŁÓWNE"
+
+	Zarządzenia podjęte przez Scrum Mastera w okresie 4 maja do 13 maja:
+
+	-kontrola pracy zespołu
+
+	-zarządzenie zorganizowania spotkania deweloperskiego dnia 7 maja
+
+	-zarządzenie zorganizowania spotkania deweloperskiego dnia 14 maja
+
+	-podjęcie decyzji o dodaniu to projektu systemu kontroli błędów
+
+	-zmiany w priorytetach projektu "Punktacja graczy" otrzymał niski priorytet
+
+	-zmiany w priorytetach projektu "Gra w formie 2D" otrzymał niski priorytet
+
+	-zmiany w priorytetach projektu "MENU GŁÓWNE" otrzymał wysoki priorytet
