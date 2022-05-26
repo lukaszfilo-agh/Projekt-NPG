@@ -1,6 +1,26 @@
 #include "game.hpp"
 #include <ctime>
 
+int game_main(MenuData& menuData) {
+    while(menuData.get_game_end()) {
+        menu(menuData);
+        if (menuData.get_game_end()) {
+            menuData.~MenuData();
+            return 0;
+        }
+        else {
+            Snake snake({static_cast<SHORT>(menuData.get_size_x() / 2), static_cast<SHORT>(menuData.get_size_y() / 2)},
+                        menuData);
+            Fruit fruit;
+            game(menuData, snake, fruit);
+            snake.~Snake();
+            fruit.~Fruit();
+        }
+    }
+    return 0;
+}
+
+
 void end_game(MenuData& menuData) {
     clear_console();
     signs();
@@ -48,7 +68,7 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
 }
 
 void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
-    srand(time(NULL));
+    srand(time(nullptr));
     clear_console();
     fruit.fruit_generate(menuData);
     console_cursor(false);

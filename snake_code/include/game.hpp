@@ -10,5 +10,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit);
 
 void end_game(MenuData& menuData);
 
+int game_main(MenuData& menuData);
+
 
 #endif //SNAKE_GAME_HPP
