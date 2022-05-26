@@ -2,17 +2,47 @@
 
 Priorytet powyższego elementu został ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022.
 Priorytet powyższego elementu został ustalony na NISKI przez Klaudiusza Grobelskiego dnia 07.05.2022.
+Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Konrada Grucel dnia 16.05.2022
 
 gra powinna zawierać:
 
--funkcję umożliwiającą ruch w górę,dół,prawo,lewo.
--funkcję wydłużającą węża.
--funkcję powudującą pojawianie się przeszkód.
--funkcję powodującą pojawianie się owoców(lub innego przedmiotu powodującego wydłużanie się węża).
--funkcję powodującą wyświetlanie się planszy.
--funckję powodującą wyswietlanie się weża.
--funckję koncząca gre w przypadku kolizji(tzn uderzenia w ściankę,przeszkode lub w siebie).
+-funkcję umożliwiającą ruch w górę,dół,prawo,lewo:
 
-Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Konrada Grucel dnia 16.05.2022
+gracz wykorzystuje przyciski do poruszania się wężem do poruszania sie w góre służy przycisk "W",
+do poruszania się w dół "S", do poruszania sie w prawo "D" oraz przycisk "A" do poruszania się
+w lewo,
+
+-funkcję wydłużającą węża:
+
+funkcja ma działa w następujący sposób, jeżeli graczowi uda złapać się owoc to wąż wydłuża się 
+o jedna długość,
+
+-funkcję powudującą pojawianie się przeszkód:
+
+opcja która ma urozmaicić rozgrywkę, przez pojawienie się dodatkowych przeszkód, powodując że, 
+gra staje się trudniejsza,
+
+-funkcję powodującą pojawianie się owoców(lub innego przedmiotu powodującego wydłużanie się węża):
+
+funkcja służy to wydłużenia węża, jeżeli gracz zbierze dany owoc wąż się wydłuża, a sam gracz 
+otrzymuje 10 punktów za zebranie jednego owoca,
+
+-funkcję powodującą wyświetlanie się planszy:
+
+ładuje plansze na ekran użytownika,
+
+-funckję powodującą wyswietlanie się weża:
+
+wyświetla na ekranie gracza węża,
+
+-funckję koncząca gre w przypadku kolizji:
+
+opcja odpowiada za zakończenie gry przez użytkownika, gracz może przegrać jeżeli:
+- uderzy w ściane na końcu planszy
+- uderzy w przeszkodę 
+- uderzy w swój ogon
+pojecie "uderzy" rozumieny jako zderzenie węża z obiektami oznaczającymi obszar gry,
+przeszkode i węża, 
+
 
 
