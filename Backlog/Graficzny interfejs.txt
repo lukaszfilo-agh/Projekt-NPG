@@ -5,4 +5,8 @@ Priorytet powyższego elementu został ustalony na NISKI przez Konrada Grucel dn
 
 Założenia zadania:
 - całkowicie zrezygnowanie z obsługi gry za pomocy konsoli,
-- wizualna poprawa atrakcyjności gry.
+
+- wizualna poprawa atrakcyjności gry:
+
+stworzenie graficznego węża, owoców oraz planszy na której będzie 
+odbywać się gra,
