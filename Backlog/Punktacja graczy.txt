@@ -2,3 +2,12 @@
 
 Priorytet powyższego elementu został ustalony na ŚREDNI przez Filipa Dymczyka dnia 21.04.2022.
 Priorytet powyższego elementu został ustalony na NISKI przez Klaudiusza Grobelskiego dnia 07.05.2022.
+Priorytet powyższego elementu został ustalony na WYSOKI przez Konrada Grucel dnia 24.06.2022
+
+pole punktacja graczy powinno zawierać:
+-funckje zliczającą punkty podczas całej sesji gry.
+-funkcje wyświetlającą wynik na bieząco.
+-funckje wyświetlającą wynik po każdej rozgrywce.
+-fukcje pokazującą końcową punktację przy wychodzeniu z gry.
+
+termin wykonania powyższych zadań zostaje ustalony  na 27.05.2022. przez Konrada Grucel.
