@@ -4,8 +4,8 @@
 
 // wypelnienie map
 
-const std::map<int, std::string> MenuData::snake_colors_ = {{1, "zielony"},
-                                                            {2, "czerwony"},
+const std::map<int, std::string> MenuData::snake_colors_ = {{1, "bialy"},
+                                                            {2, "zielony"},
                                                             {3, "niebieski"},
                                                             {4, "pomaranczowy"}};
 const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},
