@@ -1,6 +1,5 @@
-#include <unistd.h>
 #include "game.hpp"
-#include <unistd.h>
+#include <ctime>
 
 void end_game(MenuData& menuData) {
     clear_console();
@@ -84,7 +83,6 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
         snake.snake_move();
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
-        usleep(800);
     }
     end_game(menuData);
 }

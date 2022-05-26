@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "snake.hpp"
 
 Snake::Snake(COORD position, const MenuData& menuData) {
@@ -50,4 +51,5 @@ void Snake::snake_move()            //porusdzanie wezem
     if (body_.size() > length_) {
         body_.erase(body_.begin());
     }
+    usleep(2500);
 }
