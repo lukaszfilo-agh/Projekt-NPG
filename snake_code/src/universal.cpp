@@ -15,6 +15,13 @@ void console_cursor(bool showFlag) {
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
+void welcome_message() {
+    signs();
+    std::cout << "              ===Witaj w grze snake===" << std::endl;
+    signs();
+    normal_wait(1);
+}
+
 void signs() {
     std::cout << "------------------------------------------------------" << std::endl;
 }

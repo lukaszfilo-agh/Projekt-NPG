@@ -37,10 +37,9 @@ void end_game(MenuData& menuData) {
 }
 
 void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
-    COORD snake_pos = snake.get_position();
 
     menuData.print_score();
-    std::cout << fruit.fruit_get_position().X << "." << fruit.fruit_get_position().Y;
+    std::cout << fruit.get_position().X << "." << fruit.get_position().Y;
 
     for (int i = 0; i < menuData.get_size_y(); i++) {
         std::cout << "\t" + menuData.get_board_chars(menuData.get_board());
@@ -49,10 +48,10 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
                 std::cout << menuData.get_board_chars(menuData.get_board());
             }
 
-            else if (i == snake_pos.Y && j + 1 == snake_pos.X) {
+            else if (i == snake.get_position().Y && j + 1 == snake.get_position().X) {
                 std::cout << '0';
             }
-            else if (i == fruit.fruit_get_position().Y && j + 1 == fruit.fruit_get_position().X) {
+            else if (i == fruit.get_position().Y && j + 1 == fruit.get_position().X) {
                 std::cout << '@';
             }
 
@@ -78,10 +77,10 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
 void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
     srand(time(nullptr));
     clear_console();
-    fruit.fruit_generate(menuData);
+    fruit.generate(menuData);
     console_cursor(false);
 
-    while (!menuData.get_game_end()) {           // warunek konca gry
+    while (!menuData.get_game_end()) {     // warunek konca gry
         board(snake, menuData, fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem
         if (kbhit()) {                            // jak damy znowu nowa gre po przegranej to sie wyłącza
             switch (getch()) {
@@ -105,7 +104,7 @@ void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
         }
 
         if (snake.eaten(fruit)) {
-            fruit.fruit_generate(menuData);
+            fruit.generate(menuData);
             snake.grow();
             menuData.score_add();
         }

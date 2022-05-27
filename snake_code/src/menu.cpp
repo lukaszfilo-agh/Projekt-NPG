@@ -114,13 +114,6 @@ void menu(MenuData& menuData) {
     }
 }
 
-void welcome_message() {
-    signs();
-    std::cout << "              ===Witaj w grze snake===" << std::endl;
-    signs();
-    normal_wait(1);
-}
-
 void menu_display(MenuData& menuData) {                       // wyswietlanie opcji w menu
     clear_console();
     signs();
