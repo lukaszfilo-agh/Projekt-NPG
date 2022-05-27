@@ -1,4 +1,6 @@
 *Menu główne powinno zawierać następujące funkcjonalności:
+
+
 - opcje wejścia do raz wyjścia z gry:
 
 Użytkownik produktu będzie mógł w menu klikając odpowiedni przycisk w menu 
@@ -55,5 +57,9 @@ Po ukończeniu gry pojawia się ilość zdobytych punktów i napis "Gratulacje"
 i zostajemy przekierowywani z powrotem do menu, każdą opcje zatwierdzamy
 enterem
 *
+
+- możliwość zapoznania się z działaniem gry przed jej rozpoczęciem(Instrukcja)
+
+ użytkownik wybiera w menu opcję  związana z tą możliwością, na ekran zostanie wyświetlona krótka instrukcja informująca o zasadach gry.
  
 Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Filipa Dymczyka dnia 21.04.2022.
