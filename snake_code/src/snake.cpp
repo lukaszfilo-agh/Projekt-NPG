@@ -12,7 +12,7 @@ Snake::Snake(COORD position, const MenuData& menuData) {
 }
 
 bool Snake::eaten(const Fruit& fruit) {
-    if (position_.X == fruit.fruit_get_position().X && position_.Y == fruit.fruit_get_position().Y)
+    if (position_.X == fruit.get_position().X && position_.Y == fruit.get_position().Y)
         return true;
     else
         return false;

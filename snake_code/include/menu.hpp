@@ -95,8 +95,6 @@ private:
 
 // PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void welcome_message();
-
 void menu(MenuData &menuData);                                            // calosciowa obsluga menu
 
 void menu_display(MenuData &menuData);                                   // wyswietlanie opcji w menu

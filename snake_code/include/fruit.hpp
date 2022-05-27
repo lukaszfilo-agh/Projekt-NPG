@@ -12,9 +12,9 @@ public:
     Fruit() = default;
     ~Fruit() = default;
 
-    COORD fruit_get_position() const { return position_; } //uzyskanie pozycji owoca
+    COORD get_position() const { return position_; } //uzyskanie pozycji owoca
 
-    void fruit_generate(const MenuData& menuData);
+    void generate(const MenuData& menuData);
 };
 
 #endif //SNAKE_FRUIT_HPP
