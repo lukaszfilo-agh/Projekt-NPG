@@ -114,6 +114,20 @@ void menu(MenuData& menuData) {
     }
 }
 
+void instructions(){
+    clear_console();
+    signs();
+    std::cout << "              Za chwile twoim oczom ukaze sie menu..." << std::endl;
+    clear_console();
+    usleep(500);
+    std::cout << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
+    usleep(500);
+    std::cout << "1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter," << std::endl;
+
+    
+}
+
+
 void menu_display(MenuData& menuData) {                       // wyswietlanie opcji w menu
     clear_console();
     signs();
