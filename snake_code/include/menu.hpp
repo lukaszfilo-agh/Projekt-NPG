@@ -99,7 +99,7 @@ private:
 
 void menu(MenuData &menuData);                                            // calosciowa obsluga menu
 
-void instructions();                                                      // instrukcja obslugi menu
+void instructions_menu();                                                      // instrukcja obslugi menu
 
 void menu_display(MenuData &menuData);                                   // wyswietlanie opcji w menu
 
