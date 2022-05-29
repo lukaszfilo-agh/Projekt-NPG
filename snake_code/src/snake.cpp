@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "snake.hpp"
 
-Snake::Snake(COORD position, const MenuData& menuData) {
+Snake::Snake(COORD position, const MenuData& menuData) {         //konstruktor snake
     this->position_ = position;
     this->velocity_ = menuData.get_diff();
 
@@ -11,14 +11,14 @@ Snake::Snake(COORD position, const MenuData& menuData) {
     body_.push_back(position);
 }
 
-bool Snake::eaten(const Fruit& fruit) {
+bool Snake::eaten(const Fruit& fruit) {                         //metoda sprawdzajaca czy snake napotkal na owoc
     if (position_.X == fruit.get_position().X && position_.Y == fruit.get_position().Y)
         return true;
     else
         return false;
 }
 
-bool Snake::collided(const MenuData& menuData) {
+bool Snake::collided(const MenuData& menuData) {               //metoda sprawdzajaca czy snake wszedl w siebie albo obramowanie planszy
     if (position_.X < 1 || position_.X > menuData.get_size_x() - 2 || position_.Y < 1 ||
         position_.Y > menuData.get_size_y() - 2)
         return true;
@@ -29,7 +29,7 @@ bool Snake::collided(const MenuData& menuData) {
     return false;
 }
 
-void Snake::move()            //porusdzanie wezem
+void Snake::move()            //poruszanie wezem
 {
     switch (direction_) {
         case 'u':
@@ -51,5 +51,5 @@ void Snake::move()            //porusdzanie wezem
     if (body_.size() > length_) {
         body_.erase(body_.begin());
     }
-    usleep(20000);
+    usleep(20000);         //odczekanie 200000 ms
 }
