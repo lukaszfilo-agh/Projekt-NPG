@@ -120,15 +120,26 @@ void instructions(){
     std::cout << "              Za chwile twoim oczom ukaze sie menu..." << std::endl;
     clear_console();
     usleep(500);
-    std::cout << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
+    std::cout << "              Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
+    clear_console();
     usleep(500);
     std::cout << "1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter," << std::endl;
+    usleep(500);
+    std::cout << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem,"
+                 "po dokonaniu wyboru, potwierdz go klikajac Enter, " << std::endl;
+    usleep(500);
+    std::cout << "3. po wybraniu opcji 3, gra poprosi Cie o wprowadzeni dowolnej nazwy swojego Snake'a. Po wpisaniu swoja nazwe"
+                 "zatwierdz klikajac klawisz Enter,"<< std::endl;
+    usleep(500);
+    std::cout << "4. po wybraniu opcji 1 rozpoczniesz nowa gre z domyslnymi ustawieniami (kazde z nich zostanie Ci wyswietlona przed rozpoczeciem gry), natomiast "
+                 "po wyborze opcji 8 - opuscisz gre a jesli juz grales to zostanie wyswietlony Ci twoj dotychczasowy wynik" << std::endl << std::endl;
 
-    
+    normal_wait(1);
 }
 
 
 void menu_display(MenuData& menuData) {                       // wyswietlanie opcji w menu
+    instructions();
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
