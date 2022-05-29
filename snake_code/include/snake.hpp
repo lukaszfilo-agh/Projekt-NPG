@@ -15,7 +15,7 @@ private:
     char direction_;                                  //obsluga kierunku porusznania
 
 public:
-    Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
+    Snake(COORD position, const MenuData &menudata);   //konstruktor snakea
 
     ~Snake() = default;                                //destruktor domyslny
 
@@ -32,9 +32,9 @@ public:
 
     //metody
 
-    bool eaten(const Fruit& fruit);             //czy snake zjadl owoc
+    bool eaten(const Fruit &fruit);             //czy snake zjadl owoc
 
-    bool collided(const MenuData& menuData);    //czy snake zderzyl sie
+    bool collided(const MenuData &menuData);    //czy snake zderzyl sie
 
     void direction(const char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
 

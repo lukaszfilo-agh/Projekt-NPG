@@ -10,11 +10,12 @@ private:
 
 public:
     Fruit() = default;
+
     ~Fruit() = default;
 
     COORD get_position() const { return position_; } //uzyskanie pozycji owoca
 
-    void generate(const MenuData& menuData);
+    void generate(const MenuData &menuData);
 };
 
 #endif //SNAKE_FRUIT_HPP

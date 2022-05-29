@@ -1,14 +1,18 @@
 #include "game.hpp"
 #include <ctime>
 
-int game_main(MenuData& menuData) {
-    while(menuData.get_game_end()) {
+void instructions_game() {
+    //TODO
+    //Napisac instrukcje do gry
+}
+
+int game_main(MenuData &menuData) {
+    while (menuData.get_game_end()) {
         menu(menuData);
         if (menuData.get_game_end()) {
             menuData.~MenuData();
             return 0;
-        }
-        else {
+        } else {
             Snake snake({static_cast<SHORT>(menuData.get_size_x() / 2), static_cast<SHORT>(menuData.get_size_y() / 2)},
                         menuData);
             Fruit fruit;
@@ -21,7 +25,7 @@ int game_main(MenuData& menuData) {
 }
 
 
-void end_game(MenuData& menuData) {
+void end_game(MenuData &menuData) {
     clear_console();
     signs();
     std::cout << "                     KONIEC GRY!" << std::endl;
@@ -36,7 +40,7 @@ void end_game(MenuData& menuData) {
     clear_console();
 }
 
-void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
+void board(const Snake &snake, const MenuData &menuData, Fruit &fruit) {
 
     menuData.print_score();
     std::cout << fruit.get_position().X << "." << fruit.get_position().Y;
@@ -46,16 +50,13 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
         for (int j = 0; j < menuData.get_size_x() - 2; j++) {
             if (i == 0 || i == menuData.get_size_y() - 1) {
                 std::cout << menuData.get_board_chars(menuData.get_board());       // wypisywanie planszy
-            }
-
-            else if (i == snake.get_position().Y && j + 1 == snake.get_position().X) {     //wyswietlanie snake'a na odpowiednich pozycjach
+            } else if (i == snake.get_position().Y &&
+                       j + 1 == snake.get_position().X) {     //wyswietlanie snake'a na odpowiednich pozycjach
                 std::cout << '0';
-            }
-            else if (i == fruit.get_position().Y && j + 1 == fruit.get_position().X) {     //wyswietlanie owocow na wygenerowanych pozycjach
+            } else if (i == fruit.get_position().Y &&
+                       j + 1 == fruit.get_position().X) {     //wyswietlanie owocow na wygenerowanych pozycjach
                 std::cout << '@';
-            }
-
-            else {
+            } else {
                 bool isBodyPart = false;
                 for (int k = 0; k < snake.get_body_size() - 1; k++) {
                     if (i == snake.get_body_elem(k).Y && j + 1 == snake.get_body_elem(k).X) {
@@ -74,14 +75,15 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit) {
     }
 }
 
-void game(MenuData& menuData, Snake& snake, Fruit& fruit) {
+void game(MenuData &menuData, Snake &snake, Fruit &fruit) {
     srand(time(nullptr));
     clear_console();
     fruit.generate(menuData);
     console_cursor(false);
 
     while (!menuData.get_game_end()) {     // warunek konca gry
-        board(snake, menuData, fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem. Jak damy znowu nowa gre po przegranej to sie wyłącza
+        board(snake, menuData,
+              fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem. Jak damy znowu nowa gre po przegranej to sie wyłącza
         if (kbhit()) {                            //Edit: dziala juz dobrze
             switch (getch()) {                    // obsluga sterowania
                 case 'w':
