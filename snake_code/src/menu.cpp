@@ -4,25 +4,25 @@
 
 // wypelnienie map
 
-const std::map<int, std::string> MenuData::snake_colors_ = {{1, "bialy"},
+const std::map<int, std::string> MenuData::snake_colors_ = {{1, "bialy"},          //mapowanie kolorow weza
                                                             {2, "zielony"},
                                                             {3, "niebieski"},
                                                             {4, "pomaranczowy"}};
-const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},
+const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},    //mapowanie kolorow tla
                                                                  {2, "bialy"},
                                                                  {3, "rozowy"},
                                                                  {4, "brazowy"}};
 
-const std::map<int, std::string> MenuData::board_chars_ = {{1, "#"},
+const std::map<int, std::string> MenuData::board_chars_ = {{1, "#"},              //mapowanie rodzajow obramowania
                                                            {2, "$"},
                                                            {3, "*"},
                                                            {4, "&"}};
 
-const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},
+const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},             //mapowanie poziomu trudnosci
                                                         {2, "Sredni"},
                                                         {3, "Trudny"}};
 
-const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},
+const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},          //mapowanie tekstu w menu
                                                          {2, "Poziom Trudnosci"},
                                                          {3, "Nazwa weza"},
                                                          {4, "Kolor weza"},

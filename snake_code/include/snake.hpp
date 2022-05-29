@@ -11,25 +11,28 @@ private:
     COORD position_;
     std::vector<COORD> body_;
     std::vector<COORD>::size_type length_;            //dlugosc weza
-    int velocity_;          //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
-    char direction_;
+    int velocity_;                                    //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
+    char direction_;                                  //obsluga kierunku porusznania
 
 public:
     Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
 
-    ~Snake() = default;
+    ~Snake() = default;                                //destruktor domyslny
 
-    int get_length() const { return length_; }
+    //gettery
+    int get_length() const { return length_; }         //uzyskanie dlugosci
 
     COORD get_position() const { return position_; };   //uzyskanie pozycji
 
-    std::vector<COORD> get_body() const { return body_; }
+    std::vector<COORD> get_body() const { return body_; }    //uzyskanie ciala
 
-    COORD get_body_elem(int i) const { return body_[i]; }
+    COORD get_body_elem(int i) const { return body_[i]; }    //uzyskanie elementu ciala
 
-    int get_body_size() const { return body_.size(); }
+    int get_body_size() const { return body_.size(); }       //uzyskanie rozmiaru ciala
 
-    bool eaten(const Fruit& fruit);
+    //metody
+
+    bool eaten(const Fruit& fruit);             //czy snake zjadl owoc
 
     bool collided(const MenuData& menuData);    //czy snake zderzyl sie
 

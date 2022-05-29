@@ -5,7 +5,7 @@
 
 // Ponizej funckje uniwersanlne
 
-void console_cursor(bool showFlag) {
+void console_cursor(bool showFlag) {         //chowanie kursora
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 
     CONSOLE_CURSOR_INFO cursorInfo;
@@ -15,7 +15,7 @@ void console_cursor(bool showFlag) {
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
-void welcome_message() {
+void welcome_message() {           // wiadomosc powitalna
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
@@ -26,7 +26,7 @@ void signs() {
     std::cout << "------------------------------------------------------" << std::endl;
 }
 
-void clear_console() {
+void clear_console() {                //czyszczenie konsolu
     system("cls");
 }
 
