@@ -8,6 +8,8 @@ void board(const Snake& snake, const MenuData& menuData, Fruit& fruit);         
 
 void game(MenuData& menuData, Snake& snake, Fruit& fruit);                      // obsluga gry
 
+void instructions_game();                                                       // Do dodania: wyswietlanie zasad gry i instrukcji
+
 void end_game(MenuData& menuData);                                              // koniec gry - warunek
 
 int game_main(MenuData& menuData);
