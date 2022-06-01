@@ -21,6 +21,8 @@ inline T read() {
     }
 }
 
+void maximize_screen();
+
 void welcome_message();                 //wiadomosc powitalna
 
 void console_cursor(bool showFlag);      //pokazanie lub ukrycie kursora

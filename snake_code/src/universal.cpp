@@ -5,6 +5,10 @@
 
 // Ponizej funckje uniwersanlne
 
+void maximize_screen() {
+    ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
+}
+
 void console_cursor(bool showFlag) {         //chowanie kursora
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 

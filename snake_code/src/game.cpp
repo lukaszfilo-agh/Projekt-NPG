@@ -2,8 +2,7 @@
 #include <ctime>
 
 void instructions_game() {
-    //TODO
-    //Napisac instrukcje do gry
+    //TODO: Napisac instrukcje do gry
 }
 
 int game_main(MenuData &menuData) {
