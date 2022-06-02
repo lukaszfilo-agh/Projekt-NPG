@@ -7,7 +7,7 @@
 void menu(MenuData& menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
-        menu_display(menuData);                            // wyswietlanie menu
+        menu_display(menuData);                    // wyswietlanie menu
         std::cout << "Wybierz opcje z menu: ";
         choice = read<int>();
         if (choice == 2) {
@@ -23,7 +23,7 @@ void menu(MenuData& menuData) {
         } else if (choice == 7) {
             select_board(menuData);
         } else if (choice < 1 ||
-                   choice > 8) {                         // podanie złej opcji konczy sie przeladowaniem menu
+                   choice > 8) {                   // podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -76,7 +76,7 @@ void instructions_menu(){
 }
 
 
-void menu_display(MenuData& menuData) {                       // wyswietlanie opcji w menu
+void menu_display(MenuData& menuData) {                                                 //wyswietlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -84,7 +84,7 @@ void menu_display(MenuData& menuData) {                       // wyswietlanie op
     signs();
 }
 
-void select_difficulty_level(MenuData& menuData) {             // obsluguje wybor poziomu trudnosci
+void select_difficulty_level(MenuData& menuData) {                                      //obsluguje wybor poziomu trudnosci
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -99,7 +99,7 @@ void select_difficulty_level(MenuData& menuData) {             // obsluguje wybo
     menu_wait();
 }
 
-void select_snake_name(MenuData& menuData) {               // obsluguje wybor nazwy weza
+void select_snake_name(MenuData& menuData) {                                            //obsluguje wybor nazwy weza
     clear_console();
     signs();
     std::cout << "Podaj nazwe swojego weza: ";
@@ -111,7 +111,7 @@ void select_snake_name(MenuData& menuData) {               // obsluguje wybor na
     menu_wait();
 }
 
-void select_snake_color(MenuData& menuData) {             // obsluguje wybor koloru weza
+void select_snake_color(MenuData& menuData) {                                           // obsluguje wybor koloru weza
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -127,7 +127,7 @@ void select_snake_color(MenuData& menuData) {             // obsluguje wybor kol
     menu_wait();
 }
 
-void select_background_color(MenuData& menuData) {             // obsluguje wybor koloru tla
+void select_background_color(MenuData& menuData) {                                      //obsluguje wybor koloru tla
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -148,7 +148,7 @@ void select_background_color(MenuData& menuData) {             // obsluguje wybo
     menu_wait();
 }
 
-void select_size(MenuData& menuData) {               // rozmiar planszy
+void select_size(MenuData& menuData) {                                                  //rozmiar planszy
     clear_console();
     signs();
     std::cout << "Wybierz szerokosc planszy(max 60): ";
@@ -173,7 +173,7 @@ void select_size(MenuData& menuData) {               // rozmiar planszy
     menu_wait();
 }
 
-void select_board(MenuData& menuData) {                     //wybor mapy
+void select_board(MenuData& menuData) {                                                 //wybor mapy
     clear_console();
     signs();
     std::cout << "Dostepne plansze: " << std::endl;
@@ -187,7 +187,7 @@ void select_board(MenuData& menuData) {                     //wybor mapy
     menu_wait();
 }
 
-void menu_exit(MenuData& menuData) {       // opuszczanie menu
+void menu_exit(MenuData& menuData) {                                                    //opuszczanie menu
     clear_console();
     signs();
     std::cout << "              Twoj koncowy wynik to: " << menuData.get_score() << std::endl;

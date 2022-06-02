@@ -9,7 +9,7 @@ void maximize_screen() {
     ShowWindow(GetConsoleWindow(), SW_MAXIMIZE);
 }
 
-void console_cursor(bool showFlag) {         //chowanie kursora
+void console_cursor(bool showFlag) {                        //chowanie kursora
     HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 
     CONSOLE_CURSOR_INFO cursorInfo;
@@ -19,7 +19,7 @@ void console_cursor(bool showFlag) {         //chowanie kursora
     SetConsoleCursorInfo(out, &cursorInfo);
 }
 
-void welcome_message() {           // wiadomosc powitalna
+void welcome_message() {                                    // wiadomosc powitalna
     signs();
     std::cout << "              ===Witaj w grze snake===" << std::endl;
     signs();
@@ -30,7 +30,7 @@ void signs() {
     std::cout << "------------------------------------------------------" << std::endl;
 }
 
-void clear_console() {                //czyszczenie konsolu
+void clear_console() {                                      //czyszczenie konsolu
     system("cls");
 }
 
@@ -48,7 +48,7 @@ void menu_wait() {// domyslne oczekiwanie z informacja
     console_cursor(true);
 }
 
-void normal_wait(const int i) {       // samo oczekiwanie z wyborem czasu trwania
+void normal_wait(const int i) {                             // samo oczekiwanie z wyborem czasu trwania
     console_cursor(false);
     sleep(i);
     signs();
