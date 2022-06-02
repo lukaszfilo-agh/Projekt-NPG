@@ -53,6 +53,8 @@ kolor węża - "biały"
 rozmiar planszy - "60 szerokość i 30 wysokość"
 plansza - "#"
 
+- opcja "ranking", po  wybraniu której zobaczymy najlepsze wyniki uzyskane przez gracza na danym komputerze
+
 Po ukończeniu gry pojawia się ilość zdobytych punktów i napis "Gratulacje"
 i zostajemy przekierowywani z powrotem do menu, każdą opcje zatwierdzamy
 enterem
