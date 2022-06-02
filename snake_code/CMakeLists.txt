@@ -13,6 +13,7 @@ set(SOURCE_FILES
         src/fruit.cpp
         src/menu.cpp
         src/universal.cpp
-        src/game.cpp)
+        src/game.cpp
+        src/menu_map.cpp)
 
 add_executable(snake ${SOURCE_FILES} main.cpp)
