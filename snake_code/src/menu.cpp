@@ -54,13 +54,13 @@ void menu(MenuData& menuData) {
 }
 
 void instructions_menu(){
+    console_cursor(false);
     clear_console();
     std::cout << std::endl << "Za chwile twoim oczom ukaze sie menu..." << std::endl;
     sleep(2);
     clear_console();
     std::cout << std::endl << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
     sleep(3);
-    clear_console();
     std::cout << std::endl <<"1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter;" << std::endl;
     sleep(3);
     std::cout << std::endl << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem," << std::endl <<
@@ -73,6 +73,7 @@ void instructions_menu(){
                  "po wyborze opcji 8 - opuscisz gre a jesli juz grales to zostanie Ci wyswietlony twoj dotychczasowy wynik." << std::endl << std::endl;
 
     normal_wait(3);
+    console_cursor(true);
 }
 
 
