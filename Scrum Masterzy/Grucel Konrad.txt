@@ -1,0 +1,30 @@
+Czynności i zadania wykonane w okresie od 13 do 22 maja:
+
+
+     Wykonane zadania:
+    
+     -utworzenie nowego kamienia milowego Gra w formie 2D.
+     -GRA W FORMIE 2D - utworzenie funkcji wydłużającą węża
+     -GRA W FORMIE 2D - utworzenie funkcji kończąca grę w przypadku kolizji.
+     -GRA W FORMIE 2D - utworzenie funkcji powodującej wyświetlanie się planszy.
+     -GRA W FORMIE 2D - utworzenie funkcji powodującej wyświetlanie się węża.
+     -GRA W FORMIE 2D - utworzenie funkcji powodującej pojawianie się owoców.
+     -GRA W FORMIE 2D -utworzenie funkcji umożliwiającej ruch węża.
+     -Ukończenie kamienia milowego gra w formie 2D.
+      
+     -utworzenie nowego kamienia milowego Punktacja 
+     -PUNKTACJA - funkcja zliczająca punkty podczas całej sesji gier.
+     -PUNKTACJA - funkcja wyświetlająca wynik po każdej rozgrywce.
+     -PUNKTACJA - funkcja wyświetlająca wynik po każdej rozgrywce.
+     -PUNKTACJA - funkcja poprawnie wyświetlająca końcową punktację przy wychodzeniu z gry.
+     -Ukończenie kamienia milowegi Punktacja.
+
+
+     -utworzenie nowego kamienia milowego kolory.
+     -utwozenie  owego kamienia milowego instrukcja.
+     
+
+     -ODNOTOWANO BŁĄD - owoce czasem wyświetlają się poza planszą pomimo kontroli koordynatów. Do poprawy.
+     -ODNOTOWANo BŁĄD - przy wyższych poziomach trudności wąż przeskakuje nad owocami i ich nie zbiera.
+     -zmiana w priorytetach projektu "Gra w formie 2D" otrzymał priorytet wysoki.
+     -zmiana w priorytetach projektu "Punktacja graczy" otrzymał priorytet wysoki.
