@@ -48,12 +48,12 @@ void board(const Snake &snake, const MenuData &menuData, Fruit &fruit) {
         std::cout << "\t" + menuData.get_board_chars(menuData.get_board());
         for (int j = 0; j < menuData.get_size_x() - 2; j++) {
             if (i == 0 || i == menuData.get_size_y() - 1) {
-                std::cout << menuData.get_board_chars(menuData.get_board());       // wypisywanie planszy
+                std::cout << menuData.get_board_chars(menuData.get_board());       //!wypisywanie planszy
             } else if (i == snake.get_position().Y &&
-                       j + 1 == snake.get_position().X) {     //wyswietlanie snake'a na odpowiednich pozycjach
+                       j + 1 == snake.get_position().X) {     //!wyswietlanie snake'a na odpowiednich pozycjach
                 std::cout << '0';
             } else if (i == fruit.get_position().Y &&
-                       j + 1 == fruit.get_position().X) {     //wyswietlanie owocow na wygenerowanych pozycjach
+                       j + 1 == fruit.get_position().X) {     //!wyswietlanie owocow na wygenerowanych pozycjach
                 std::cout << '@';
             } else {
                 bool isBodyPart = false;
@@ -80,11 +80,11 @@ void game(MenuData &menuData, Snake &snake, Fruit &fruit) {
     fruit.generate(menuData);
     console_cursor(false);
 
-    while (!menuData.get_game_end()) {     // warunek konca gry
+    while (!menuData.get_game_end()) {                 //!warunek konca gry
         board(snake, menuData,
-              fruit);            // !!!!!!! gra konczy sie po pewnym czasie, mamy problem. Jak damy znowu nowa gre po przegranej to sie wyłącza
-        if (kbhit()) {                            //Edit: dziala juz dobrze
-            switch (getch()) {                    // obsluga sterowania
+              fruit);            //!gra konczy sie po pewnym czasie, mamy problem. Jak damy znowu nowa gre po przegranej to sie wyłącza
+        if (kbhit()) {                            //!Edit: dziala juz dobrze
+            switch (getch()) {                    //!obsluga sterowania
                 case 'w':
                     snake.direction('u');
                     break;
@@ -100,17 +100,17 @@ void game(MenuData &menuData, Snake &snake, Fruit &fruit) {
             }
         }
 
-        if (snake.collided(menuData)) {              // warunek konca gry
+        if (snake.collided(menuData)) {              //!warunek konca gry
             menuData.set_game_end(true);
         }
 
-        if (snake.eaten(fruit)) {                    //sprawdzenie czy snake natrafil na owoc
+        if (snake.eaten(fruit)) {                    //!sprawdzenie czy snake natrafil na owoc
             fruit.generate(menuData);
             snake.grow();
             menuData.score_add();
         }
 
-        snake.move();                                //poruszanie wezem
+        snake.move();                                //!poruszanie wezem
 
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {0, 0});
     }

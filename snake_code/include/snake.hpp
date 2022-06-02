@@ -10,19 +10,19 @@ class Snake {
 private:
     COORD position_;
     std::vector<COORD> body_;
-    std::vector<COORD>::size_type length_;            //dlugosc weza
-    int velocity_;                                    //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
-    char direction_;                                  //obsluga kierunku porusznania
+    std::vector<COORD>::size_type length_;                   //dlugosc weza
+    int velocity_;                                           //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
+    char direction_;                                         //obsluga kierunku porusznania
 
 public:
-    Snake(COORD position, const MenuData &menudata);   //konstruktor snakea
+    Snake(COORD position, const MenuData &menudata);         //konstruktor snakea
 
-    ~Snake() = default;                                //destruktor domyslny
+    ~Snake() = default;                                      //destruktor domyslny
 
     //gettery
-    int get_length() const { return length_; }         //uzyskanie dlugosci
+    int get_length() const { return length_; }               //uzyskanie dlugosci
 
-    COORD get_position() const { return position_; };   //uzyskanie pozycji
+    COORD get_position() const { return position_; };        //uzyskanie pozycji
 
     std::vector<COORD> get_body() const { return body_; }    //uzyskanie ciala
 
@@ -36,11 +36,11 @@ public:
 
     bool collided(const MenuData &menuData);    //czy snake zderzyl sie
 
-    void direction(const char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
+    void direction(const char direction) { this->direction_ = direction; };     //przypisanie kierunku weza
 
-    void grow() { length_++; };   //wydluzanie weza
+    void grow() { length_++; };                 //wydluzanie weza
 
-    void move(); //poruszanie snakem
+    void move();                                //poruszanie snakem
 };
 
 #endif
