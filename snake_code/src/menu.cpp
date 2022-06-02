@@ -1,7 +1,6 @@
 #include <unistd.h>
 #include "menu.hpp"
 #include "universal.hpp"
-#include "menu_map.cpp"
 
 // PONIZEJ FUNKCJE DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
