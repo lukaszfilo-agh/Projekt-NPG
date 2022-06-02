@@ -13,7 +13,7 @@ public:
 
     ~Fruit() = default;
 
-    COORD get_position() const { return position_; } //uzyskanie pozycji owoca
+    COORD get_position() const { return position_; }        //!uzyskanie pozycji owoca
 
     void generate(const MenuData &menuData);
 };

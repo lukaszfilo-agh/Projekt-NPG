@@ -40,7 +40,7 @@ public:
 
     void grow() { length_++; };   //wydluzanie weza
 
-    void move(); //poruszanie snakem
+    void move();                    //poruszanie snakem
 };
 
 #endif

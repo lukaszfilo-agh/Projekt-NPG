@@ -7,23 +7,23 @@
 void menu(MenuData& menuData) {
     int choice = 0;
     while (choice != 1 && choice != 8) {
-        menu_display(menuData);                    // wyswietlanie menu
+        menu_display(menuData);                    //!wyswietlanie menu
         std::cout << "Wybierz opcje z menu: ";
         choice = read<int>();
         if (choice == 2) {
-            select_difficulty_level(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+            select_difficulty_level(menuData);     //!funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 3) {
-            select_snake_name(menuData);           // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+            select_snake_name(menuData);           //!funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 4) {
-            select_snake_color(menuData);          // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+            select_snake_color(menuData);          //!funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 5) {
-            select_background_color(menuData);     // funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
+            select_background_color(menuData);     //!funcja modyfikujaca obiekt w klasie (zmieniajaca opcje)
         } else if (choice == 6) {
             select_size(menuData);
         } else if (choice == 7) {
             select_board(menuData);
         } else if (choice < 1 ||
-                   choice > 8) {                   // podanie złej opcji konczy sie przeladowaniem menu
+                   choice > 8) {                   //!podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -76,7 +76,7 @@ void instructions_menu(){
 }
 
 
-void menu_display(MenuData& menuData) {                                                 //wyswietlanie opcji w menu
+void menu_display(MenuData& menuData) {                             //!wyswietlanie opcji w menu
     clear_console();
     signs();
     std::cout << "                 ===MENU GLOWNE===" << std::endl;
@@ -84,7 +84,7 @@ void menu_display(MenuData& menuData) {                                         
     signs();
 }
 
-void select_difficulty_level(MenuData& menuData) {                                      //obsluguje wybor poziomu trudnosci
+void select_difficulty_level(MenuData& menuData) {                  //!obsluguje wybor poziomu trudnosci
     clear_console();
     signs();
     std::cout << "Dostepne poziomy:" << std::endl;
@@ -99,7 +99,7 @@ void select_difficulty_level(MenuData& menuData) {                              
     menu_wait();
 }
 
-void select_snake_name(MenuData& menuData) {                                            //obsluguje wybor nazwy weza
+void select_snake_name(MenuData& menuData) {                        //!obsluguje wybor nazwy weza
     clear_console();
     signs();
     std::cout << "Podaj nazwe swojego weza: ";
@@ -111,7 +111,7 @@ void select_snake_name(MenuData& menuData) {                                    
     menu_wait();
 }
 
-void select_snake_color(MenuData& menuData) {                                           // obsluguje wybor koloru weza
+void select_snake_color(MenuData& menuData) {                       //!obsluguje wybor koloru weza
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -127,7 +127,7 @@ void select_snake_color(MenuData& menuData) {                                   
     menu_wait();
 }
 
-void select_background_color(MenuData& menuData) {                                      //obsluguje wybor koloru tla
+void select_background_color(MenuData& menuData) {                   //!obsluguje wybor koloru tla
     clear_console();
     signs();
     std::cout << "Dostepne kolory to:" << std::endl;
@@ -148,7 +148,7 @@ void select_background_color(MenuData& menuData) {                              
     menu_wait();
 }
 
-void select_size(MenuData& menuData) {                                                  //rozmiar planszy
+void select_size(MenuData& menuData) {                               //!rozmiar planszy
     clear_console();
     signs();
     std::cout << "Wybierz szerokosc planszy(max 60): ";
@@ -173,7 +173,7 @@ void select_size(MenuData& menuData) {                                          
     menu_wait();
 }
 
-void select_board(MenuData& menuData) {                                                 //wybor mapy
+void select_board(MenuData& menuData) {                              //!wybor mapy
     clear_console();
     signs();
     std::cout << "Dostepne plansze: " << std::endl;
@@ -187,7 +187,7 @@ void select_board(MenuData& menuData) {                                         
     menu_wait();
 }
 
-void menu_exit(MenuData& menuData) {                                                    //opuszczanie menu
+void menu_exit(MenuData& menuData) {                                 //!opuszczanie menu
     clear_console();
     signs();
     std::cout << "              Twoj koncowy wynik to: " << menuData.get_score() << std::endl;
@@ -203,7 +203,7 @@ void menu_exit(MenuData& menuData) {                                            
 
 // wypelnienie map
 
-const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},          //mapowanie tekstu w menu
+const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},               //!mapowanie tekstu w menu
                                                          {2, "Poziom Trudnosci"},
                                                          {3, "Nazwa weza"},
                                                          {4, "Kolor weza"},
@@ -212,21 +212,21 @@ const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},       
                                                          {7, "Rodzaj planszy"},
                                                          {8, "Wyjdz z gry"}};
 
-const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},             //mapowanie poziomu trudnosci
+const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},                   //!mapowanie poziomu trudnosci
                                                         {2, "Sredni"},
                                                         {3, "Trudny"}};
 
-const std::map<int, std::string> MenuData::snake_colors_ = {{1, "bialy"},          //mapowanie kolorow weza
+const std::map<int, std::string> MenuData::snake_colors_ = {{1, "bialy"},               //!mapowanie kolorow weza
                                                             {2, "zielony"},
                                                             {3, "niebieski"},
                                                             {4, "pomaranczowy"}};
 
-const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},    //mapowanie kolorow tla
+const std::map<int, std::string> MenuData::background_colors_ = {{1, "czarny"},         //!mapowanie kolorow tla
                                                                  {2, "bialy"},
                                                                  {3, "rozowy"},
                                                                  {4, "brazowy"}};
 
-const std::map<int, std::string> MenuData::board_chars_ = {{1, "#"},              //mapowanie rodzajow obramowania
+const std::map<int, std::string> MenuData::board_chars_ = {{1, "#"},                    //!mapowanie rodzajow obramowania
                                                            {2, "$"},
                                                            {3, "*"},
                                                            {4, "&"}};
