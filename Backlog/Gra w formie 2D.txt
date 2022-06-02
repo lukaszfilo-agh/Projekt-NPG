@@ -31,11 +31,11 @@ otrzymuje 10 punktów za zebranie jednego owoca,
 
 ładuje plansze na ekran użytownika,
 
--funckję powodującą wyswietlanie się weża:
+-funkcję powodującą wyswietlanie się weża:
 
 wyświetla na ekranie gracza węża,
 
--funckję koncząca gre w przypadku kolizji:
+-funkcję koncząca gre w przypadku kolizji:
 
 opcja odpowiada za zakończenie gry przez użytkownika, gracz może przegrać jeżeli:
 - uderzy w ściane na końcu planszy
