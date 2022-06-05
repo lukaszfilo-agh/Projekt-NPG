@@ -6,7 +6,7 @@
 
 void menu(MenuData& menuData) {
     int choice = 0;
-    while (choice != 1 && choice != 8) {
+    while (choice != 1 && choice != 9) {
         menu_display(menuData);                    //!wyswietlanie menu
         std::cout << "Wybierz opcje z menu: ";
         choice = read<int>();
@@ -22,8 +22,10 @@ void menu(MenuData& menuData) {
             select_size(menuData);
         } else if (choice == 7) {
             select_board(menuData);
-        } else if (choice < 1 ||
-                   choice > 8) {                   //!podanie złej opcji konczy sie przeladowaniem menu
+        } else if (choice == 8){
+            game_instruction();
+        }else if (choice < 1 ||
+                   choice > 9) {                   //!podanie złej opcji konczy sie przeladowaniem menu
             clear_console();
             signs();
             std::cout << "Podano nieznana opcje!" << std::endl;
@@ -186,6 +188,21 @@ void select_board(MenuData& menuData) {                              //!wybor ma
     std::cout << "Wybrales plansze " << menuData.get_board_chars(menuData.get_board()) << std::endl;
     signs();
     menu_wait();
+}
+
+void game_instruction() {
+    clear_console();
+    signs();
+    std::cout << "----------------------INSTRUKCJA----------------------"<<std::endl;
+    std::cout << "W grze poruszasz sie przycisami WSAD odpowiednio: "<<
+    std::endl << "W - w gore S - w dol, A - w lewo, D - w prawo. " <<
+    std::endl << "Celem gry jest uzyskanie jak najwiekszej ilosci " <<
+    std::endl << "punktow zodobywanych przez zebranie owocow. " <<
+    std::endl << "Przegrywasz jesli wejdziesz w sciane lub w swoj ogon " <<
+    std::endl << "POWODZENIA!!" << std::endl;
+    signs();
+    menu_wait();
+
 }
 
 void menu_exit(MenuData& menuData) {                                 //!opuszczanie menu

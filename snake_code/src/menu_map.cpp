@@ -11,7 +11,8 @@ const std::map<int, std::string> MenuData::menu_text_ = {{1, "Nowa Gra"},       
                                                          {5, "Kolor tla"},
                                                          {6, "Rozmiar planszy"},
                                                          {7, "Rodzaj planszy"},
-                                                         {8, "Wyjdz z gry"}};
+                                                         {8, "Instrukcja gry"},
+                                                         {9, "Wyjdz z gry"}};
 
 const std::map<int, std::string> MenuData::diff_map_ = {{1, "Latwy"},                   //!mapowanie poziomu trudnosci
                                                         {2, "Sredni"},

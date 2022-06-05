@@ -115,6 +115,8 @@ void select_size(MenuData &menuData);                                    //!rozm
 
 void select_board(MenuData &menuData);                                   //!wybor planszy
 
+void game_instruction();                                                // instrukcja gry
+
 void menu_exit(MenuData &menuData);                                      //!wyjscie z menu
 
 #endif //SNAKE_MENU_HPP
