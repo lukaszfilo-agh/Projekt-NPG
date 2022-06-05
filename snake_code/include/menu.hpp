@@ -12,8 +12,10 @@ public:
              const int &size_y = 30, const int &board = 1, const int &score = 0, const bool game_ended = true)
             : snake_name_(snake_name), diff_(diff), snake_color_(snake_color),
               background_color_(background_color), size_x_(size_x), size_y_(size_y),
-              board_(board), score_(score), game_ended_(game_ended){}; // konstruktor domyslny
+              board_(board), score_(score), game_ended_(game_ended) {}; // konstruktor domyslny
+
     ~MenuData() = default;
+
     // gettery
     std::string get_snake_name() const { return snake_name_; }
 
@@ -39,7 +41,7 @@ public:
 
     int get_score() const { return score_; }
 
-    bool get_game_end() const {return game_ended_;}
+    bool get_game_end() const { return game_ended_; }
 
     // settery
 
@@ -57,13 +59,13 @@ public:
 
     void set_size_y() { size_y_ = read<int>(); }
 
-    void score_add() { score_ += 10;}
+    void score_add() { score_ += 10; }
 
-    void set_game_end(bool end) { game_ended_ = end;}
+    void set_game_end(bool end) { game_ended_ = end; }
 
     //wypisywanie map
 
-    void print_score() const { std::cout << "WYNIK: " << score_ << std::endl << std::endl;}
+    void print_score() const { std::cout << "WYNIK: " << score_ << std::endl << std::endl; }
 
     void print_background_diff_map();
 
@@ -95,24 +97,24 @@ private:
 
 // PONIZEJ FUNKCJE TYPOWO DO OBSLUGI MENU W KOLEJNOSCI UZYCIA
 
-void welcome_message();
+void menu(MenuData &menuData);                                           //!calosciowa obsluga menu
 
-void menu(MenuData &menuData);                                            // calosciowa obsluga menu
+void instructions_menu();                                                //!instrukcja obslugi menu
 
-void menu_display(MenuData &menuData);                                   // wyswietlanie opcji w menu
+void menu_display(MenuData &menuData);                                   //!wyswietlanie opcji w menu
 
-void select_difficulty_level(MenuData &menuData);                        // wybor poziomu trudnosci
+void select_difficulty_level(MenuData &menuData);                        //!wybor poziomu trudnosci
 
-void select_snake_name(MenuData &menuData);                              // wybor nazwy weza
+void select_snake_name(MenuData &menuData);                              //!wybor nazwy weza
 
-void select_snake_color(MenuData &menuData);                             // wybor koloru weza
+void select_snake_color(MenuData &menuData);                             //!wybor koloru weza
 
-void select_background_color(MenuData &menuData);                        // wybor koloru tla
+void select_background_color(MenuData &menuData);                        //!wybor koloru tla
 
-void select_size(MenuData &menuData);                                   // rozmiar planszy
+void select_size(MenuData &menuData);                                    //!rozmiar planszy
 
-void select_board(MenuData &menuData);                                   // wybor planszy
+void select_board(MenuData &menuData);                                   //!wybor planszy
 
-void menu_exit(MenuData& menuData);                                                        // wyjscie z menu
+void menu_exit(MenuData &menuData);                                      //!wyjscie z menu
 
 #endif //SNAKE_MENU_HPP

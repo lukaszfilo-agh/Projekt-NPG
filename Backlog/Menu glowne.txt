@@ -1,8 +1,67 @@
 *Menu główne powinno zawierać następujące funkcjonalności:
-- opcje wejścia do raz wyjścia z gry,
-- możliwość nadania nazwy węża,
-- możliwość wyboru poziomu trudności,
-- możliwość wyboru koloru tła,
-- możliwość wyboru koloru węża.*
+
+
+- opcje wejścia do raz wyjścia z gry:
+
+Użytkownik produktu będzie mógł w menu klikając odpowiedni przycisk w menu 
+wyjść w każdej chwili z aplikacji,
+
+- możliwość nadania nazwy węża:
+
+opcja służąca do nazwania przez gracza swojego węża, opcja ma na celu 
+uprzyjemnienie rozgrywki przez uczestnika, aby gracz nadał nazwę węża
+należy w menu wybrać odpowiednią opcje,
+
+- możliwość wyboru poziomu trudności:
+
+w aplikacji znajdują się trzy poziomy trudności "łatwy", "średni", "trudny",
+każdy gracz może wybrać poziom trudności w menu, wybierając odpowiednia 
+opcję dla danego poziomu,
+
+- możliwość wyboru koloru tła:
+
+w grze mamy wybór 4 kolorów planszy "czarny", "biały", "różowy", "brązowy", 
+każdy gracz może wybrać kolor w menu aplikacji, jeżeli gracz nie wybierze 
+
+- możliwość wyboru koloru węża:
+
+w aplikacji mamy również możłiwość wyboru koloru węża, w menu wybieramy odpowiednio kolory 
+wybierając odpowiednia liczbę dla danego koloru. Możliwe kolory to: "biały","zielony",
+"niebieski","pomarańczowy",
+
+-możliwość wyboru rozmiaru planszy
+
+w menu znajdziemy również opcje rozmiaru planszy, użytkownik wybiera w menu opcję 
+związana z tą możliwością, gracz wybiera rozmiar wpisując odpowiednią szerokość
+i wysokość planszy. Szerokość nie może przekroczyć 60, a wysokość 30,
+
+- możliwość wyboru rodzaju planszy
+
+opcja znajdująca się w menu w celu wyboru rodzaju planszy na jakiej użytkownik 
+będzie grał, gracz ma do wyboru 4 plansze wybierając odpowiedni liczbę przyporządkowana
+do danej planszy. Użytkownik ma do wyboru plansze składającą się z "#", "$", "*", "&"
+ 
+- opcja nowa gra
+
+rozpoczyna nową grę, po wybraniu w menu pokazuję wszystkie opcje jakie wybraliśmy,
+jeżeli gracz nie wybierze żadnej z opcji i od razu przejdzie do nowej gry opcjami 
+domyślnymi są: 
+poziom - "łatwy"
+nazwa węża - "snake"
+kolor tła - "czarny"
+kolor węża - "biały"
+rozmiar planszy - "60 szerokość i 30 wysokość"
+plansza - "#"
+
+- opcja "ranking", po  wybraniu której zobaczymy najlepsze wyniki uzyskane przez gracza na danym komputerze
+
+Po ukończeniu gry pojawia się ilość zdobytych punktów i napis "Gratulacje"
+i zostajemy przekierowywani z powrotem do menu, każdą opcje zatwierdzamy
+enterem
+*
+
+- możliwość zapoznania się z działaniem gry przed jej rozpoczęciem(Instrukcja)
+
+ użytkownik wybiera w menu opcję  związana z tą możliwością, na ekran zostanie wyświetlona krótka instrukcja informująca o zasadach gry.
  
 Priorytet wszystkich powyższych funkcjonalności został ustalony na WYSOKI przez Filipa Dymczyka dnia 21.04.2022.

@@ -10,34 +10,37 @@ class Snake {
 private:
     COORD position_;
     std::vector<COORD> body_;
-    std::vector<COORD>::size_type length_;            //dlugosc weza
-    int velocity_;          //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
-    char direction_;
+    std::vector<COORD>::size_type length_;                   //dlugosc weza
+    int velocity_;                                           //predkosc przesuwania sie weza, ustalona wedlug poziomu trudnosci
+    char direction_;                                         //obsluga kierunku porusznania
 
 public:
-    Snake(COORD position, const MenuData& menudata);   //konstruktor snakea
+    Snake(COORD position, const MenuData &menudata);         //konstruktor snakea
 
-    ~Snake() = default;
+    ~Snake() = default;                                      //destruktor domyslny
 
-    void snake_move(); //poruszanie snakem
+    //gettery
+    int get_length() const { return length_; }               //uzyskanie dlugosci
 
-    int get_length() const { return length_; }
+    COORD get_position() const { return position_; };        //uzyskanie pozycji
 
-    void snake_grow() { length_++; };   //wydluzanie weza
+    std::vector<COORD> get_body() const { return body_; }    //uzyskanie ciala
 
-    COORD snake_get_position() const { return position_; };   //uzyskanie pozycji
+    COORD get_body_elem(int i) const { return body_[i]; }    //uzyskanie elementu ciala
 
-    void snake_direction(const char direction) { this->direction_ = direction; }; //przypisanie kierunku weza
+    int get_body_size() const { return body_.size(); }       //uzyskanie rozmiaru ciala
 
-    std::vector<COORD> get_body() const { return body_; }
+    //metody
 
-    COORD get_body_elem(int i) const { return body_[i]; }
+    bool eaten(const Fruit &fruit);             //czy snake zjadl owoc
 
-    int get_body_size() const { return body_.size(); }
+    bool collided(const MenuData &menuData);    //czy snake zderzyl sie
 
-    bool snake_eaten(const Fruit& fruit);
+    void direction(const char direction) { this->direction_ = direction; };     //przypisanie kierunku weza
 
-    bool snake_collided(const MenuData& menuData);    //czy snake zderzyl sie
+    void grow() { length_++; };                 //wydluzanie weza
+
+    void move();                                //poruszanie snakem
 };
 
 #endif

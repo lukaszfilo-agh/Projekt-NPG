@@ -1,0 +1,4 @@
+funkcja powinna powodować wyświetalnie się wybranego koloru planszy podczas rogrywki.
+
+priorytet poyższego zadania został ustawiony na WYSOKI dnia 27.05.2022.
+termin powyższego zadania został ustalony do 3.06.2022.
