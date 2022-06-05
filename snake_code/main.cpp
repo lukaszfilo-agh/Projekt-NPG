@@ -7,5 +7,6 @@ int main() {
     welcome_message();        //!wiadomosc powitalna
     instructions_menu();      //!instrukcje obslugi menu
     game_main(menuData);
+    menuData.~MenuData();
     return 0;
 }
