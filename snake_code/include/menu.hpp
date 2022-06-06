@@ -101,7 +101,9 @@ void menu(MenuData &menuData);                                           //!calo
 
 void instructions_menu();                                                //!instrukcja obslugi menu
 
-bool instructions_menu_wait();                                           //oczekiwania na wybranie 1 lub 2 przed instrukcja menu
+bool instructions_menu_wait();                                           //!oczekiwania na wybranie 1 lub 2 przed instrukcja menu
+
+void instructions_menu_display();                                        //!wyswietlanie instrukcji obslugi menu
 
 void menu_display(MenuData &menuData);                                   //!wyswietlanie opcji w menu
 
@@ -117,7 +119,7 @@ void select_size(MenuData &menuData);                                    //!rozm
 
 void select_board(MenuData &menuData);                                   //!wybor planszy
 
-void game_instruction();                                                // instrukcja gry
+void game_instruction();                                                 //!instrukcja gry - do wykonania
 
 void menu_exit(MenuData &menuData);                                      //!wyjscie z menu
 

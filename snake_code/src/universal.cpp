@@ -54,6 +54,7 @@ void normal_wait(const int i) {                             //!samo oczekiwanie 
     signs();
     std::cout << "Nacisnij ENTER aby kontynuowac." << std::endl;
     signs();
+    std::cin.ignore();
     std::cin.get();
     console_cursor(true);
 }

@@ -21,17 +21,17 @@ inline T read() {
     }
 }
 
-void maximize_screen();
+void maximize_screen();                 //!wymuszenie fullscreena
 
-void welcome_message();                 //wiadomosc powitalna
+void welcome_message();                 //!wiadomosc powitalna
 
-void console_cursor(bool showFlag);      //pokazanie lub ukrycie kursora
+void console_cursor(bool showFlag);      //!pokazanie lub ukrycie kursora
 
-void signs();        // znaki ozdobne
+void signs();        //!znaki ozdobne
 
-void clear_console();       // czyszczenie konsoli
+void clear_console();       //!czyszczenie konsoli
 
-void menu_wait();                // sleep domyslny z informacja
+void menu_wait();                //!sleep domyslny z informacja
 
-void normal_wait(const int i);         // oczekiwanie na enter poza menu
+void normal_wait(const int i);         //!oczekiwanie na enter poza menu
 #endif

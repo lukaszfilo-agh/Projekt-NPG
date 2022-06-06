@@ -55,41 +55,15 @@ void menu(MenuData& menuData) {
     }
 }
 
-void instructions_menu(){
+void instructions_menu(){            //!obsluga instrukcji
     console_cursor(false);
     clear_console();
     if(instructions_menu_wait()) {
-        std::cout << std::endl << "Za chwile twoim oczom ukaze sie menu..." << std::endl;
-        sleep(2);
-        clear_console();
-        std::cout << std::endl << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
-        sleep(3);
-        std::cout << std::endl
-                  << "1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter;"
-                  << std::endl;
-        sleep(3);
-        std::cout << std::endl
-                  << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem,"
-                  << std::endl <<
-                  "po dokonaniu wyboru, potwierdz go klikajac Enter; " << std::endl;
-        sleep(3);
-        std::cout << std::endl
-                  << "3. po wybraniu opcji 3, gra poprosi Cie o wprowadzenie dowolnej nazwy swojego Snake'a. Po wpisaniu swojej nazwy"
-                  << std::endl <<
-                  "zatwierdz ja klikajac klawisz Enter;" << std::endl;
-        sleep(3);
-        std::cout << std::endl
-                  << "4. po wybraniu opcji 1 rozpoczniesz nowa gre z domyslnymi ustawieniami (kazde z nich zostanie Ci wyswietlona przed"
-                  << std::endl << "rozpoczeciem gry), natomiast" <<
-                  "po wyborze opcji 8 - opuscisz gre a jesli juz grales to zostanie Ci wyswietlony twoj dotychczasowy wynik."
-                  << std::endl << std::endl;
-
-        normal_wait(3);
-        console_cursor(true);
+        instructions_menu_display();
     }
 }
 
-bool instructions_menu_wait() {                        //  obsluga wyswietlania instrukcji - mozliwosc pomijania
+bool instructions_menu_wait() {                        //!obsluga wyswietlania instrukcji - mozliwosc pomijania
     console_cursor(false);
     signs();
     std::cout << "Aby zobaczyc instrukcje obslugi menu wcisnij 1..." << std::endl << std::endl;
@@ -109,6 +83,36 @@ bool instructions_menu_wait() {                        //  obsluga wyswietlania 
     }
     console_cursor(true);
     return true;
+}
+
+void instructions_menu_display(){                //!wyswietlanie instrukcji menu
+    clear_console();
+    std::cout << std::endl << "Za chwile twoim oczom ukaze sie menu..." << std::endl;
+    sleep(2);
+    clear_console();
+    std::cout << std::endl << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
+    sleep(3);
+    std::cout << std::endl
+              << "1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter;"
+              << std::endl;
+    sleep(3);
+    std::cout << std::endl
+              << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem,"
+              << std::endl <<
+              "po dokonaniu wyboru, potwierdz go klikajac Enter; " << std::endl;
+    sleep(3);
+    std::cout << std::endl
+              << "3. po wybraniu opcji 3, gra poprosi Cie o wprowadzenie dowolnej nazwy swojego Snake'a. Po wpisaniu swojej nazwy"
+              << std::endl <<
+              "zatwierdz ja klikajac klawisz Enter;" << std::endl;
+    sleep(3);
+    std::cout << std::endl
+              << "4. po wybraniu opcji 1 rozpoczniesz nowa gre z domyslnymi ustawieniami (kazde z nich zostanie Ci wyswietlona przed"
+              << std::endl << "rozpoczeciem gry), natomiast" <<
+              "po wyborze opcji 9 - opuscisz gre a jesli juz grales to zostanie Ci wyswietlony twoj dotychczasowy wynik."
+              << std::endl << std::endl;
+
+    normal_wait(3);
 }
 
 
@@ -223,7 +227,7 @@ void select_board(MenuData& menuData) {                              //!wybor ma
     menu_wait();
 }
 
-void game_instruction() {
+void game_instruction() {                                        //!instrukcja gry
     clear_console();
     signs();
     std::cout << "----------------------INSTRUKCJA----------------------"<<std::endl;
