@@ -101,6 +101,8 @@ void menu(MenuData &menuData);                                           //!calo
 
 void instructions_menu();                                                //!instrukcja obslugi menu
 
+bool instructions_menu_wait();                                           //oczekiwania na wybranie 1 lub 2 przed instrukcja menu
+
 void menu_display(MenuData &menuData);                                   //!wyswietlanie opcji w menu
 
 void select_difficulty_level(MenuData &menuData);                        //!wybor poziomu trudnosci

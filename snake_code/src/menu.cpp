@@ -58,24 +58,57 @@ void menu(MenuData& menuData) {
 void instructions_menu(){
     console_cursor(false);
     clear_console();
-    std::cout << std::endl << "Za chwile twoim oczom ukaze sie menu..." << std::endl;
-    sleep(2);
-    clear_console();
-    std::cout << std::endl << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
-    sleep(3);
-    std::cout << std::endl <<"1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter;" << std::endl;
-    sleep(3);
-    std::cout << std::endl << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem," << std::endl <<
-                 "po dokonaniu wyboru, potwierdz go klikajac Enter; " << std::endl;
-    sleep(3);
-    std::cout << std::endl << "3. po wybraniu opcji 3, gra poprosi Cie o wprowadzenie dowolnej nazwy swojego Snake'a. Po wpisaniu swojej nazwy" << std::endl <<
-                 "zatwierdz ja klikajac klawisz Enter;"<< std::endl;
-    sleep(3);
-    std::cout << std::endl << "4. po wybraniu opcji 1 rozpoczniesz nowa gre z domyslnymi ustawieniami (kazde z nich zostanie Ci wyswietlona przed" << std::endl << "rozpoczeciem gry), natomiast" <<
-                 "po wyborze opcji 8 - opuscisz gre a jesli juz grales to zostanie Ci wyswietlony twoj dotychczasowy wynik." << std::endl << std::endl;
+    if(instructions_menu_wait()) {
+        std::cout << std::endl << "Za chwile twoim oczom ukaze sie menu..." << std::endl;
+        sleep(2);
+        clear_console();
+        std::cout << std::endl << "Ale zanim do tego przejdziemy musisz poznac pare zasad jego obslugi: " << std::endl;
+        sleep(3);
+        std::cout << std::endl
+                  << "1. wybieraj opcje menu za pomoca cyfr od 1 - 8 potwierdzajac swoj wybor klawiszem Enter;"
+                  << std::endl;
+        sleep(3);
+        std::cout << std::endl
+                  << "2. po wybraniu opcji od 2 - 7 (bez 3) program poprosi Cie o wybranie jednej opcji z podanych odpowiednim klawiszem,"
+                  << std::endl <<
+                  "po dokonaniu wyboru, potwierdz go klikajac Enter; " << std::endl;
+        sleep(3);
+        std::cout << std::endl
+                  << "3. po wybraniu opcji 3, gra poprosi Cie o wprowadzenie dowolnej nazwy swojego Snake'a. Po wpisaniu swojej nazwy"
+                  << std::endl <<
+                  "zatwierdz ja klikajac klawisz Enter;" << std::endl;
+        sleep(3);
+        std::cout << std::endl
+                  << "4. po wybraniu opcji 1 rozpoczniesz nowa gre z domyslnymi ustawieniami (kazde z nich zostanie Ci wyswietlona przed"
+                  << std::endl << "rozpoczeciem gry), natomiast" <<
+                  "po wyborze opcji 8 - opuscisz gre a jesli juz grales to zostanie Ci wyswietlony twoj dotychczasowy wynik."
+                  << std::endl << std::endl;
 
-    normal_wait(3);
+        normal_wait(3);
+        console_cursor(true);
+    }
+}
+
+bool instructions_menu_wait() {                        //  obsluga wyswietlania instrukcji - mozliwosc pomijania
+    console_cursor(false);
+    signs();
+    std::cout << "Aby zobaczyc instrukcje obslugi menu wcisnij 1..." << std::endl << std::endl;
+    std::cout << "W przeciwnym razie wcisnij 2..." << std::endl;
+    signs();
+    int choice;
+    std::cout << "Twoj wybor to: ";
+    std::cin >> choice;
+    if (choice == 2){
+        clear_console();
+        signs();
+        std::cout << "              Przeniesienie do okna menu..." << std::endl;
+        signs();
+        sleep(1);
+        console_cursor(true);
+        return false;
+    }
     console_cursor(true);
+    return true;
 }
 
 

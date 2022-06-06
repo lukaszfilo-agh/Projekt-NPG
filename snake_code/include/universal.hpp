@@ -34,5 +34,4 @@ void clear_console();       // czyszczenie konsoli
 void menu_wait();                // sleep domyslny z informacja
 
 void normal_wait(const int i);         // oczekiwanie na enter poza menu
-
 #endif
