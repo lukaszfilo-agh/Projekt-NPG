@@ -1,0 +1,10 @@
+Sprawozdanie z dnia 7.06.2022
+
+W dniu 7.06.2022 od godziny 20:00 do godziny 21:00 odbyło sie piąte, ostatnie, spotkanie 
+członków zespołu, na którym nastąpiło podsumowanie całego projektu. Prowadzącym spotkania był 
+Łukasz Filo (obecny Scrum master). W spotkaniu uczestniczyli rówież pozostali członkowie 
+zespołu. Najpierw każdy zdał krótką relację z wykonanych przez siebie zadań od ostaniego spotkania, a następnie 
+głos zabrał Scrum master, który całościowo podsumował zrealizowany przez nas projekt. Wskazał że dużo zadań z 
+backlogu zostało zrealizowane (tj. menu główne, gra w formie 2D, punktacja) ale przypominiał że wiele zagadnień
+jednak nie zostało ukończonych (gra w formie 3D, interfejs graficzny, możliwość gry online) nie mniej jednak
+całość prac określił jako bardzo pozytywny.
