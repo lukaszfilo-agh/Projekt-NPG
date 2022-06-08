@@ -1,0 +1,7 @@
+Scrum Master od 30.05.2022 - 08.06.2022.
+
+Podczas tego okresu zostały podjęte następujące działania:
+- kończenie wyznaczonych zadań
+- zmienienie statusu niewykonanych zadań na niezrealizowane
+- podsumowywanie projektu
+- umieszczenie sprawozdania z projektu na platfromie github
